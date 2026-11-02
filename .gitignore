@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Downloaded data is cached locally, not committed
+data/cache/
