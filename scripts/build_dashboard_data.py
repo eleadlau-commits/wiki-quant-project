@@ -23,21 +23,23 @@ from wikiquant.pageviews import load_pageviews  # noqa: E402
 START = "2019-01-01"
 INDEX = "SPY"  # ETF that tracks the S&P 500
 
-# ticker, display name, English Wikipedia article
+# ticker, display name, English Wikipedia article(s). When a company page was
+# renamed (Facebook -> Meta), list every title: views are summed, because
+# readers of the old title land on a redirect that is counted separately.
 UNIVERSE = [
     ("AAPL", "Apple", "Apple_Inc."),
     ("MSFT", "Microsoft", "Microsoft"),
     ("NVDA", "Nvidia", "Nvidia"),
     ("AMZN", "Amazon", "Amazon_(company)"),
     ("GOOGL", "Alphabet", "Alphabet_Inc."),
-    ("META", "Meta", "Meta_Platforms"),
+    ("META", "Meta", ["Meta_Platforms", "Facebook,_Inc."]),
     ("TSLA", "Tesla", "Tesla,_Inc."),
     ("NFLX", "Netflix", "Netflix"),
     ("JPM", "JPMorgan Chase", "JPMorgan_Chase"),
     ("DIS", "Disney", "The_Walt_Disney_Company"),
     ("BA", "Boeing", "Boeing"),
     ("GME", "GameStop", "GameStop"),
-    ("AMD", "AMD", "AMD"),
+    ("AMD", "AMD", ["AMD", "Advanced_Micro_Devices"]),
     ("PFE", "Pfizer", "Pfizer"),
     ("NKE", "Nike", "Nike,_Inc."),
     ("INTC", "Intel", "Intel"),
@@ -61,7 +63,10 @@ def main() -> None:
 
     stocks = []
     for ticker, name, title in UNIVERSE:
-        views = load_pageviews(title, START, end, refresh=True)
+        titles = [title] if isinstance(title, str) else title
+        parts = [load_pageviews(t, START, end, refresh=True) for t in titles]
+        views = pd.concat(parts, axis=1).sum(axis=1, min_count=1)
+        title = titles[0]
         views = views.reindex(pd.date_range(START, views.index.max(), freq="D"))
         stocks.append({
             "ticker": ticker,

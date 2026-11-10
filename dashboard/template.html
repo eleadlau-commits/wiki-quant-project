@@ -81,6 +81,12 @@ header { display: grid; gap: 12px; }
 @media (max-width: 720px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .pos { color: var(--good); } .neg { color: var(--bad); }
 
+.spike-list { display: grid; gap: 6px; font-size: 13px; }
+.spike-list .row { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; padding-block: 6px; border-bottom: 1px solid var(--line); }
+.spike-list .row:last-child { border-bottom: 0; }
+.spike-list .d { font-family: var(--f-mono); min-width: 11ch; }
+.spike-list .x { font-family: var(--f-mono); min-width: 6ch; color: var(--spike); }
+.spike-list .r { font-family: var(--f-mono); min-width: 9ch; }
 .verdict { border-left: 3px solid var(--views); padding: 4px 0 4px 14px; font-size: 15px; }
 .verdict strong { font-weight: 600; }
 
@@ -114,6 +120,7 @@ tr.sel td { background: var(--chip); }
 h3 { font-family: var(--f-display); font-size: 16px; margin: 0; }
 .small { font-size: 13px; }
 .chart-box.mini-box { height: 220px; }
+.replay-split .chart-box.mini-box { height: 300px; }
 @media (max-width: 560px) { .control { flex-wrap: wrap; } .control input[type="range"] { flex: 1 1 160px; } }
 .notes { display: grid; gap: 10px; font-size: 14px; }
 .notes ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; max-width: 75ch; }
@@ -160,6 +167,7 @@ a { color: var(--price); }
     </div>
     <div class="chart-box"><canvas id="mainChart" aria-label="Share price and Wikipedia page views"></canvas></div>
     <div class="stats" id="stats"></div>
+    <div class="spike-list" id="spike-list"></div>
   </section>
 
   <section class="panel" id="event">
@@ -228,7 +236,19 @@ a { color: var(--price); }
       <span class="replay-date" id="replay-date"></span>
     </div>
     <div class="headline-news" id="replay-note"></div>
-    <div class="bars" id="bars"></div>
+    <div class="split replay-split">
+      <div class="mini">
+        <h3>The market at that moment</h3>
+        <p class="muted small">S&amp;P 500 (line) and how unusual Wikipedia traffic was across all 16 companies (shaded, 1-week average). Watch March 2020 and January 2021.</p>
+        <div class="legend"><span><i style="background:var(--index)"></i>S&amp;P 500</span><span><i style="background:var(--views)"></i>Market-wide attention</span></div>
+        <div class="chart-box mini-box"><canvas id="replayChart" aria-label="S&P 500 and market-wide attention"></canvas></div>
+      </div>
+      <div class="mini">
+        <h3>Attention by company</h3>
+        <p class="muted small">Views that day compared with each company's usual level.</p>
+        <div class="bars" id="bars"></div>
+      </div>
+    </div>
   </section>
 
   <section class="panel notes" id="method">
@@ -429,6 +449,12 @@ function renderStats(s, ev, sum) {
     ["Beat the S&P after a spike", sum.n ? `${Math.round(sum.hit * 100)}%` : "–", `of spikes · normally ${Math.round(b.hit * 100)}% of the time`],
     ["Latest spike", recent ? fmtDate(t0 + recent.c * DAY).replace(/ \d{4}$/, m => m) : "–", recent ? `${fmtBig(recent.views)} views, ${recent.ratio.toFixed(1)}× usual` : "none at this threshold"],
   ].map(([k, v, sub]) => `<div class="stat"><span class="k">${k}</span><span class="v">${v}</span><span class="s">${sub}</span></div>`).join("");
+  const recentEv = ev.slice(-5).reverse();
+  const wikiDay = t => { const d = new Date(t); return `${d.getUTCFullYear()}_${d.toLocaleString("en-GB", { month: "long", timeZone: "UTC" })}_${d.getUTCDate()}`; };
+  $("spike-list").innerHTML = recentEv.length ? `<span class="eyebrow">Latest spikes · what was the news?</span>` + recentEv.map(e => {
+    const t = t0 + e.c * DAY;
+    return `<div class="row"><span class="d">${fmtDate(t)}</span><span class="x">${e.ratio.toFixed(1)}×</span><span class="r">${e.tr == null ? "too recent" : `<span class="${cls(e.tr)}">${fmtPct(e.tr)}</span> vs S&amp;P`}</span><a href="https://en.wikipedia.org/wiki/Portal:Current_events/${wikiDay(t)}" target="_blank" rel="noopener">News that day ↗</a></div>`;
+  }).join("") : "";
 }
 
 function renderEvent(allEv, sums) {
@@ -589,8 +615,31 @@ $("excl").addEventListener("click", ev => { const btn = ev.target.closest(".chip
 const nCal = Math.max(...S.map(s => s.views.length));
 const firstC = WINDOW; // ratios need history
 $("scrub").min = firstC; $("scrub").max = nCal - 1; $("scrub").value = nCal - 1;
-let timer = null;
+let timer = null, replayChart = null;
+// market-wide attention: median across companies of the attention ratio, smoothed over 14 days
+const mktAttn = (() => {
+  // geometric mean across companies, so one GameStop-sized spike cannot dominate
+  const raw = []; for (let c = 0; c < nCal; c++) { const v = S.map(s => s.ratio[c]).filter(Boolean); raw.push(v.length >= 8 ? v.reduce((a, b) => a + Math.log(b), 0) / v.length : null); }
+  const out = []; for (let c = 0; c < nCal; c++) { let sum = 0, n = 0; for (let j = Math.max(0, c - 6); j <= c; j++) if (raw[j] != null) { sum += raw[j]; n++; } out.push(n ? { x: t0 + c * DAY, y: Math.exp(sum / n) } : null); }
+  return out.filter(Boolean);
+})();
+const cursor = { id: "cursor", afterDatasetsDraw(ch) { const t = t0 + +$("scrub").value * DAY; const { ctx, chartArea: a, scales: { x } } = ch; const px = x.getPixelForValue(t);
+  ctx.save(); ctx.strokeStyle = css("--spike"); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(px, a.top); ctx.lineTo(px, a.bottom); ctx.stroke(); ctx.restore(); } };
+function buildReplayChart() {
+  const ax = axisTheme();
+  if (replayChart) replayChart.destroy();
+  replayChart = new Chart($("replayChart"), { data: { datasets: [
+      { type: "line", data: mktAttn, yAxisID: "ya", borderColor: withAlpha(css("--views"), .9), backgroundColor: withAlpha(css("--views"), .2), fill: true, borderWidth: 1, pointRadius: 0 },
+      { type: "line", data: tDates.map((t, i) => ({ x: t, y: spy[i] })), yAxisID: "yp", borderColor: css("--index"), borderWidth: 1.8, pointRadius: 0 },
+    ] }, plugins: [cursor],
+    options: { responsive: true, maintainAspectRatio: false, parsing: false, normalized: true, animation: false, events: [],
+      plugins: { legend: { display: false }, tooltip: { enabled: false }, decimation: { enabled: true, algorithm: "lttb", samples: 500 } },
+      scales: { x: { type: "linear", min: tDates[0], max: lastT, ...ax, grid: { display: false }, ticks: { ...ax.ticks, maxTicksLimit: 6, callback: v => fmtShort(v) } },
+        yp: { position: "left", ...ax, ticks: { ...ax.ticks, callback: v => "$" + v } },
+        ya: { position: "right", ...ax, grid: { display: false }, ticks: { ...ax.ticks, maxTicksLimit: 5, callback: v => v.toFixed(2) + "×" } } } } });
+}
 function renderReplay() {
+  if (replayChart) replayChart.draw();
   const c = +$("scrub").value; const t = t0 + c * DAY;
   $("replay-date").textContent = fmtDate(t);
   const rows = S.map(s => ({ s, r: s.ratio[c], v: s.views[c] })).sort((a, b) => (b.r || 0) - (a.r || 0));
@@ -623,6 +672,7 @@ function renderAll() {
   renderStats(s, allEv[state.sel], sums[state.sel]);
   renderEvent(allEv, sums);
   renderIndex();
+  buildReplayChart();
   renderReplay();
 }
 renderAll();
