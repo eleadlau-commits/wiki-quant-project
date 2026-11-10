@@ -23,7 +23,7 @@ question with real data for 16 large US stocks since 2019:
 
 **First findings (Nov 2026).** After a spike, most companies' next-20-day
 returns are within noise (|t| < 2). The Buzz 4 beats equal weight by about
-21% a year, but removing GameStop alone cuts that to about 8%, and most of
+22% a year, but removing GameStop alone cuts that to about 9%, and most of
 it comes from 2020-21. So: an interesting lead, not a reliable signal yet.
 
 **How the data stays fresh.** `.github/workflows/dashboard-data.yml` runs every

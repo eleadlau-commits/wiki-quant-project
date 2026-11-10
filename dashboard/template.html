@@ -588,7 +588,9 @@ function renderIndex() {
   $("idx-verdict").innerHTML = (excluded.size ? `With ${outNames} left out, the` : "The") +
     ` Buzz 4 earns <strong>${fmtPct(edge)}</strong> a year ${edge >= 0 ? "more" : "less"} than simply holding all ${S.length - excluded.size} companies equally over this period. ` +
     `But look at who carries it: over the whole period, removing <strong>${S[top.k].name}</strong> alone shrinks the edge from ${fmtPct(fullEdge)} to ${fmtPct(top.edge)} a year` +
-    (top.drop > 0.6 * fullEdge ? `, so the result is mostly <strong>one company's story</strong>, not a reliable pattern.` : `. The next biggest is ${S[second.k].name}.`) +
+    (top.drop > 0.6 * fullEdge ? `, so the result is mostly <strong>one company's story</strong>, not a reliable pattern.`
+      : top.drop > 0.4 * fullEdge ? `, so <strong>about half of it rests on one company</strong>. Treat it as a lead to test on many more stocks, not a reliable pattern yet.`
+      : `. The next biggest is ${S[second.k].name}.`) +
     (excluded.has(top.k) ? "" : ` Try leaving ${S[top.k].ticker} out above.`);
 
   // edge by calendar year
