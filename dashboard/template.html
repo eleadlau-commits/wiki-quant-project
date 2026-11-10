@@ -112,6 +112,7 @@ tr.sel td { background: var(--chip); }
 .headline-news { font-size: 13px; color: var(--muted); min-height: 1.5em; }
 
 .control-block { display: grid; gap: 8px; }
+.source-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
 .control-block .k { font-size: 13px; color: var(--muted); }
 #excl .chip[aria-pressed="true"] { background: transparent; color: var(--muted); border-style: dashed; text-decoration: line-through; border-color: var(--muted); }
 .split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
@@ -130,13 +131,18 @@ a { color: var(--price); }
 
 <div class="wrap">
   <header>
-    <div class="eyebrow">Wikipedia attention × stock returns</div>
+    <div class="eyebrow" id="eyebrow">Online attention × stock returns</div>
     <h1>Attention Tape</h1>
-    <p class="muted">When millions of people suddenly look up a company on Wikipedia, does its stock do anything unusual afterwards? Pick a company, set what counts as a spike, and see what happened next.</p>
+    <p class="muted">When people suddenly pay attention to a company, by reading its Wikipedia page or posting about it on Hacker News, does its stock do anything unusual afterwards? Pick a data source and a company, set what counts as a spike, and see what happened next.</p>
     <div class="badges">
       <span class="badge real">Real data</span>
       <span class="badge" id="asof">Loading…</span>
       <span class="badge">16 large US stocks · S&amp;P 500 benchmark</span>
+    </div>
+    <div class="source-pick">
+      <span>Attention source</span>
+      <div class="seg" role="group" aria-label="Attention source" id="source"></div>
+      <span id="src-about" class="small"></span>
     </div>
     <div class="ticker-tape" aria-hidden="true"><div class="track" id="tape"></div></div>
   </header>
@@ -155,17 +161,17 @@ a { color: var(--price); }
     </div>
     <div class="chips" id="chips" role="group" aria-label="Company"></div>
     <div class="controls">
-      <label class="control" for="thresh">Spike = views at least
+      <label class="control" for="thresh">Spike = attention at least
         <input type="range" id="thresh" min="2" max="8" step="0.5" value="3">
         <output id="thresh-out">3×</output> the usual level
       </label>
     </div>
     <div class="legend">
       <span><i style="background:var(--price)"></i>Share price (left axis, $)</span>
-      <span><i style="background:var(--views)"></i>Daily Wikipedia views (right axis)</span>
+      <span><i style="background:var(--views)"></i><span id="legend-att">Daily Wikipedia views</span> (right axis)</span>
       <span><i class="dot" style="background:var(--spike)"></i>Attention spike</span>
     </div>
-    <div class="chart-box"><canvas id="mainChart" aria-label="Share price and Wikipedia page views"></canvas></div>
+    <div class="chart-box"><canvas id="mainChart" aria-label="Share price and attention"></canvas></div>
     <div class="stats" id="stats"></div>
     <div class="spike-list" id="spike-list"></div>
   </section>
@@ -199,7 +205,7 @@ a { color: var(--price); }
         <button data-range="0" aria-pressed="true">All</button>
       </div>
     </div>
-    <p class="muted">Every Monday, rank the 16 stocks by how unusual last week's Wikipedia traffic was. The <strong>Buzz 4</strong> holds the four with the most abnormal attention for the week; the <strong>Quiet 4</strong> holds the four with the least. Both start with $10,000. The chart uses a log scale, so equal steps up mean equal percentage gains.</p>
+    <p class="muted">Every Monday, rank the 16 stocks by how unusual last week's attention was in the chosen source. The <strong>Buzz 4</strong> holds the four with the most abnormal attention for the week; the <strong>Quiet 4</strong> holds the four with the least. Both start with $10,000. The chart uses a log scale, so equal steps up mean equal percentage gains.</p>
     <div class="legend" id="idx-legend"></div>
     <div class="chart-box"><canvas id="indexChart" aria-label="Growth of $10,000"></canvas></div>
     <div class="table-scroll"><table id="idxTable"></table></div>
@@ -229,7 +235,7 @@ a { color: var(--price); }
         <h2>Who the internet was reading</h2>
       </div>
     </div>
-    <p class="muted">Press play to scroll through the years. Bars show each company's Wikipedia views compared with its usual level; pink means a spike.</p>
+    <p class="muted">Press play to scroll through the years. Bars show each company's attention compared with its usual level; pink means a spike.</p>
     <div class="replay-row">
       <button class="play" id="play">▶ Play</button>
       <input type="range" id="scrub" min="0" max="1" value="0" aria-label="Replay date">
@@ -239,13 +245,13 @@ a { color: var(--price); }
     <div class="split replay-split">
       <div class="mini">
         <h3>The market at that moment</h3>
-        <p class="muted small">S&amp;P 500 (line) and how unusual Wikipedia traffic was across all 16 companies (shaded, 1-week average). Watch March 2020 and January 2021.</p>
+        <p class="muted small">S&amp;P 500 (line) and how unusual attention was across all 16 companies (shaded, 1-week average). Watch March 2020 and January 2021.</p>
         <div class="legend"><span><i style="background:var(--index)"></i>S&amp;P 500</span><span><i style="background:var(--views)"></i>Market-wide attention</span></div>
         <div class="chart-box mini-box"><canvas id="replayChart" aria-label="S&P 500 and market-wide attention"></canvas></div>
       </div>
       <div class="mini">
         <h3>Attention by company</h3>
-        <p class="muted small">Views that day compared with each company's usual level.</p>
+        <p class="muted small">Attention that day compared with each company's usual level.</p>
         <div class="bars" id="bars"></div>
       </div>
     </div>
@@ -254,10 +260,11 @@ a { color: var(--price); }
   <section class="panel notes" id="method">
     <div class="eyebrow">How this works, and what to trust</div>
     <ul>
-      <li><strong>Everything on this page is real data</strong>, no sample numbers: daily page views from the free Wikimedia Pageviews API (human readers only) and split- and dividend-adjusted closing prices from Yahoo Finance. A GitHub Action refreshes the data every weekday evening.</li>
-      <li><strong>Spike</strong>: a day whose views are at least the chosen multiple of the median of the previous 60 days. After a spike we ignore further spikes for 10 trading days, so one news story counts once.</li>
-      <li><strong>No peeking</strong>: Wikipedia counts days in UTC, which runs past the US close. So we only trade from the close of the first trading day after the spike.</li>
+      <li><strong>Everything on this page is real data</strong>, no sample numbers: daily page views from the free Wikimedia Pageviews API (human readers only), daily counts of Hacker News stories whose headline names the company (free Algolia search API), and split- and dividend-adjusted closing prices from Yahoo Finance. A GitHub Action refreshes the data every weekday evening.</li>
+      <li><strong>Spike</strong>: a day whose attention is at least the chosen multiple of the median of the previous 60 days. After a spike we ignore further spikes for 10 trading days, so one news story counts once. Hacker News is sparse (often 0 or 1 story a day), so for it we compare 7-day totals instead of single days.</li>
+      <li><strong>No peeking</strong>: both sources count days in UTC, which runs past the US close. So we only trade from the close of the first trading day after the spike.</li>
       <li><strong>What the results do not include</strong>: trading costs, taxes, and the fact that these 16 companies were picked because they are famous today (survivorship bias). Results this good or bad on 16 stocks can easily be luck, so treat them as a first look, not proof.</li>
+      <li><strong>Same test for every source</strong>: each source is a small plug-in in the project's code, and every number on this page comes from the same calculations whichever source you pick, so the comparison is fair.</li>
       <li>The calculations run in your browser from the embedded data; nothing is sent anywhere.</li>
     </ul>
   </section>
@@ -280,9 +287,9 @@ const N = tDates.length;
 const spy = D.index.close;
 const COOLDOWN = 10, WINDOW = 60, PRE = 5, POST = 20, HOLD = 20;
 
-const state = { sel: 0, thresh: 3, range: 0, scope: "one", idxRange: 0 };
+const state = { sel: 0, thresh: 3, range: 0, scope: "one", idxRange: 0, src: null };
 try { const s = JSON.parse(localStorage.getItem("attn-tape") || "{}"); Object.assign(state, s); } catch (e) {}
-const save = () => { try { localStorage.setItem("attn-tape", JSON.stringify({ sel: state.sel, thresh: state.thresh })); } catch (e) {} };
+const save = () => { try { localStorage.setItem("attn-tape", JSON.stringify({ sel: state.sel, thresh: state.thresh, src: state.src })); } catch (e) {} };
 
 const $ = id => document.getElementById(id);
 const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -307,10 +314,25 @@ function rollingMedianRatio(views) {
   }
   return out;
 }
-const S = D.stocks.map(s => ({ ...s, ratio: rollingMedianRatio(s.views) }));
+// ---------- attention sources (plug-ins) ----------
+const SRCS = D.attention;
+if (!SRCS.some(x => x.id === state.src)) state.src = SRCS[0].id;
+let SRC, S;
+function trailingSum(a, k) {
+  // sum of the last k days (k = 1 leaves the series unchanged); sparse sources use k = 7
+  if (k <= 1) return a;
+  return a.map((_, i) => { if (i < k - 1) return null; let s = 0; for (let j = i - k + 1; j <= i; j++) { if (a[j] == null) return null; s += a[j]; } return s; });
+}
+function prepSource() {
+  SRC = SRCS.find(x => x.id === state.src);
+  S = D.stocks.map(s => { const att = trailingSum(s.attention[SRC.id] || [], SRC.smooth || 1); return { ...s, att, ratio: rollingMedianRatio(att) }; });
+}
+prepSource();
+const unitWord = () => SRC.unit;
+const attLabel = () => (SRC.smooth > 1 ? `${SRC.label} (last ${SRC.smooth} days)` : `Daily ${SRC.label.toLowerCase().replace(/^wikipedia/, "Wikipedia")}`);
 // index of first trading day strictly after a calendar day number
 const firstTradeAfter = [];
-{ let j = 0; const nCal = Math.max(...S.map(s => s.views.length));
+{ let j = 0; const nCal = Math.max(...D.stocks.flatMap(s => Object.values(s.attention).map(a => a.length)));
   for (let c = 0; c < nCal; c++) { const t = t0 + c * DAY; while (j < N && tDates[j] <= t) j++; firstTradeAfter[c] = j; } }
 
 function excessPath(s, e) {
@@ -334,7 +356,7 @@ function events(s, thresh) {
     const path = excessPath(s, e);
     // tradable: close of day 0 to close of day HOLD
     const tr = (e + HOLD < N && s.close[e] && s.close[e + HOLD]) ? (s.close[e + HOLD] / s.close[e] - 1) - (spy[e + HOLD] / spy[e] - 1) : null;
-    ev.push({ c, e, ratio: r, views: s.views[c], path, tr });
+    ev.push({ c, e, ratio: r, views: s.att[c], path, tr });
   }
   return ev;
 }
@@ -371,15 +393,16 @@ function avgPath(evs) {
 // ---------- header ----------
 const lastT = tDates[N - 1];
 $("asof").textContent = "Prices to " + fmtDate(lastT) + " · updated " + new Date(D.built).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC";
-$("sources").textContent = "Sources: " + D.sources.views + "; " + D.sources.prices + ".";
-{
+$("sources").textContent = "Sources: " + SRCS.map(x => x.about).join("; ") + "; " + D.sources.prices + ".";
+function renderTape() {
   const items = S.map(s => {
     const c = s.close, ch = c[N - 1] / c[N - 2] - 1;
-    let lastV = null, lastR = null; for (let i = s.views.length - 1; i >= 0; i--) if (s.views[i] != null) { lastV = s.views[i]; lastR = s.ratio[i]; break; }
-    return `<span><b>${s.ticker}</b> ${c[N - 1].toFixed(2)} <span class="${cls(ch)}">${fmtPct(ch)}</span> · ${fmtBig(lastV)} views${lastR ? ` (${lastR.toFixed(1)}×)` : ""}</span>`;
+    let lastV = null, lastR = null; for (let i = s.att.length - 1; i >= 0; i--) if (s.att[i] != null) { lastV = s.att[i]; lastR = s.ratio[i]; break; }
+    return `<span><b>${s.ticker}</b> ${c[N - 1].toFixed(2)} <span class="${cls(ch)}">${fmtPct(ch)}</span> · ${fmtBig(lastV)} ${unitWord()}${lastR ? ` (${lastR.toFixed(1)}×)` : ""}</span>`;
   }).join("");
   $("tape").innerHTML = items + items;
 }
+renderTape();
 
 // ---------- chips & controls ----------
 if (state.sel >= S.length) state.sel = 0;
@@ -411,12 +434,12 @@ function renderMain(s, ev) {
   const x0 = rangeStart(state.range);
   const price = [], views = [], spikes = [];
   for (let i = 0; i < N; i++) if (tDates[i] >= x0 && s.close[i] != null) price.push({ x: tDates[i], y: s.close[i] });
-  for (let c = 0; c < s.views.length; c++) { const t = t0 + c * DAY; if (t >= x0 && s.views[c] != null) views.push({ x: t, y: s.views[c] }); }
+  for (let c = 0; c < s.att.length; c++) { const t = t0 + c * DAY; if (t >= x0 && s.att[c] != null) views.push({ x: t, y: s.att[c] }); }
   for (const e of ev) { const t = t0 + e.c * DAY; if (t >= x0) spikes.push({ x: t, y: e.views, r: e.ratio, tr: e.tr }); }
   const ax = axisTheme();
   const cfg = {
     data: { datasets: [
-      { type: "line", label: "Wikipedia views", data: views, yAxisID: "yv", borderColor: withAlpha(css("--views"), .85), backgroundColor: withAlpha(css("--views"), .18), fill: true, borderWidth: 1, pointRadius: 0, tension: 0, order: 3 },
+      { type: "line", label: "Attention", data: views, yAxisID: "yv", borderColor: withAlpha(css("--views"), .85), backgroundColor: withAlpha(css("--views"), .18), fill: true, borderWidth: 1, pointRadius: 0, tension: 0, order: 3 },
       { type: "scatter", label: "Spike", data: spikes, yAxisID: "yv", backgroundColor: css("--spike"), borderColor: css("--surface"), borderWidth: 1.5, pointRadius: 5, pointHoverRadius: 7, order: 1 },
       { type: "line", label: "Price", data: price, yAxisID: "yp", borderColor: css("--price"), borderWidth: 2, pointRadius: 0, tension: 0, order: 2 },
     ] },
@@ -427,8 +450,8 @@ function renderMain(s, ev) {
         tooltip: { callbacks: {
           title: items => fmtDate(items[0].parsed.x),
           label: it => it.dataset.label === "Price" ? ` Price $${it.parsed.y.toFixed(2)}`
-            : it.dataset.label === "Spike" ? ` Spike: ${fmtBig(it.raw.y)} views (${it.raw.r.toFixed(1)}× usual) · next 20 days vs S&P: ${fmtPct(it.raw.tr)}`
-            : ` ${fmtBig(it.parsed.y)} views` } } },
+            : it.dataset.label === "Spike" ? ` Spike: ${fmtBig(it.raw.y)} ${unitWord()} (${it.raw.r.toFixed(1)}× usual) · next 20 days vs S&P: ${fmtPct(it.raw.tr)}`
+            : ` ${fmtBig(it.parsed.y)} ${unitWord()}` } } },
       scales: {
         x: { type: "linear", min: x0, max: lastT, ...ax, grid: { display: false }, ticks: { ...ax.ticks, maxTicksLimit: 7, callback: v => fmtShort(v) } },
         yp: { position: "left", ...ax, ticks: { ...ax.ticks, callback: v => "$" + v } },
@@ -444,10 +467,10 @@ function renderStats(s, ev, sum) {
   const b = BASE[state.sel];
   const recent = ev.length ? ev[ev.length - 1] : null;
   $("stats").innerHTML = [
-    ["Spikes found", `${ev.length}`, `since ${D.viewsStart.slice(0, 4)} at ${state.thresh}× usual views`],
+    ["Spikes found", `${ev.length}`, `since ${D.viewsStart.slice(0, 4)} at ${state.thresh}× usual ${unitWord()}`],
     ["After a spike: next 20 days", `<span class="${cls(sum.mean)}">${fmtPct(sum.mean)}</span>`, `vs S&P 500 · normal 20 days: ${fmtPct(b.mean)}`],
     ["Beat the S&P after a spike", sum.n ? `${Math.round(sum.hit * 100)}%` : "–", `of spikes · normally ${Math.round(b.hit * 100)}% of the time`],
-    ["Latest spike", recent ? fmtDate(t0 + recent.c * DAY).replace(/ \d{4}$/, m => m) : "–", recent ? `${fmtBig(recent.views)} views, ${recent.ratio.toFixed(1)}× usual` : "none at this threshold"],
+    ["Latest spike", recent ? fmtDate(t0 + recent.c * DAY).replace(/ \d{4}$/, m => m) : "–", recent ? `${fmtBig(recent.views)} ${unitWord()}, ${recent.ratio.toFixed(1)}× usual` : "none at this threshold"],
   ].map(([k, v, sub]) => `<div class="stat"><span class="k">${k}</span><span class="v">${v}</span><span class="s">${sub}</span></div>`).join("");
   const recentEv = ev.slice(-5).reverse();
   const wikiDay = t => { const d = new Date(t); return `${d.getUTCFullYear()}_${d.toLocaleString("en-GB", { month: "long", timeZone: "UTC" })}_${d.getUTCDate()}`; };
@@ -538,14 +561,19 @@ function weeklyIndex(excl = new Set()) {
   for (const k in series) series[k] = series[k].slice(0, dates.length);
   return { dates, series, picks };
 }
-let IDX = weeklyIndex();
+let IDX, FULL_BUZZ, FULL_EW, LOO;
+function computeIndex() {
+  IDX = weeklyIndex(excluded);
 const yearsOf = d => (d.at(-1) - d[0]) / (365.25 * DAY);
 const cagrOf = (v, d) => Math.pow(v.at(-1) / v[0], 1 / yearsOf(d)) - 1;
 // leave-one-out: how much of the Buzz 4 result depends on a single company?
-const FULL_BUZZ = cagrOf(IDX.series.buzz, IDX.dates), FULL_EW = cagrOf(IDX.series.ew, IDX.dates);
-const LOO = S.map((s, k) => { const r = weeklyIndex(new Set([k])); return { k, buzz: cagrOf(r.series.buzz, r.dates), ew: cagrOf(r.series.ew, r.dates) }; })
-  .map(o => ({ ...o, edge: o.buzz - o.ew, drop: (FULL_BUZZ - FULL_EW) - (o.buzz - o.ew) })).sort((a, b) => b.drop - a.drop);
+  const full = excluded.size ? weeklyIndex() : IDX;
+  FULL_BUZZ = cagrOf(full.series.buzz, full.dates); FULL_EW = cagrOf(full.series.ew, full.dates);
+  LOO = S.map((s, k) => { const r = weeklyIndex(new Set([k])); return { k, buzz: cagrOf(r.series.buzz, r.dates), ew: cagrOf(r.series.ew, r.dates) }; })
+    .map(o => ({ ...o, edge: o.buzz - o.ew, drop: (FULL_BUZZ - FULL_EW) - (o.buzz - o.ew) })).sort((a, b) => b.drop - a.drop);
+}
 const excluded = new Set();
+computeIndex();
 let yearChart, looChart;
 function perf(vals, dates) {
   const r = []; for (let i = 1; i < vals.length; i++) r.push(vals[i] / vals[i - 1] - 1);
@@ -614,17 +642,19 @@ $("excl").addEventListener("click", ev => { const btn = ev.target.closest(".chip
   IDX = weeklyIndex(excluded); renderIndex(); });
 
 // ---------- replay ----------
-const nCal = Math.max(...S.map(s => s.views.length));
+let nCal = Math.max(...S.map(s => s.att.length));
 const firstC = WINDOW; // ratios need history
 $("scrub").min = firstC; $("scrub").max = nCal - 1; $("scrub").value = nCal - 1;
 let timer = null, replayChart = null;
 // market-wide attention: median across companies of the attention ratio, smoothed over 14 days
-const mktAttn = (() => {
+let mktAttn;
+function computeMkt() {
   // geometric mean across companies, so one GameStop-sized spike cannot dominate
   const raw = []; for (let c = 0; c < nCal; c++) { const v = S.map(s => s.ratio[c]).filter(Boolean); raw.push(v.length >= 8 ? v.reduce((a, b) => a + Math.log(b), 0) / v.length : null); }
   const out = []; for (let c = 0; c < nCal; c++) { let sum = 0, n = 0; for (let j = Math.max(0, c - 6); j <= c; j++) if (raw[j] != null) { sum += raw[j]; n++; } out.push(n ? { x: t0 + c * DAY, y: Math.exp(sum / n) } : null); }
   return out.filter(Boolean);
-})();
+}
+mktAttn = computeMkt();
 const cursor = { id: "cursor", afterDatasetsDraw(ch) { const t = t0 + +$("scrub").value * DAY; const { ctx, chartArea: a, scales: { x } } = ch; const px = x.getPixelForValue(t);
   ctx.save(); ctx.strokeStyle = css("--spike"); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(px, a.top); ctx.lineTo(px, a.bottom); ctx.stroke(); ctx.restore(); } };
 function buildReplayChart() {
@@ -644,12 +674,12 @@ function renderReplay() {
   if (replayChart) replayChart.draw();
   const c = +$("scrub").value; const t = t0 + c * DAY;
   $("replay-date").textContent = fmtDate(t);
-  const rows = S.map(s => ({ s, r: s.ratio[c], v: s.views[c] })).sort((a, b) => (b.r || 0) - (a.r || 0));
+  const rows = S.map(s => ({ s, r: s.ratio[c], v: s.att[c] })).sort((a, b) => (b.r || 0) - (a.r || 0));
   const maxR = Math.max(4, ...rows.map(o => o.r || 0));
   const scale = r => Math.min(100, (Math.log(Math.max(r, 0.25)) - Math.log(0.25)) / (Math.log(maxR) - Math.log(0.25)) * 100);
   $("bars").innerHTML = rows.map(o => `<div class="bar-row"><span class="t">${o.s.ticker}</span><span class="track"><span class="fill ${o.r >= state.thresh ? "hot" : ""}" style="display:block;width:${o.r ? scale(o.r) : 0}%"></span></span><span class="r">${o.r ? o.r.toFixed(1) + "×" : "–"}</span></div>`).join("");
   const top = rows[0];
-  $("replay-note").textContent = top.r >= state.thresh ? `${top.s.name}: ${fmtBig(top.v)} people read its Wikipedia page, ${top.r.toFixed(1)}× the usual.` : "A quiet day: no company above the spike threshold.";
+  $("replay-note").textContent = top.r >= state.thresh ? (SRC.id === "wikipedia" ? `${top.s.name}: ${fmtBig(top.v)} people read its Wikipedia page, ${top.r.toFixed(1)}× the usual.` : `${top.s.name}: ${fmtBig(top.v)} ${attLabel().toLowerCase().replace(/^daily /, "")}, ${top.r.toFixed(1)}× the usual.`) : "A quiet day: no company above the spike threshold.";
 }
 $("scrub").addEventListener("input", () => { stop(); renderReplay(); });
 function stop() { if (timer) { clearInterval(timer); timer = null; $("play").textContent = "▶ Play"; } }
@@ -660,11 +690,24 @@ $("play").addEventListener("click", () => {
   timer = setInterval(() => { const v = +$("scrub").value + 2; if (v >= nCal - 1) { $("scrub").value = nCal - 1; renderReplay(); return stop(); } $("scrub").value = v; renderReplay(); }, 60);
 });
 
+// ---------- source picker ----------
+$("source").innerHTML = SRCS.map(x => `<button data-src="${x.id}" aria-pressed="false">${x.label}</button>`).join("");
+$("source").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b || b.dataset.src === state.src) return;
+  stop(); state.src = b.dataset.src; save(); prepSource(); excluded.clear(); computeIndex();
+  nCal = Math.max(...S.map(s => s.att.length)); $("scrub").max = nCal - 1; $("scrub").value = nCal - 1;
+  mktAttn = computeMkt(); renderTape(); renderAll();
+});
+
 // ---------- render all ----------
 function renderAll() {
   const s = S[state.sel];
   $("chips").querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.i === state.sel)));
   $("thresh-out").textContent = state.thresh + "×";
+  syncSeg("source", "src", state.src);
+  $("eyebrow").textContent = `${SRC.label} × stock returns`;
+  $("src-about").textContent = SRC.about;
+  $("legend-att").textContent = attLabel();
   syncSeg("range", "range", state.range); syncSeg("scope", "scope", state.scope); syncSeg("idxrange", "range", state.idxRange);
   $("scope-one").textContent = s.ticker;
   $("explore-title").textContent = `${s.name} (${s.ticker}): price and attention`;

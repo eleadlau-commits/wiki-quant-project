@@ -1,12 +1,16 @@
-"""Build dashboard/data.json: daily prices and Wikipedia page views.
+"""Build dashboard/data.json: daily prices plus attention from every source.
 
 Run by the GitHub Action in .github/workflows/dashboard-data.yml every
 weekday, so the dashboard always has fresh numbers. You can also run it
 yourself: `python scripts/build_dashboard_data.py`.
+
+Which companies and how each is looked up: src/wikiquant/universe.py.
+Which data sources: src/wikiquant/sources/ (add a plugin, list it in SOURCES).
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from datetime import date, timedelta
@@ -18,32 +22,13 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from wikiquant.data import load_prices  # noqa: E402
-from wikiquant.pageviews import load_pageviews  # noqa: E402
+from wikiquant.sources import get_source  # noqa: E402
+from wikiquant.universe import BENCHMARK, UNIVERSE  # noqa: E402
 
 START = "2019-01-01"
-INDEX = "SPY"  # ETF that tracks the S&P 500
-
-# ticker, display name, English Wikipedia article(s). When a company page was
-# renamed (Facebook -> Meta), list every title: views are summed, because
-# readers of the old title land on a redirect that is counted separately.
-UNIVERSE = [
-    ("AAPL", "Apple", "Apple_Inc."),
-    ("MSFT", "Microsoft", "Microsoft"),
-    ("NVDA", "Nvidia", "Nvidia"),
-    ("AMZN", "Amazon", "Amazon_(company)"),
-    ("GOOGL", "Alphabet", "Alphabet_Inc."),
-    ("META", "Meta", ["Meta_Platforms", "Facebook,_Inc."]),
-    ("TSLA", "Tesla", "Tesla,_Inc."),
-    ("NFLX", "Netflix", "Netflix"),
-    ("JPM", "JPMorgan Chase", "JPMorgan_Chase"),
-    ("DIS", "Disney", "The_Walt_Disney_Company"),
-    ("BA", "Boeing", "Boeing"),
-    ("GME", "GameStop", "GameStop"),
-    ("AMD", "AMD", ["AMD", "Advanced_Micro_Devices"]),
-    ("PFE", "Pfizer", "Pfizer"),
-    ("NKE", "Nike", "Nike,_Inc."),
-    ("INTC", "Intel", "Intel"),
-]
+# The first source is required; the others are skipped (with a warning) if
+# their API is down, so one flaky source cannot stop the daily refresh.
+SOURCES = ["wikipedia", "hackernews"]
 
 
 def build_page() -> None:
@@ -55,48 +40,72 @@ def build_page() -> None:
     print("Wrote dashboard/index.html")
 
 
-def main() -> None:
-    end = (date.today() - timedelta(days=1)).isoformat()
-    tickers = [t for t, _, _ in UNIVERSE] + [INDEX]
-    prices = load_prices(tickers, start=START, refresh=True).dropna(how="all")
-    prices = prices.ffill()
+def to_list(series: pd.Series, digits: int | None = None) -> list:
+    if digits is None:
+        return [None if pd.isna(v) else int(round(v)) for v in series]
+    return [None if pd.isna(v) else round(float(v), digits) for v in series]
 
-    stocks = []
-    for ticker, name, title in UNIVERSE:
-        titles = [title] if isinstance(title, str) else title
-        parts = [load_pageviews(t, START, end, refresh=True) for t in titles]
-        views = pd.concat(parts, axis=1).sum(axis=1, min_count=1)
-        title = titles[0]
-        # Before an article existed under any listed title (e.g. Meta before
-        # "Facebook, Inc." was split out), counts are near zero. Treat that
-        # stretch as missing rather than as a sudden attention explosion later.
-        real = views >= 0.1 * views.median()
-        if real.any():
-            views = views.where(views.index >= real.idxmax())
-        views = views.reindex(pd.date_range(START, views.index.max(), freq="D"))
-        stocks.append({
-            "ticker": ticker,
-            "name": name,
-            "wiki": title,
-            "close": [None if pd.isna(v) else round(float(v), 2) for v in prices[ticker]],
-            "views": [None if pd.isna(v) else int(v) for v in views],
-        })
-        print(f"{ticker}: {len(views)} days of views, last price {prices[ticker].iloc[-1]:.2f}")
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--sources", nargs="+", default=SOURCES)
+    parser.add_argument("--page-only", action="store_true", help="only rebuild index.html")
+    args = parser.parse_args()
+    if args.page_only:
+        return build_page()
+
+    end = (date.today() - timedelta(days=1)).isoformat()
+    tickers = [c.ticker for c in UNIVERSE] + [BENCHMARK]
+    prices = load_prices(tickers, start=START, refresh=True).dropna(how="all").ffill()
+    calendar = pd.date_range(START, end, freq="D")
+
+    attention: dict[str, dict[str, list]] = {c.ticker: {} for c in UNIVERSE}
+    meta = []
+    for i, name in enumerate(args.sources):
+        source = get_source(name)
+        try:
+            for c in UNIVERSE:
+                series = source.load(c.keys_for(name), START, end).reindex(calendar)
+                attention[c.ticker][name] = to_list(series)
+                last = series.dropna()
+                print(f"[{name}] {c.ticker}: {int(last.sum()):,} {source.unit}, "
+                      f"last {last.index.max().date() if len(last) else '-'}")
+        except Exception as err:  # noqa: BLE001
+            if i == 0:
+                raise
+            print(f"WARNING: skipping source {name!r}: {err!r}")
+            for c in UNIVERSE:
+                attention[c.ticker].pop(name, None)
+            continue
+        meta.append(source.describe())
+
+    # Trim trailing calendar days where no source has data yet.
+    last_day = max(
+        (calendar[max(i for i, v in enumerate(vals) if v is not None)]
+         for per in attention.values() for vals in per.values() if any(v is not None for v in vals)),
+        default=calendar[-1],
+    )
+    n = len(pd.date_range(START, last_day, freq="D"))
 
     out = {
         "built": pd.Timestamp.now(tz="UTC").isoformat(timespec="minutes"),
-        "sources": {
-            "views": "Wikimedia Pageviews API (en.wikipedia, human traffic)",
-            "prices": "Yahoo Finance via yfinance (split and dividend adjusted close)",
-        },
+        "sources": {"prices": "Yahoo Finance via yfinance (split and dividend adjusted close)"},
+        "attention": meta,
         "dates": [d.strftime("%Y-%m-%d") for d in prices.index],
         "viewsStart": START,
-        "index": {"ticker": INDEX, "name": "S&P 500 (SPY)",
-                  "close": [round(float(v), 2) for v in prices[INDEX]]},
-        "stocks": stocks,
+        "index": {"ticker": BENCHMARK, "name": "S&P 500 (SPY)", "close": to_list(prices[BENCHMARK], 2)},
+        "stocks": [
+            {
+                "ticker": c.ticker,
+                "name": c.name,
+                "wiki": c.keys_for("wikipedia")[0],
+                "close": to_list(prices[c.ticker], 2),
+                "attention": {k: v[:n] for k, v in attention[c.ticker].items()},
+            }
+            for c in UNIVERSE
+        ],
     }
     path = ROOT / "dashboard" / "data.json"
-    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(out, separators=(",", ":")))
     print(f"Wrote {path} ({path.stat().st_size / 1e6:.2f} MB)")
     build_page()

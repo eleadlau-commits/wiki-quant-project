@@ -5,10 +5,14 @@ on:
     - cron: "30 22 * * 1-5"   # weekdays, after the US market closes (runs on main)
   workflow_dispatch:
   push:
-    branches: [main, claude/project-thread-e4lb48]
+    branches: [main, claude/project-thread-0y7spp]
     paths:
       - scripts/build_dashboard_data.py
       - src/wikiquant/pageviews.py
+      - src/wikiquant/sources/**
+      - src/wikiquant/universe.py
+      - src/wikiquant/analysis.py
+      - scripts/compare_sources.py
       - .github/workflows/dashboard-data.yml
       - dashboard/template.html
 
@@ -30,12 +34,20 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pandas numpy yfinance requests
+      # Keep downloaded attention data between runs, so each day only fetches new days
+      - uses: actions/cache@v4
+        with:
+          path: data/cache/attention
+          key: attention-${{ github.run_id }}
+          restore-keys: attention-
       - run: python scripts/build_dashboard_data.py
+      - name: Compare sources (same tests on every source)
+        run: python scripts/compare_sources.py
       - name: Commit fresh data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dashboard/data.json dashboard/index.html
+          git add dashboard/data.json dashboard/index.html reports/attention_comparison.md
           git diff --cached --quiet || git commit -m "Refresh dashboard data"
           git push
       # Publish the page to GitHub Pages (only from main, once Pages is set to "GitHub Actions")
