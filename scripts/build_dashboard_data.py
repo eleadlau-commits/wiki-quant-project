@@ -67,6 +67,12 @@ def main() -> None:
         parts = [load_pageviews(t, START, end, refresh=True) for t in titles]
         views = pd.concat(parts, axis=1).sum(axis=1, min_count=1)
         title = titles[0]
+        # Before an article existed under any listed title (e.g. Meta before
+        # "Facebook, Inc." was split out), counts are near zero. Treat that
+        # stretch as missing rather than as a sudden attention explosion later.
+        real = views >= 0.1 * views.median()
+        if real.any():
+            views = views.where(views.index >= real.idxmax())
         views = views.reindex(pd.date_range(START, views.index.max(), freq="D"))
         stocks.append({
             "ticker": ticker,
