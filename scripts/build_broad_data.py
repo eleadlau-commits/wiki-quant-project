@@ -53,8 +53,10 @@ def yahoo_many(tickers: list[str], start: str) -> dict[str, pd.Series]:
     import yfinance as yf
 
     out = {}
-    for i in range(0, len(tickers), 100):
-        batch = tickers[i:i + 100]
+    for i in range(0, len(tickers), 50):
+        batch = tickers[i:i + 50]
+        if i:
+            time.sleep(2)
         df = None
         for attempt in range(4):
             try:
@@ -75,6 +77,18 @@ def yahoo_many(tickers: list[str], start: str) -> dict[str, pd.Series]:
             if len(s):
                 out[t] = s.astype(float)
     return out
+
+
+def yahoo_one(ticker: str, start: str) -> pd.Series | None:
+    """Single-ticker retry. Big batch downloads sometimes come back empty or
+    truncated for a few tickers (rate limits), so anything missing or suspiciously
+    short is asked for again on its own."""
+    for attempt in range(3):
+        got = yahoo_many([ticker], start)
+        if ticker in got:
+            return got[ticker]
+        time.sleep(2 * (attempt + 1))
+    return None
 
 
 def stooq_one(ticker: str, start: str) -> pd.Series | None:
@@ -108,6 +122,10 @@ def load_all_prices(members, start_date: pd.Timestamp, use_stooq: bool = True):
         rejected = []
         for sym in cands[m.ticker]:
             s = got.get(sym)
+            if s is None or s.index.min() > start_date + MAX_LATE_START:
+                retry = yahoo_one(sym, PRICE_START)
+                if retry is not None and (s is None or retry.index.min() < s.index.min()):
+                    s = got[sym] = retry
             if s is None:
                 continue
             if s.index.min() > start_date + MAX_LATE_START:
@@ -164,6 +182,13 @@ def main() -> None:
         print(f"Universe: {len(members)} companies from {meta['url']} ({meta['timestamp']})")
     else:
         members = U.load_universe(OUT / "universe.csv")
+        # Pick up ticker renames added since the list was saved, and re-follow
+        # redirects (articles get renamed over time).
+        current = U.resolve_redirects([m.article for m in members])
+        for m in members:
+            m.yahoo = "|".join(U.yahoo_tickers(m.ticker))
+            m.current = current.get(m.article, m.article)
+        U.save_universe(members, OUT / "universe.csv")
         print(f"Universe: {len(members)} companies (cached in data/broad/universe.csv)")
 
     start_date = pd.Timestamp(args.as_of)

@@ -49,3 +49,9 @@ def test_member_keys_include_old_and_new_title():
     assert m.keys == ["Meta_Platforms", "Facebook,_Inc."]
     same = U.Member("MMM", "MMM", "3M", "Ind", "3M", "3M")
     assert same.keys == ["3M"]
+
+
+def test_redirect_chains_are_followed(monkeypatch):
+    hops = {"Netflix_Inc.": "Netflix,_Inc.", "Netflix,_Inc.": "Netflix"}
+    monkeypatch.setattr(U, "_resolve_once", lambda ts: {t: hops.get(t, t) for t in ts})
+    assert U.resolve_redirects(["Netflix_Inc.", "3M"]) == {"Netflix_Inc.": "Netflix", "3M": "3M"}

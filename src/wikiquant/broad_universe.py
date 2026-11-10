@@ -72,6 +72,14 @@ RENAMED: dict[str, tuple[str, ...]] = {
     "WRK": ("SW",),           # WestRock -> Smurfit WestRock (2024)
     "TYC": ("JCI",),          # Tyco merged into Johnson Controls (2016)
     "GOOG": ("GOOGL", "GOOG"),
+    "CBG": ("CBRE",),         # CBRE Group (2018)
+    "BLL": ("BALL",),         # Ball Corp (2022)
+    "CHK": ("EXE",),          # Chesapeake -> Expand Energy (2024)
+    "LB": ("BBWI",),          # L Brands -> Bath & Body Works (2021)
+    "PKI": ("RVTY",),         # PerkinElmer -> Revvity (2023)
+    "GPS": ("GAP",),          # Gap (2024)
+    "IR": ("TT",),            # Ingersoll-Rand plc -> Trane Technologies (2020)
+    "UA": ("UAA",),           # Under Armour class A (UA is now the newer class C)
 }
 
 
@@ -231,8 +239,7 @@ def revision_html(revid: int) -> str:
     return _get({"action": "parse", "oldid": revid, "prop": "text"})["parse"]["text"]
 
 
-def resolve_redirects(titles: list[str]) -> dict[str, str]:
-    """Map each article title to the page it redirects to today (or itself)."""
+def _resolve_once(titles: list[str]) -> dict[str, str]:
     out = {}
     for i in range(0, len(titles), 50):
         batch = [t.replace("_", " ") for t in titles[i:i + 50]]
@@ -247,6 +254,24 @@ def resolve_redirects(titles: list[str]) -> dict[str, str]:
                 cur, steps = hop[cur], steps + 1
             out[t.replace(" ", "_")] = cur.replace(" ", "_")
     return out
+
+
+def resolve_redirects(titles: list[str], rounds: int = 4) -> dict[str, str]:
+    """Map each article title to the real page it ends up at today.
+
+    The API follows only one redirect per request, and after a rename the old
+    title often points at another redirect ("Netflix Inc." -> "Netflix, Inc."
+    -> "Netflix"). So we keep resolving until nothing changes.
+    """
+    result = {t: t for t in titles}
+    for _ in range(rounds):
+        todo = sorted(set(result.values()))
+        step = _resolve_once(todo)
+        new = {t: step.get(cur, cur) for t, cur in result.items()}
+        if new == result:
+            break
+        result = new
+    return result
 
 
 def build_universe(date: str = START_DATE) -> tuple[list[Member], dict]:
