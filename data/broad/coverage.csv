@@ -56,7 +56,7 @@ AVGO,Avago Technologies,Information Technology,yahoo,AVGO,2015-07-01,2026-11-10,
 AVB,"AvalonBay Communities, Inc.",Financials,,,,,AVB starts 2026-08-14,56.0,,"AvalonBay_Communities + AvalonBay_Communities,_Inc.",False
 AVY,Avery Dennison Corp,Materials,yahoo,AVY,2015-07-01,2026-11-10,,170.0,,Avery_Dennison + Avery_Dennison_Corp,True
 BHI,Baker Hughes Inc,Energy,,,,,no price data (most likely bought out or delisted),485.0,,Baker_Hughes + Baker_Hughes_Inc,True
-BLL,Ball Corp,Materials,,,,,no price data (most likely bought out or delisted),308.0,,Ball_Corporation + Ball_Corp,True
+BLL,Ball Corp,Materials,yahoo,BALL,2015-07-01,2026-11-10,,308.0,,Ball_Corporation + Ball_Corp,True
 BAC,Bank of America Corp,Financials,yahoo,BAC,2015-07-01,2026-11-10,,2182.0,,Bank_of_America + Bank_of_America_Corp,True
 BK,The Bank of New York Mellon Corp.,Financials,,,,,no price data (most likely bought out or delisted),2.0,,BNY + The_Bank_of_New_York_Mellon_Corp.,True
 BCR,Bard (C.R.) Inc.,Health Care,,,,,no price data (most likely bought out or delisted),11.0,,Bard_(company) + Bard_(C.R.)_Inc.,False
@@ -89,7 +89,7 @@ HSIC,Henry Schein,Health Care,yahoo,HSIC,2015-07-01,2026-11-10,,100.0,,Henry_Sch
 KMX,Carmax Inc,Consumer Discretionary,yahoo,KMX,2015-07-01,2026-11-10,,246.0,,CarMax + Carmax_Inc,False
 CCL,Carnival Corp.,Consumer Discretionary,yahoo,CCL,2015-07-01,2026-11-10,,24.0,,Carnival_Corporation + Carnival_Corp.,True
 CAT,Caterpillar Inc.,Industrials,yahoo,CAT,2015-07-01,2026-11-10,,1260.0,,Caterpillar_Inc.,True
-CBG,CBRE Group,Financials,,,,,no price data (most likely bought out or delisted),614.0,,CBRE_Group,True
+CBG,CBRE Group,Financials,yahoo,CBRE,2015-07-01,2026-11-10,,614.0,,CBRE_Group,True
 CBS,CBS Corp.,Consumer Discretionary,,,,,PSKY starts 2026-07-29; PARA starts 2021-02-12,384.0,,CBS_Corporation + CBS_Corp.,False
 CELG,Celgene Corp.,Health Care,,,,,no price data (most likely bought out or delisted),140.0,,Celgene + Celgene_Corp.,False
 CNP,CenterPoint Energy,Utilities,yahoo,CNP,2015-07-01,2026-11-10,,82.0,,CenterPoint_Energy,True
@@ -97,7 +97,7 @@ CTL,CenturyLink Inc,Telecommunications Services,,,,,no price data (most likely b
 CERN,Cerner,Health Care,,,,,no price data (most likely bought out or delisted),279.0,,Oracle_Health + Cerner,False
 CF,CF Industries Holdings Inc,Materials,yahoo,CF,2015-07-01,2026-11-10,,59.0,,CF_Industries + CF_Industries_Holdings_Inc,True
 SCHW,Charles Schwab Corporation,Financials,yahoo,SCHW,2015-07-01,2026-11-10,,626.0,,Charles_Schwab_Corporation,True
-CHK,Chesapeake Energy,Energy,,,,,no price data (most likely bought out or delisted),120.0,,Expand_Energy + Chesapeake_Energy,True
+CHK,Chesapeake Energy,Energy,,,,,EXE starts 2021-02-10,120.0,,Expand_Energy + Chesapeake_Energy,True
 CVX,Chevron Corp.,Energy,yahoo,CVX,2015-07-01,2026-11-10,,1142.0,,Chevron_Corporation + Chevron_Corp.,True
 CMG,Chipotle Mexican Grill,Consumer Discretionary,yahoo,CMG,2015-07-01,2026-11-10,,1388.0,,Chipotle_Mexican_Grill,True
 CB,Chubb Corp.,Financials,yahoo,CB,2015-07-01,2026-11-10,,301.0,,Chubb_Limited + Chubb_Corp.,True
@@ -199,7 +199,7 @@ BEN,Franklin Resources,Financials,yahoo,BEN,2015-07-01,2026-11-10,,18.0,,Frankli
 FCX,Freeport-McMoran Cp & Gld,Materials,yahoo,FCX,2015-07-01,2026-11-10,,242.0,,Freeport-McMoRan + Freeport-McMoran_Cp_&_Gld,True
 FTR,Frontier Communications,Telecommunications Services,,,,,no price data (most likely bought out or delisted),275.0,,Frontier_Communications,False
 GME,GameStop Corp.,Consumer Discretionary,yahoo,GME,2015-07-01,2026-11-10,,797.5,,GameStop + GameStop_Corp.,False
-GPS,Gap (The),Consumer Discretionary,,,,,no price data (most likely bought out or delisted),946.0,,Gap_Inc. + Gap_(The),False
+GPS,Gap (The),Consumer Discretionary,yahoo,GAP,2015-07-01,2026-11-10,,946.0,,Gap_Inc. + Gap_(The),False
 GRMN,Garmin Ltd.,Consumer Discretionary,yahoo,GRMN,2015-07-01,2026-11-10,,623.0,,Garmin + Garmin_Ltd.,True
 GD,General Dynamics,Industrials,yahoo,GD,2015-07-01,2026-11-10,,1021.0,,General_Dynamics,True
 GE,General Electric,Industrials,yahoo,GE,2015-07-01,2026-11-10,,2595.5,,General_Electric,False
@@ -232,7 +232,7 @@ HUM,Humana Inc.,Health Care,yahoo,HUM,2015-07-01,2026-11-10,,269.0,,Humana + Hum
 HBAN,Huntington Bancshares,Financials,yahoo,HBAN,2015-07-01,2026-11-10,,190.0,,Huntington_Bancshares,True
 ITW,Illinois Tool Works,Industrials,yahoo,ITW,2015-07-01,2026-11-10,,153.0,,Illinois_Tool_Works,True
 ILMN,Illumina Inc,Health Care,yahoo,ILMN,2015-07-01,2026-11-10,,294.0,,"Illumina,_Inc. + Illumina_(company)",True
-IR,Ingersoll-Rand PLC,Industrials,,,,,IR starts 2017-05-12,110.0,,Trane_Technologies + Ingersoll-Rand_PLC,True
+IR,Ingersoll-Rand PLC,Industrials,yahoo,TT,2015-07-01,2026-11-10,,110.0,,Trane_Technologies + Ingersoll-Rand_PLC,True
 INTC,Intel Corp.,Information Technology,yahoo,INTC,2015-07-01,2026-11-10,,2548.0,,Intel + Intel_Corp.,True
 ICE,Intercontinental Exchange,Financials,yahoo,ICE,2015-07-01,2026-11-10,,440.5,,Intercontinental_Exchange,True
 IBM,International Bus. Machines,Information Technology,yahoo,IBM,2015-07-01,2026-11-10,,3937.0,,IBM,True
@@ -260,7 +260,7 @@ KLAC,KLA-Tencor Corp.,Information Technology,yahoo,KLAC,2015-07-01,2026-11-10,,1
 KSS,Kohl's Corp.,Consumer Discretionary,yahoo,KSS,2015-07-01,2026-11-10,,548.0,,Kohl's + Kohl's_Corp.,False
 KHC,Kraft Heinz Co,Consumer Staples,yahoo,KHC,2015-07-06,2026-11-10,,922.0,,Kraft_Heinz,True
 KR,Kroger Co.,Consumer Staples,yahoo,KR,2015-07-01,2026-11-10,,1421.0,,Kroger + Kroger_Co.,True
-LB,L Brands Inc.,Consumer Discretionary,,,,,LB starts 2024-06-28,7.0,,"Bath_&_Body_Works,_Inc. + L_Brands_Inc.",False
+LB,L Brands Inc.,Consumer Discretionary,yahoo,BBWI,2015-07-01,2026-11-10,,7.0,,"Bath_&_Body_Works,_Inc. + L_Brands_Inc.",False
 LLL,L-3 Communications Holdings,Industrials,,,,,no price data (most likely bought out or delisted),221.0,,L3_Technologies + L-3_Communications_Holdings,False
 LH,Laboratory Corp. of America Holding,Health Care,yahoo,LH,2015-07-01,2026-11-10,,16.0,,Labcorp + Laboratory_Corp._of_America_Holding,True
 LRCX,Lam Research,Information Technology,yahoo,LRCX,2015-07-01,2026-11-10,,265.0,,Lam_Research,True
@@ -348,7 +348,7 @@ PNR,Pentair Ltd.,Industrials,yahoo,PNR,2015-07-01,2026-11-10,,97.0,,Pentair,True
 PBCT,People's United Financial,Financials,,,,,no price data (most likely bought out or delisted),46.0,,People's_United_Financial,False
 POM,Pepco Holdings Inc.,Utilities,,,,,POM starts 2025-10-08,20.0,,Pepco_Holdings + Pepco_Holdings_Inc.,False
 PEP,PepsiCo Inc.,Consumer Staples,yahoo,PEP,2015-07-01,2026-11-10,,2841.0,,PepsiCo + PepsiCo_Inc.,True
-PKI,PerkinElmer,Health Care,,,,,no price data (most likely bought out or delisted),179.0,,PerkinElmer,False
+PKI,PerkinElmer,Health Care,yahoo,RVTY,2015-07-01,2026-11-10,,179.0,,PerkinElmer,False
 PRGO,Perrigo,Health Care,yahoo,PRGO,2015-07-01,2026-11-10,,118.0,,Perrigo,False
 PFE,Pfizer Inc.,Health Care,yahoo,PFE,2015-07-01,2026-11-10,,1505.0,,Pfizer + Pfizer_Inc.,True
 PCG,PG&E Corp.,Utilities,yahoo,PCG,2015-07-01,2026-11-10,,484.5,,Pacific_Gas_and_Electric_Company + PG&E_Corp.,True
@@ -450,7 +450,7 @@ FOX,Twenty-First Century Fox Class B,Consumer Discretionary,,,,,FOX starts 2019-
 TSN,Tyson Foods,Consumer Staples,yahoo,TSN,2015-07-01,2026-11-10,,436.0,,Tyson_Foods,True
 TYC,Tyco International,Industrials,yahoo,JCI,2015-07-01,2026-11-10,,274.0,,Tyco_International,False
 USB,U.S. Bancorp,Financials,yahoo,USB,2015-07-01,2026-11-10,,576.0,,U.S._Bancorp,True
-UA,Under Armour,Consumer Discretionary,,,,,UA starts 2016-03-23,1250.5,,Under_Armour,False
+UA,Under Armour,Consumer Discretionary,yahoo,UAA,2015-07-01,2026-11-10,,1250.5,,Under_Armour,False
 UNP,Union Pacific,Industrials,yahoo,UNP,2015-07-01,2026-11-10,,928.0,,Union_Pacific_Railroad + Union_Pacific,False
 UAL,United Continental Holdings,Industrials,yahoo,UAL,2015-07-01,2026-11-10,,2922.0,,United_Airlines + United_Continental_Holdings,True
 UNH,United Health Group Inc.,Health Care,yahoo,UNH,2015-07-01,2026-11-10,,932.0,,UnitedHealth_Group + United_Health_Group_Inc.,True

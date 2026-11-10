@@ -56,7 +56,7 @@ AVGO,AVGO,Avago Technologies,Information Technology,Avago_Technologies,Broadcom
 AVB,AVB,"AvalonBay Communities, Inc.",Financials,"AvalonBay_Communities,_Inc.",AvalonBay_Communities
 AVY,AVY,Avery Dennison Corp,Materials,Avery_Dennison_Corp,Avery_Dennison
 BHI,BHI,Baker Hughes Inc,Energy,Baker_Hughes_Inc,Baker_Hughes
-BLL,BLL,Ball Corp,Materials,Ball_Corp,Ball_Corporation
+BLL,BALL|BLL,Ball Corp,Materials,Ball_Corp,Ball_Corporation
 BAC,BAC,Bank of America Corp,Financials,Bank_of_America_Corp,Bank_of_America
 BK,BK,The Bank of New York Mellon Corp.,Financials,The_Bank_of_New_York_Mellon_Corp.,BNY
 BCR,BCR,Bard (C.R.) Inc.,Health Care,Bard_(C.R.)_Inc.,Bard_(company)
@@ -89,7 +89,7 @@ HSIC,HSIC,Henry Schein,Health Care,Henry_Schein,Henry_Schein
 KMX,KMX,Carmax Inc,Consumer Discretionary,Carmax_Inc,CarMax
 CCL,CCL,Carnival Corp.,Consumer Discretionary,Carnival_Corp.,Carnival_Corporation
 CAT,CAT,Caterpillar Inc.,Industrials,Caterpillar_Inc.,Caterpillar_Inc.
-CBG,CBG,CBRE Group,Financials,CBRE_Group,CBRE_Group
+CBG,CBRE|CBG,CBRE Group,Financials,CBRE_Group,CBRE_Group
 CBS,PSKY|PARA|CBS,CBS Corp.,Consumer Discretionary,CBS_Corp.,CBS_Corporation
 CELG,CELG,Celgene Corp.,Health Care,Celgene_Corp.,Celgene
 CNP,CNP,CenterPoint Energy,Utilities,CenterPoint_Energy,CenterPoint_Energy
@@ -97,7 +97,7 @@ CTL,CTL,CenturyLink Inc,Telecommunications Services,CenturyLink_Inc,Lumen_Techno
 CERN,CERN,Cerner,Health Care,Cerner,Oracle_Health
 CF,CF,CF Industries Holdings Inc,Materials,CF_Industries_Holdings_Inc,CF_Industries
 SCHW,SCHW,Charles Schwab Corporation,Financials,Charles_Schwab_Corporation,Charles_Schwab_Corporation
-CHK,CHK,Chesapeake Energy,Energy,Chesapeake_Energy,Expand_Energy
+CHK,EXE|CHK,Chesapeake Energy,Energy,Chesapeake_Energy,Expand_Energy
 CVX,CVX,Chevron Corp.,Energy,Chevron_Corp.,Chevron_Corporation
 CMG,CMG,Chipotle Mexican Grill,Consumer Discretionary,Chipotle_Mexican_Grill,Chipotle_Mexican_Grill
 CB,CB,Chubb Corp.,Financials,Chubb_Corp.,Chubb_Limited
@@ -199,7 +199,7 @@ BEN,BEN,Franklin Resources,Financials,Franklin_Resources,Franklin_Templeton
 FCX,FCX,Freeport-McMoran Cp & Gld,Materials,Freeport-McMoran_Cp_&_Gld,Freeport-McMoRan
 FTR,FTR,Frontier Communications,Telecommunications Services,Frontier_Communications,Frontier_Communications
 GME,GME,GameStop Corp.,Consumer Discretionary,GameStop_Corp.,GameStop
-GPS,GPS,Gap (The),Consumer Discretionary,Gap_(The),Gap_Inc.
+GPS,GAP|GPS,Gap (The),Consumer Discretionary,Gap_(The),Gap_Inc.
 GRMN,GRMN,Garmin Ltd.,Consumer Discretionary,Garmin_Ltd.,Garmin
 GD,GD,General Dynamics,Industrials,General_Dynamics,General_Dynamics
 GE,GE,General Electric,Industrials,General_Electric,General_Electric
@@ -232,7 +232,7 @@ HUM,HUM,Humana Inc.,Health Care,Humana_Inc.,Humana
 HBAN,HBAN,Huntington Bancshares,Financials,Huntington_Bancshares,Huntington_Bancshares
 ITW,ITW,Illinois Tool Works,Industrials,Illinois_Tool_Works,Illinois_Tool_Works
 ILMN,ILMN,Illumina Inc,Health Care,Illumina_(company),"Illumina,_Inc."
-IR,IR,Ingersoll-Rand PLC,Industrials,Ingersoll-Rand_PLC,Trane_Technologies
+IR,TT|IR,Ingersoll-Rand PLC,Industrials,Ingersoll-Rand_PLC,Trane_Technologies
 INTC,INTC,Intel Corp.,Information Technology,Intel_Corp.,Intel
 ICE,ICE,Intercontinental Exchange,Financials,Intercontinental_Exchange,Intercontinental_Exchange
 IBM,IBM,International Bus. Machines,Information Technology,IBM,IBM
@@ -260,7 +260,7 @@ KLAC,KLAC,KLA-Tencor Corp.,Information Technology,KLA-Tencor_Corp.,KLA_Corporati
 KSS,KSS,Kohl's Corp.,Consumer Discretionary,Kohl's_Corp.,Kohl's
 KHC,KHC,Kraft Heinz Co,Consumer Staples,Kraft_Heinz,Kraft_Heinz
 KR,KR,Kroger Co.,Consumer Staples,Kroger_Co.,Kroger
-LB,LB,L Brands Inc.,Consumer Discretionary,L_Brands_Inc.,"Bath_&_Body_Works,_Inc."
+LB,BBWI|LB,L Brands Inc.,Consumer Discretionary,L_Brands_Inc.,"Bath_&_Body_Works,_Inc."
 LLL,LLL,L-3 Communications Holdings,Industrials,L-3_Communications_Holdings,L3_Technologies
 LH,LH,Laboratory Corp. of America Holding,Health Care,Laboratory_Corp._of_America_Holding,Labcorp
 LRCX,LRCX,Lam Research,Information Technology,Lam_Research,Lam_Research
@@ -348,7 +348,7 @@ PNR,PNR,Pentair Ltd.,Industrials,Pentair,Pentair
 PBCT,PBCT,People's United Financial,Financials,People's_United_Financial,People's_United_Financial
 POM,POM,Pepco Holdings Inc.,Utilities,Pepco_Holdings_Inc.,Pepco_Holdings
 PEP,PEP,PepsiCo Inc.,Consumer Staples,PepsiCo_Inc.,PepsiCo
-PKI,PKI,PerkinElmer,Health Care,PerkinElmer,PerkinElmer
+PKI,RVTY|PKI,PerkinElmer,Health Care,PerkinElmer,PerkinElmer
 PRGO,PRGO,Perrigo,Health Care,Perrigo,Perrigo
 PFE,PFE,Pfizer Inc.,Health Care,Pfizer_Inc.,Pfizer
 PCG,PCG,PG&E Corp.,Utilities,PG&E_Corp.,Pacific_Gas_and_Electric_Company
@@ -450,7 +450,7 @@ FOX,FOX,Twenty-First Century Fox Class B,Consumer Discretionary,Twenty-First_Cen
 TSN,TSN,Tyson Foods,Consumer Staples,Tyson_Foods,Tyson_Foods
 TYC,JCI|TYC,Tyco International,Industrials,Tyco_International,Tyco_International
 USB,USB,U.S. Bancorp,Financials,U.S._Bancorp,U.S._Bancorp
-UA,UA,Under Armour,Consumer Discretionary,Under_Armour,Under_Armour
+UA,UAA|UA,Under Armour,Consumer Discretionary,Under_Armour,Under_Armour
 UNP,UNP,Union Pacific,Industrials,Union_Pacific,Union_Pacific_Railroad
 UAL,UAL,United Continental Holdings,Industrials,United_Continental_Holdings,United_Airlines
 UNH,UNH,United Health Group Inc.,Health Care,United_Health_Group_Inc.,UnitedHealth_Group
