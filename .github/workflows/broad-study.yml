@@ -1,0 +1,53 @@
+name: Broad study (~500 stocks, costs, out-of-sample)
+
+# Builds data/broad/ (S&P 500 as listed on 1 Jan 2016, prices + Wikipedia views)
+# and runs scripts/broad_study.py. Needs the internet, which is why it runs here.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 1 * *"     # monthly top-up (runs on main)
+  push:
+    branches: [main, claude/project-thread-lzfdb3]
+    paths:
+      - scripts/build_broad_data.py
+      - scripts/broad_study.py
+      - src/wikiquant/broad_universe.py
+      - src/wikiquant/broad_dataset.py
+      - src/wikiquant/backtest.py
+      - dashboard/broad_template.html
+      - .github/workflows/broad-study.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: broad-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy yfinance requests
+      - uses: actions/cache@v4
+        with:
+          path: data/cache/attention
+          key: broad-attention-${{ github.run_id }}
+          restore-keys: broad-attention-
+      - name: Build the broad dataset
+        run: python scripts/build_broad_data.py
+      - name: Run the broad study
+        run: python scripts/broad_study.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/broad reports/broad_study.md dashboard/broad_results.json dashboard/broad.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Refresh broad study"
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
