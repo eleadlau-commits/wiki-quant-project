@@ -212,7 +212,7 @@ $("headline").innerHTML = [
   tile(`<span class="${cls(E.gross.edge)}">${fmtPct(E.gross.edge)}</span>`, `a year before costs (t ${fmtNum(E.gross.t)})`),
   tile(`<span class="${cls(E.net.edge)}">${fmtPct(E.net.edge)}</span>`, `a year after costs (t ${fmtNum(E.net.t)})`),
   tile(`<span class="${cls(oos.edge)}">${fmtPct(oos.edge)}</span>`, `after costs, 2021 on only (t ${fmtNum(oos.t)})`),
-  tile(fmtNum(E.turnover, 0) + "×", `portfolio replaced per year; breaks even at ${fmtNum(E.breakeven_bps, 0)} bps a trade`),
+  tile(fmtNum(E.turnover, 0) + "×", (E.breakeven_bps > 0 ? `portfolio replaced per year; breaks even at ${fmtNum(E.breakeven_bps, 0)} bps a trade` : "portfolio replaced per year; no edge before costs to protect")),
 ].join("");
 
 // ---- charts

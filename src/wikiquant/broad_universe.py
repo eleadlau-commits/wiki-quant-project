@@ -91,11 +91,18 @@ class Member:
     sector: str
     article: str        # article the list linked to on START_DATE
     current: str        # same article after following redirects today
+    former: str = ""    # earlier titles of the article (found via busy redirects), "|"-joined
 
     @property
     def keys(self) -> list[str]:
-        """Page titles whose views we add up (old and new names of a renamed article)."""
-        return list(dict.fromkeys([self.current, self.article]))
+        """Page titles whose views we add up (old and new names of a renamed article).
+
+        Wikipedia counts views per title, so when an article is moved
+        ("Cigna" -> "The Cigna Group") its history before the move sits under
+        the old title. Adding every former title gives one continuous series.
+        """
+        extra = [t for t in self.former.split("|") if t]
+        return list(dict.fromkeys([self.current, self.article, *extra]))
 
 
 # ---------------------------------------------------------------- parsing the old list
@@ -272,6 +279,61 @@ def resolve_redirects(titles: list[str], rounds: int = 4) -> dict[str, str]:
             break
         result = new
     return result
+
+
+def redirects_to(titles: list[str]) -> dict[str, list[str]]:
+    """Every article-space redirect pointing at each title (spaces as underscores)."""
+    out: dict[str, list[str]] = {t: [] for t in titles}
+    for i in range(0, len(titles), 50):
+        batch = [t.replace("_", " ") for t in titles[i:i + 50]]
+        params = {"action": "query", "titles": "|".join(batch), "prop": "redirects",
+                  "rdnamespace": 0, "rdlimit": "max", "rdprop": "title"}
+        while True:
+            d = _get(params)
+            for page in d.get("query", {}).get("pages", []):
+                key = page["title"].replace(" ", "_")
+                out.setdefault(key, []).extend(r["title"].replace(" ", "_")
+                                               for r in page.get("redirects", []))
+            if "continue" not in d:
+                break
+            params = {**params, **d["continue"]}
+    return out
+
+
+MONTHLY_API = ("https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/"
+               "en.wikipedia/all-access/user/{title}/monthly/{start}/{end}")
+
+
+def peak_monthly_views(title: str, start: str, end: str) -> float:
+    """Busiest month of human views for one title (0 if none). One cheap request."""
+    import requests
+
+    url = MONTHLY_API.format(title=requests.utils.quote(title, safe=""),
+                             start=pd.Timestamp(start).strftime("%Y%m01"),
+                             end=pd.Timestamp(end).strftime("%Y%m01"))
+    for attempt in range(4):
+        resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=30)
+        if resp.status_code == 404:
+            return 0.0
+        if resp.status_code == 429 or resp.status_code >= 500:
+            time.sleep(2 ** attempt)
+            continue
+        resp.raise_for_status()
+        return float(max((x["views"] for x in resp.json()["items"]), default=0))
+    return 0.0
+
+
+def former_titles(current: list[str], start: str, end: str,
+                  min_month: float = 3000, peak=peak_monthly_views) -> dict[str, list[str]]:
+    """Redirects that once carried real traffic: almost always the article's old name.
+
+    An ordinary alias redirect gets a handful of views a day; a title the
+    article lived under before a move had its full readership (>= ~100 a day).
+    """
+    found = {}
+    for title, reds in redirects_to(sorted(set(current))).items():
+        found[title] = [r for r in reds if peak(r, start, end) >= min_month]
+    return found
 
 
 def build_universe(date: str = START_DATE) -> tuple[list[Member], dict]:

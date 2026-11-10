@@ -83,12 +83,28 @@ def yahoo_one(ticker: str, start: str) -> pd.Series | None:
     """Single-ticker retry. Big batch downloads sometimes come back empty or
     truncated for a few tickers (rate limits), so anything missing or suspiciously
     short is asked for again on its own."""
+    import yfinance as yf
+
+    best = None
     for attempt in range(3):
-        got = yahoo_many([ticker], start)
-        if ticker in got:
-            return got[ticker]
-        time.sleep(2 * (attempt + 1))
-    return None
+        got = yahoo_many([ticker], start).get(ticker)
+        if attempt:
+            # A different request shape: Yahoo sometimes serves only recent
+            # months to start= queries for a ticker but the full history to period="max".
+            try:
+                h = yf.Ticker(ticker).history(period="max", auto_adjust=True)["Close"].dropna()
+                h.index = pd.DatetimeIndex(h.index).tz_localize(None).normalize()
+                h = h.loc[start:].astype(float)
+                if len(h) and (got is None or h.index.min() < got.index.min()):
+                    got = h
+            except Exception:  # noqa: BLE001
+                pass
+        if got is not None and (best is None or got.index.min() < best.index.min()):
+            best = got
+        if best is not None and best.index.min() <= pd.Timestamp(start) + pd.Timedelta(days=200):
+            break
+        time.sleep(3 * (attempt + 1))
+    return best
 
 
 def stooq_one(ticker: str, start: str) -> pd.Series | None:
@@ -172,6 +188,7 @@ def main() -> None:
     ap.add_argument("--as-of", default=U.START_DATE)
     ap.add_argument("--rebuild-universe", action="store_true")
     ap.add_argument("--no-stooq", action="store_true")
+    ap.add_argument("--refresh-former", action="store_true", help="re-scan redirects for old article titles")
     args = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
 
@@ -191,8 +208,17 @@ def main() -> None:
         U.save_universe(members, OUT / "universe.csv")
         print(f"Universe: {len(members)} companies (cached in data/broad/universe.csv)")
 
-    start_date = pd.Timestamp(args.as_of)
     end = (date.today() - timedelta(days=1)).isoformat()
+    if args.refresh_former or not any(m.former for m in members):
+        # Moved articles keep their pre-move views under the old title.
+        print("Looking for former article titles (busy redirects)...")
+        former = U.former_titles([m.current for m in members], VIEWS_START, end)
+        for m in members:
+            m.former = "|".join(t for t in former.get(m.current, []) if t != m.article)
+        print(f"  {sum(bool(m.former) for m in members)} articles had earlier titles with real traffic")
+        U.save_universe(members, OUT / "universe.csv")
+
+    start_date = pd.Timestamp(args.as_of)
 
     print("Downloading prices...")
     prices, bench, cov = load_all_prices(members, start_date, use_stooq=not args.no_stooq)

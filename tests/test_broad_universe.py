@@ -55,3 +55,13 @@ def test_redirect_chains_are_followed(monkeypatch):
     hops = {"Netflix_Inc.": "Netflix,_Inc.", "Netflix,_Inc.": "Netflix"}
     monkeypatch.setattr(U, "_resolve_once", lambda ts: {t: hops.get(t, t) for t in ts})
     assert U.resolve_redirects(["Netflix_Inc.", "3M"]) == {"Netflix_Inc.": "Netflix", "3M": "3M"}
+
+
+def test_former_titles_keeps_only_busy_redirects(monkeypatch):
+    # "Cigna" was the article's name until a move; "CIGNA Corp." is a quiet alias.
+    monkeypatch.setattr(U, "redirects_to", lambda titles: {"The_Cigna_Group": ["Cigna", "CIGNA_Corp."]})
+    peaks = {"Cigna": 90_000, "CIGNA_Corp.": 40}
+    got = U.former_titles(["The_Cigna_Group"], "2015-07-01", "2026-11-01", peak=lambda t, s, e: peaks[t])
+    assert got == {"The_Cigna_Group": ["Cigna"]}
+    m = U.Member("CI", "CI", "Cigna", "Health Care", "CIGNA_Corp.", "The_Cigna_Group", "Cigna")
+    assert m.keys == ["The_Cigna_Group", "CIGNA_Corp.", "Cigna"]
