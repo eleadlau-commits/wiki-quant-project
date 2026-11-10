@@ -23,6 +23,31 @@ The latest comparison is in [`reports/attention_comparison.md`](reports/attentio
 (refreshed every weekday). An honest evaluation of the idea, the pitfalls, and
 how to add your own source: [`docs/attention-framework.md`](docs/attention-framework.md).
 
+## The broad test: ~500 stocks, after costs
+
+The 16-stock dashboard flatters any signal (those companies are famous *because*
+they did well). The broad test fixes that:
+
+- **Universe picked in advance:** every company in Wikipedia's *List of S&P 500
+  companies* exactly as it stood on 1 Jan 2016 (read from the page history),
+  including companies later bought out, delisted or dropped from the index.
+  Wikipedia article titles come from that list's own links.
+- **Trading costs:** 0.10% per trade each way, charged on the real change in weights.
+- **Out of sample:** settings may only be chosen on 2016-2020; 2021 onwards is the check.
+- **Luck test:** the same strategy with attention scores shuffled between stocks, 200 times.
+- **Month-clustered t-stats** for spike events, since spikes bunch on market-wide news.
+
+```bash
+python scripts/build_broad_data.py   # needs internet; the GitHub Action does this
+python scripts/broad_study.py        # offline from data/broad/ -> reports/broad_study.md
+```
+
+Results: [`reports/broad_study.md`](reports/broad_study.md) and the page
+`dashboard/broad.html` (linked from the main dashboard). Rebuilt by
+`.github/workflows/broad-study.yml`. Companies Yahoo no longer has prices for
+are listed in `data/broad/coverage.csv`: free data cannot fully remove
+survivorship bias, but it can measure how much is left.
+
 ## Attention Tape dashboard
 
 One self-contained web page (`dashboard/index.html`) that answers the core
@@ -49,8 +74,7 @@ Finance, writes `dashboard/data.json`, runs the source comparison, and rebuilds 
 from `dashboard/template.html`. To rebuild locally:
 `python scripts/build_dashboard_data.py`.
 
-Not included yet: trading costs, a larger universe (the 16 names are famous
-today, which flatters the results), and out-of-sample testing. Those are Weeks 2-4.
+Trading costs, a larger universe and out-of-sample testing are in the broad test above.
 
 ## Setup
 
@@ -72,6 +96,10 @@ pytest                           # loader tests pass; metric tests fail until yo
 | `src/wikiquant/universe.py` | The companies and their search keys per source |
 | `src/wikiquant/analysis.py` | Source-agnostic tests: spikes, event study, Buzz 4, overlap |
 | `src/wikiquant/dataset.py` | Load `dashboard/data.json` into pandas, offline |
+| `src/wikiquant/broad_universe.py` | S&P 500 as listed on Wikipedia on a past date |
+| `src/wikiquant/backtest.py` | Costs, turnover, out-of-sample split, luck test, clustered t-stats |
+| `src/wikiquant/broad_dataset.py` | Load `data/broad/` into pandas, offline |
+| `data/broad/` | Broad dataset (~500 stocks, prices + views), built by the Action |
 | `reports/` | Generated comparison of sources |
 | `docs/` | Framework guide and evaluation |
 | `dashboard/` | Attention Tape page, its template and data |
