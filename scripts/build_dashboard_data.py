@@ -44,6 +44,15 @@ UNIVERSE = [
 ]
 
 
+def build_page() -> None:
+    """Inline data.json into template.html to make one self-contained page."""
+    template = (ROOT / "dashboard" / "template.html").read_text()
+    data = (ROOT / "dashboard" / "data.json").read_text()
+    page = template.replace("/*__DATA__*/", data.replace("</", "<\\/"))
+    (ROOT / "dashboard" / "index.html").write_text(page)
+    print("Wrote dashboard/index.html")
+
+
 def main() -> None:
     end = (date.today() - timedelta(days=1)).isoformat()
     tickers = [t for t, _, _ in UNIVERSE] + [INDEX]
@@ -76,8 +85,10 @@ def main() -> None:
         "stocks": stocks,
     }
     path = ROOT / "dashboard" / "data.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(out, separators=(",", ":")))
     print(f"Wrote {path} ({path.stat().st_size / 1e6:.2f} MB)")
+    build_page()
 
 
 if __name__ == "__main__":

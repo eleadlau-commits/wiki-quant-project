@@ -10,6 +10,7 @@ on:
       - scripts/build_dashboard_data.py
       - src/wikiquant/pageviews.py
       - .github/workflows/dashboard-data.yml
+      - dashboard/template.html
 
 permissions:
   contents: write
@@ -28,6 +29,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dashboard/data.json
+          git add dashboard/data.json dashboard/index.html
           git diff --cached --quiet || git commit -m "Refresh dashboard data"
           git push
