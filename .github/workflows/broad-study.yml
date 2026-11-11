@@ -1,0 +1,69 @@
+name: Broad study (~500 stocks, costs, out-of-sample)
+
+# Builds data/broad/ (S&P 500 as listed on 1 Jan 2016, prices + Wikipedia views)
+# and runs scripts/broad_study.py. Needs the internet, which is why it runs here.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 1 * *"     # monthly top-up (runs on main)
+  push:
+    branches: [main, claude/project-thread-lzfdb3]
+    paths:
+      - scripts/build_broad_data.py
+      - scripts/broad_study.py
+      - src/wikiquant/broad_universe.py
+      - src/wikiquant/broad_dataset.py
+      - src/wikiquant/backtest.py
+      - dashboard/broad_template.html
+      - .github/workflows/broad-study.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: broad-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy yfinance requests
+      - name: Check the scripts compile before the long download
+        run: python -W error::SyntaxWarning -m py_compile scripts/build_broad_data.py scripts/broad_study.py
+      - uses: actions/cache/restore@v4
+        with:
+          path: data/cache/attention
+          key: broad-attention-${{ github.run_id }}
+          restore-keys: broad-attention-
+      - name: Build the broad dataset
+        id: build
+        run: python scripts/build_broad_data.py
+      - name: Save downloaded page views even if a later step fails
+        if: ${{ !cancelled() }}
+        uses: actions/cache/save@v4
+        with:
+          path: data/cache/attention
+          key: broad-attention-${{ github.run_id }}
+      - name: Run the broad study
+        id: study
+        continue-on-error: true
+        run: python scripts/broad_study.py
+      - name: Commit results
+        # Keep the (slow) downloaded data even if the study script breaks.
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/broad reports/broad_study.md dashboard/broad_results.json dashboard/broad.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Refresh broad study"
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+      - name: Fail the run if the study broke
+        if: ${{ steps.study.outcome == 'failure' }}
+        run: exit 1

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attention Tape: broad test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+/* Same tokens as the main dashboard (template.html), so the two pages read as one site. */
+:root {
+  --bg: #f3f5f8; --surface: #ffffff; --fg: #121722; --muted: #5b6577; --line: #dde2ea; --grid: #edf0f4;
+  --buzz: #d6336c; --spy: #1f5fbf; --quiet: #e0761b; --ew: #7a8496;
+  --good: #1d8a5a; --bad: #c2412d; --chip: #e8edf4;
+  --f-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0d1117; --surface: #151b24; --fg: #e8ecf2; --muted: #93a0b4; --line: #263041; --grid: #1d2532;
+  --buzz: #e64a7f; --spy: #4f8fe8; --quiet: #cc7424; --ew: #8b96a8;
+  --good: #3fcf8e; --bad: #ff7a63; --chip: #1e2633; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0d1117; --surface: #151b24; --fg: #e8ecf2; --muted: #93a0b4; --line: #263041; --grid: #1d2532;
+  --buzz: #e64a7f; --spy: #4f8fe8; --quiet: #cc7424; --ew: #8b96a8;
+  --good: #3fcf8e; --bad: #ff7a63; --chip: #1e2633; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 22px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.05; }
+h2 { font-size: 21px; }
+h3 { font-size: 16px; }
+p { margin: 0; max-width: 70ch; }
+a { color: var(--spy); }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.num, .mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+header { display: grid; gap: 12px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.badge { font-family: var(--f-mono); font-size: 12px; padding: 3px 9px; border-radius: 999px; background: var(--chip); color: var(--muted); }
+.badge.real { color: var(--good); }
+.badge.real::before { content: "●  "; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: grid; gap: 16px; min-width: 0; }
+.verdict { border-left: 4px solid var(--muted); }
+.verdict[data-kind="no"] { border-left-color: var(--bad); }
+.verdict[data-kind="weak"] { border-left-color: var(--quiet); }
+.verdict[data-kind="yes"] { border-left-color: var(--good); }
+.verdict strong { font-family: var(--f-display); font-size: 20px; line-height: 1.25; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.tile { border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 4px; align-content: start; }
+.tile .v { font-family: var(--f-mono); font-size: 26px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.tile .l { font-size: 13px; color: var(--muted); }
+.chart-box { position: relative; height: 340px; }
+.chart-box.short { height: 240px; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.two > div { display: grid; gap: 10px; min-width: 0; align-content: start; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted); }
+.legend span::before { content: ""; display: inline-block; width: 14px; height: 3px; border-radius: 2px; background: var(--c); vertical-align: middle; margin-right: 6px; }
+.legend span.dash::before { background: repeating-linear-gradient(90deg, var(--c) 0 4px, transparent 4px 7px); }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 7px 10px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; white-space: normal; }
+th { font-weight: 600; color: var(--muted); font-size: 13px; }
+td { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+td:first-child { font-family: var(--f-body); }
+tr.picked td { font-weight: 600; }
+.pos { color: var(--good); } .neg { color: var(--bad); }
+details summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+.notes ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; max-width: 75ch; }
+footer { font-size: 13px; color: var(--muted); display: grid; gap: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Attention Tape · the broad test</div>
+    <h1 id="title">Does attention still work on hundreds of stocks, after costs?</h1>
+    <p class="muted">The main dashboard looks at 16 famous companies. That flatters any signal: they are famous today because they did well. This page runs the test the hard way, on every company in the S&amp;P 500 as it stood in 2016, paying for every trade, and checking the result on years that were never used to design it.</p>
+    <div class="badges">
+      <span class="badge real">Real data</span>
+      <span class="badge" id="asof"></span>
+      <a class="badge" href="index.html">← Main dashboard (16 stocks)</a>
+    </div>
+  </header>
+
+  <section class="panel verdict" id="verdict"><strong id="verdict-text"></strong><p class="muted" id="verdict-sub"></p></section>
+
+  <section class="panel">
+    <h2>The universe: picked before anyone knew the answer</h2>
+    <div class="tiles" id="universe"></div>
+    <p class="small muted" id="universe-note"></p>
+  </section>
+
+  <section class="panel">
+    <div>
+      <h2>The one test decided in advance</h2>
+      <p class="muted">Every Monday, score each stock by how unusual its Wikipedia attention was over the past 7 days. Hold the top 10% (<b>Buzz</b>) for a week. Compare with holding every stock equally, which is the fair benchmark. Charge 0.10% per trade.</p>
+    </div>
+    <div class="tiles" id="headline"></div>
+    <div class="legend" id="curve-legend"></div>
+    <div class="chart-box"><canvas id="curve" aria-label="Growth of 1 pound for each portfolio, after costs"></canvas></div>
+    <p class="small muted">Growth of £1, after trading costs. The dotted line marks 1 Jan 2021: everything to its right is the out-of-sample check.</p>
+  </section>
+
+  <section class="panel two">
+    <div>
+      <h3>Year by year</h3>
+      <p class="small muted">Buzz minus equal weight, after costs. Green years helped, red years hurt.</p>
+      <div class="chart-box short"><canvas id="years" aria-label="Yearly edge of Buzz over equal weight"></canvas></div>
+    </div>
+    <div>
+      <h3>What costs do to it</h3>
+      <p class="small muted" id="cost-sub"></p>
+      <div class="chart-box short"><canvas id="costs" aria-label="Yearly edge at different trading costs"></canvas></div>
+    </div>
+  </section>
+
+  <section class="panel two">
+    <div>
+      <h3>Is it luck?</h3>
+      <p class="small muted" id="luck-sub"></p>
+      <div class="chart-box short"><canvas id="luck" aria-label="Distribution of edges with shuffled attention scores"></canvas></div>
+    </div>
+    <div>
+      <h3>Who made the money?</h3>
+      <p class="small muted">Share of Buzz's lead over equal weight that came from each stock (before costs).</p>
+      <div class="table-wrap"><table id="top5"></table></div>
+      <p class="small muted" id="top5-note"></p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div>
+      <h2>Choosing settings without cheating</h2>
+      <p class="muted">Nine versions of the strategy, judged only on 2016-2020. The best one there is what a researcher would have picked. Its 2021+ column is the honest estimate of what it would have earned next.</p>
+    </div>
+    <div class="table-wrap"><table id="grid"></table></div>
+  </section>
+
+  <section class="panel">
+    <div>
+      <h2>Spike events across every stock</h2>
+      <p class="muted" id="events-sub"></p>
+    </div>
+    <div class="table-wrap"><table id="events"></table></div>
+  </section>
+
+  <section class="panel notes">
+    <h2>How to read this</h2>
+    <ul>
+      <li><b>t-stat</b>: the average divided by its uncertainty. Below about 2, luck could easily produce the same number.</li>
+      <li><b>Out of sample</b>: years not used to design or choose anything. A real pattern should still be there.</li>
+      <li><b>Luck test</b>: the strategy re-run hundreds of times with the attention scores shuffled between stocks, so they mean nothing. If the real result sits in the middle of those, it is not evidence of anything.</li>
+      <li><b>By-month t-stat</b>: hundreds of pages spike on the same market-wide news (March 2020). Those bets move together, so they are counted as one month, not hundreds of independent wins.</li>
+      <li><b>Costs</b>: 0.10% each time you buy or sell, a reasonable estimate for large US stocks. A weekly strategy that swaps most of its stocks pays this many times a year.</li>
+    </ul>
+    <details id="limits"><summary>Limits that remain</summary></details>
+  </section>
+
+  <footer>
+    <span id="built"></span>
+    <span>Code: <a href="https://github.com/eleadlau-commits/wiki-quant-project">wiki-quant-project</a> (<span class="mono">scripts/broad_study.py</span>). A student research project. Not investment advice.</span>
+  </footer>
+</div>
+
+<script>
+const D = /*__DATA__*/;
+
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmtPct = (x, d = 1) => x == null ? "–" : `${x >= 0 ? "+" : ""}${(x * 100).toFixed(d)}%`;
+const fmtNum = (x, d = 1) => x == null ? "–" : x.toFixed(d);
+const share = x => x == null ? "–" : `${Math.round(x * 100)}%`;
+const cls = x => x == null ? "" : x >= 0 ? "pos" : "neg";
+const $ = id => document.getElementById(id);
+const tile = (v, l) => `<div class="tile"><div class="v">${v}</div><div class="l">${l}</div></div>`;
+
+$("title").textContent = `Does attention still work on ${D.universe.with_prices} stocks, after costs?`;
+$("asof").textContent = `${D.period[0]} to ${D.period[1]}`;
+$("built").textContent = `Built ${D.built.replace("T", " ")} UTC from data/broad/ (refreshed by a GitHub Action).`;
+
+// ---- verdict
+const kind = D.verdict.startsWith("Survives") ? "yes" : D.verdict.startsWith("Weak") ? "weak" : "no";
+$("verdict").dataset.kind = kind;
+$("verdict-text").textContent = D.verdict;
+const oos = D.edge.periods.out_of_sample;
+$("verdict-sub").textContent = `After costs, Buzz beat equal weight by ${fmtPct(D.edge.net.edge)} a year (t ${fmtNum(D.edge.net.t)}). ` +
+  `From 2021 on, the years never used to design it: ${fmtPct(oos.edge)} a year (t ${fmtNum(oos.t)}). ` +
+  `Shuffled, meaningless scores did at least as well before costs ${share(D.luck.p)} of the time.`;
+
+// ---- universe
+const U = D.universe;
+$("universe").innerHTML = [
+  tile(U.n, `companies in the S&P 500 list on ${U.as_of}`),
+  tile(U.with_prices, "with free price history (Yahoo, plus Stooq for some delisted)"),
+  tile(U.left_index, `have since left the index (${U.left_with_prices} of them still tested)`),
+  tile(U.missing, "missing: no free prices, mostly bought out"),
+  tile(U.eligible_median, `scored on a typical Monday (≥ ${U.min_views} Wikipedia views a day)`),
+].join("");
+$("universe-note").innerHTML = `Taken from <a href="${U.url}">this exact 2016 version</a> of Wikipedia's list, so nothing about later winners leaks in. ` +
+  `${U.stopped_trading} of the tested stocks stopped trading part-way through; money in them is treated as cash until the next rebalance.`;
+
+// ---- headline numbers
+const E = D.edge;
+$("headline").innerHTML = [
+  tile(`<span class="${cls(E.gross.edge)}">${fmtPct(E.gross.edge)}</span>`, `a year before costs (t ${fmtNum(E.gross.t)})`),
+  tile(`<span class="${cls(E.net.edge)}">${fmtPct(E.net.edge)}</span>`, `a year after costs (t ${fmtNum(E.net.t)})`),
+  tile(`<span class="${cls(oos.edge)}">${fmtPct(oos.edge)}</span>`, `after costs, 2021 on only (t ${fmtNum(oos.t)})`),
+  tile(fmtNum(E.turnover, 0) + "×", (E.breakeven_bps > 0 ? `portfolio replaced per year; breaks even at ${fmtNum(E.breakeven_bps, 0)} bps a trade` : "portfolio replaced per year; no edge before costs to protect")),
+].join("");
+
+// ---- charts
+Chart.defaults.font.family = css("--f-body");
+Chart.defaults.color = css("--muted");
+const grid = { color: css("--grid") };
+const tooltip = { backgroundColor: css("--surface"), titleColor: css("--fg"), bodyColor: css("--fg"),
+  borderColor: css("--line"), borderWidth: 1, padding: 10, usePointStyle: true };
+
+const splitLine = {
+  id: "split",
+  afterDraw(c) {
+    const i = D.curve.dates.findIndex(d => d >= D.settings.split);
+    if (i < 0 || !c.scales.x) return;
+    const x = c.scales.x.getPixelForValue(i), { top, bottom } = c.chartArea, g = c.ctx;
+    g.save(); g.strokeStyle = css("--muted"); g.setLineDash([2, 4]); g.lineWidth = 1;
+    g.beginPath(); g.moveTo(x, top); g.lineTo(x, bottom); g.stroke();
+    g.fillStyle = css("--muted"); g.font = `12px ${css("--f-mono")}`; g.fillText("out of sample →", x + 6, top + 12); g.restore();
+  },
+};
+
+const series = [
+  ["buzz", "Buzz (top 10%)", "--buzz", []],
+  ["quiet", "Quiet (bottom 10%)", "--quiet", []],
+  ["ew", "Equal weight (benchmark)", "--ew", [5, 4]],
+  ["spy", "S&P 500 (SPY)", "--spy", []],
+];
+$("curve-legend").innerHTML = series.map(([k, l, c, dash]) =>
+  `<span class="${dash.length ? "dash" : ""}" style="--c: var(${c})">${l}</span>`).join("");
+new Chart($("curve"), {
+  type: "line",
+  data: { labels: D.curve.dates, datasets: series.map(([k, l, c, dash]) => ({
+    label: l, data: D.curve[k], borderColor: css(c), backgroundColor: css(c), borderWidth: 2,
+    borderDash: dash, pointRadius: 0, pointHoverRadius: 5, tension: 0 })) },
+  options: { maintainAspectRatio: false, animation: false, interaction: { mode: "index", intersect: false },
+    scales: { x: { grid: { display: false }, ticks: { maxTicksLimit: 8, callback(v) { return this.getLabelForValue(v).slice(0, 4); } } },
+              y: { grid, ticks: { callback: v => "£" + v.toFixed(1) } } },
+    plugins: { legend: { display: false }, tooltip: { ...tooltip, callbacks: { label: c => ` ${c.dataset.label}: £${c.parsed.y.toFixed(2)}` } } } },
+  plugins: [splitLine],
+});
+
+const barOpts = (fmt, extra = {}) => ({ maintainAspectRatio: false, animation: false,
+  scales: { x: { grid: { display: false } }, y: { grid, ticks: { callback: fmt } } },
+  plugins: { legend: { display: false }, tooltip }, ...extra });
+
+new Chart($("years"), {
+  type: "bar",
+  data: { labels: D.yearly.map(y => y.year), datasets: [{ data: D.yearly.map(y => y.edge),
+    backgroundColor: D.yearly.map(y => css(y.edge >= 0 ? "--good" : "--bad")), borderRadius: 4, maxBarThickness: 28 }] },
+  options: barOpts(v => fmtPct(v, 0), { plugins: { legend: { display: false },
+    tooltip: { ...tooltip, callbacks: { label: c => ` ${fmtPct(c.parsed.y)} vs equal weight${c.label >= D.settings.split.slice(0, 4) ? " (out of sample)" : ""}` } } } }),
+});
+
+$("cost-sub").textContent = `Yearly edge of Buzz over equal weight at each cost per trade. Main test uses ${D.settings.cost_bps} bps.`;
+new Chart($("costs"), {
+  type: "bar",
+  data: { labels: D.costs.map(c => `${c.bps} bps`), datasets: [{ data: D.costs.map(c => c.edge),
+    backgroundColor: D.costs.map(c => css(c.edge >= 0 ? "--good" : "--bad")), borderRadius: 4, maxBarThickness: 36 }] },
+  options: barOpts(v => fmtPct(v, 0), { plugins: { legend: { display: false },
+    tooltip: { ...tooltip, callbacks: { label: c => ` ${fmtPct(c.parsed.y)} a year (t ${fmtNum(D.costs[c.dataIndex].t)})` } } } }),
+});
+
+const L = D.luck, mids = L.hist.map((_, i) => (L.edges[i] + L.edges[i + 1]) / 2);
+$("luck-sub").textContent = `Grey bars: the before-cost edge from ${L.runs} runs with shuffled scores. ` +
+  `Pink line: the real signal (${fmtPct(L.real)}). ${share(L.p)} of shuffles did at least as well.`;
+const realLine = {
+  id: "real",
+  afterDraw(c) {
+    const xs = c.scales.x, lo = L.edges[0], hi = L.edges[L.edges.length - 1];
+    const f = (L.real - lo) / (hi - lo), n = L.hist.length;
+    const x = xs.getPixelForValue(Math.max(-0.5, Math.min(n - 0.5, f * n - 0.5)));
+    const { top, bottom } = c.chartArea, g = c.ctx;
+    g.save(); g.strokeStyle = css("--buzz"); g.lineWidth = 2; g.beginPath(); g.moveTo(x, top); g.lineTo(x, bottom); g.stroke();
+    g.fillStyle = css("--fg"); g.font = `12px ${css("--f-mono")}`; g.textAlign = f > 0.6 ? "right" : "left";
+    g.fillText("real", x + (f > 0.6 ? -6 : 6), top + 12); g.restore();
+  },
+};
+new Chart($("luck"), {
+  type: "bar",
+  data: { labels: mids.map(m => fmtPct(m)), datasets: [{ data: L.hist, backgroundColor: css("--ew"), borderRadius: 3, categoryPercentage: 0.95, barPercentage: 0.95 }] },
+  options: barOpts(v => v, { scales: { x: { grid: { display: false }, ticks: { maxTicksLimit: 6 } }, y: { grid, title: { display: true, text: "runs" } } },
+    plugins: { legend: { display: false }, tooltip: { ...tooltip, callbacks: { title: c => `edge ≈ ${c[0].label}`, label: c => ` ${c.parsed.y} shuffled runs` } } } }),
+  plugins: [realLine],
+});
+
+// ---- tables
+$("top5").innerHTML = "<tr><th>Stock</th><th>Share of the lead</th></tr>" +
+  E.top5.map(r => `<tr><td>${r.ticker}</td><td>${share(r.share)}</td></tr>`).join("");
+$("top5-note").textContent = `Without these five, Buzz minus equal weight after costs is ${fmtPct(E.without_top5)} a year.`;
+
+$("grid").innerHTML = "<tr><th>Look-back</th><th>Buzz size</th><th>2016-2020</th><th>t</th><th>2021+</th><th>t</th></tr>" +
+  D.grid.map(g => `<tr class="${g.picked ? "picked" : ""}"><td>${g.lookback} days${g.picked ? " ← picked on 2016-2020" : ""}</td>` +
+    `<td>${share(g.frac)}</td><td class="${cls(g.in)}">${fmtPct(g.in)}</td><td>${fmtNum(g.in_t)}</td>` +
+    `<td class="${cls(g.out)}">${fmtPct(g.out)}</td><td>${fmtNum(g.out_t)}</td></tr>`).join("");
+
+const ev = D.events;
+$("events-sub").textContent = `Every time a page got 3× its usual views: the stock minus the S&P 500 over the next 20 trading days, from the first close you could trade. ` +
+  `A normal 20-day stretch averages ${fmtPct(D.baseline_excess)}. The news itself moved the stock ${fmtPct(ev.reaction.mean, 2)} on the day, before you could act.`;
+const evRow = (label, s) => `<tr><td>${label}</td><td>${s.n ?? "–"}</td><td>${s.months ?? "–"}</td><td class="${cls(s.mean)}">${fmtPct(s.mean)}</td>` +
+  `<td>${share(s.hit)}</td><td>${fmtNum(s.t_naive)}</td><td>${fmtNum(s.t_month)}</td></tr>`;
+$("events").innerHTML = "<tr><th></th><th>Spikes</th><th>Months</th><th>Next 20 days vs S&amp;P</th><th>Beat S&amp;P</th><th>t (naive)</th><th>t (by month)</th></tr>" +
+  evRow("All spikes, before costs", ev.all) + evRow("All spikes, after costs", ev.net) +
+  evRow("2016-2020, after costs", ev.in) + evRow("2021 on, after costs", ev.out) +
+  evRow("Only the famous names from the main dashboard", ev.famous) +
+  D.events_by_size.map(s => evRow(`Spike size ${s.label}`, s)).join("");
+
+$("limits").insertAdjacentHTML("beforeend", `<ul>
+  <li>${U.missing} companies have no free price history, mostly buyouts. Buyouts usually happen at a premium, so leaving them out more likely hurts a long-only strategy than helps it, but it cannot be tested for free.</li>
+  <li>Page titles come from the links in the 2016 list. A few may point at a parent company or the wrong article. Pages with fewer than ${U.min_views} views a day are ignored.</li>
+  <li>The 0.10% cost is a flat estimate. Small, volatile stocks, where attention spikes cluster, cost more to trade.</li>
+</ul>`);
+</script>
+</body>
+</html>
