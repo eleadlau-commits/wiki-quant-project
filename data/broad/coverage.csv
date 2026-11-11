@@ -1,501 +1,501 @@
 ticker,name,sector,source,symbol,first,last,note,views_median,views_error,pages,in_index_today
-MMM,3M Company,Industrials,yahoo,MMM,2015-07-01,2026-11-10,,1175.0,,3M,
-ABT,Abbott Laboratories,Health Care,yahoo,ABT,2015-07-01,2026-11-10,,882.0,,Abbott_Laboratories + PediaSure,
-ABBV,AbbVie,Health Care,yahoo,ABBV,2015-07-01,2026-11-10,,568.0,,AbbVie + AbbVie_Inc.,
-ACN,Accenture plc,Information Technology,yahoo,ACN,2015-07-01,2026-11-10,,3430.0,,Accenture + Accenture_plc,
-ACE,ACE Limited,Financials,,,,,no price data (most likely bought out or delisted),354.0,,Chubb_Limited + ACE_Limited + Chubb_Corp. + Chubb_(company),
-ATVI,Activision Blizzard,Information Technology,,,,,no price data (most likely bought out or delisted),1192.0,,Activision_Blizzard,
-ADBE,Adobe Systems Inc,Information Technology,yahoo,ADBE,2015-07-01,2026-11-10,,1738.0,,Adobe_Inc. + Adobe_Systems_Inc + Adobe_Systems,
-ADT,ADT Corp,Industrials,,,,,ADT starts 2018-01-19,280.0,,ADT_Inc. + ADT_Corp + ADT_Security_Services + The_ADT_Corporation,
-AAP,Advance Auto Parts,Consumer Discretionary,yahoo,AAP,2015-07-01,2026-11-10,,235.0,,Advance_Auto_Parts,
-AES,AES Corp,Utilities,yahoo,AES,2015-07-01,2026-11-10,,170.0,,AES_Corporation + AES_Corp,
-AET,Aetna Inc,Health Care,,,,,no price data (most likely bought out or delisted),358.0,,Aetna + Aetna_Inc,
-AFL,AFLAC Inc,Financials,yahoo,AFL,2015-07-01,2026-11-10,,240.0,,Aflac + AFLAC_Inc,
-AMG,Affiliated Managers Group Inc,Financials,yahoo,AMG,2015-07-01,2026-11-10,,36.0,,Affiliated_Managers_Group + Affiliated_Managers_Group_Inc,
-A,Agilent Technologies Inc,Health Care,yahoo,A,2015-07-01,2026-11-10,,309.0,,Agilent_Technologies + Agilent_Technologies_Inc,
-GAS,AGL Resources Inc.,Utilities,,,,,no price data (most likely bought out or delisted),26.0,,Southern_Company_Gas + AGL_Resources_Inc. + AGL_Resources,
-APD,Air Products & Chemicals Inc,Materials,yahoo,APD,2015-07-01,2026-11-10,,143.0,,Air_Products + Air_Products_&_Chemicals_Inc + Air_Products_and_Chemicals + Air_Products_&_Chemicals,
-ARG,Airgas Inc,Materials,,,,,no price data (most likely bought out or delisted),61.0,,Airgas + Airgas_Inc,
-AKAM,Akamai Technologies Inc,Information Technology,yahoo,AKAM,2015-07-01,2026-11-10,,727.0,,Akamai_Technologies + Akamai_Technologies_Inc + Akamai,
-AA,Alcoa Inc,Materials,yahoo,AA,2015-07-01,2026-11-10,,370.0,,Alcoa + Alcoa_Inc,
-AGN,Allergan plc,Health Care,,,,,no price data (most likely bought out or delisted),241.0,,"Allergan + Allergan,_plc + Allergan,_Plc",
-ALXN,Alexion Pharmaceuticals,Health Care,,,,,no price data (most likely bought out or delisted),123.0,,Alexion_Pharmaceuticals,
-ALLE,Allegion,Industrials,yahoo,ALLE,2015-07-01,2026-11-10,,67.0,,Allegion,
-ADS,Alliance Data Systems,Information Technology,yahoo,BFH,2015-07-01,2026-11-10,,144.0,,Bread_Financial + Alliance_Data_Systems + Alliance_Data,
-ALL,Allstate Corp,Financials,yahoo,ALL,2015-07-01,2026-11-10,,479.0,,Allstate + Allstate_Corp + Mayhem_(advertising_character),
-GOOGL,Alphabet Inc Class A,Information Technology,yahoo,GOOGL,2015-07-01,2026-11-10,,4709.0,,"Alphabet_Inc. + Alphabet_Inc_Class_A + Googl + Goog + Alphabet_Inc + Alphabet,_Inc. + List_of_assets_owned_by_Alphabet_Inc.",
-GOOG,Alphabet Inc Class C,Information Technology,yahoo,GOOGL,2015-07-01,2026-11-10,,4709.0,,"Alphabet_Inc. + Alphabet_Inc_Class_C + Googl + Goog + Alphabet_Inc + Alphabet,_Inc. + List_of_assets_owned_by_Alphabet_Inc.",
-MO,Altria Group Inc,Consumer Staples,yahoo,MO,2015-07-01,2026-11-10,,701.0,,Altria + Altria_Group_Inc + Altria_Group,
-AMZN,Amazon.com Inc,Consumer Discretionary,yahoo,AMZN,2015-07-01,2026-11-10,,13617.0,,Amazon_(company) + Amazon.com_Inc + Amazon.ca + Amazon_UK + Amazon_Inc. + List_of_Amazon_locations + Amazon.com + List_of_Amazon.com_locations,
-AEE,Ameren Corp,Utilities,yahoo,AEE,2015-07-01,2026-11-10,,96.0,,Ameren + Ameren_Corp,
-AAL,American Airlines Group,Industrials,yahoo,AAL,2015-07-01,2026-11-10,,379.0,,American_Airlines_Group,
-AEP,American Electric Power,Utilities,yahoo,AEP,2015-07-01,2026-11-10,,189.0,,American_Electric_Power,
-AXP,American Express Co,Financials,yahoo,AXP,2015-07-01,2026-11-10,,1942.0,,American_Express + American_Express_Co + Americanexpress + American_express,
-AIG,"American International Group, Inc.",Financials,yahoo,AIG,2015-07-01,2026-11-10,,769.0,,American_International_Group + AIG,
-AMT,American Tower Corp A,Financials,yahoo,AMT,2015-07-01,2026-11-10,,136.0,,American_Tower + American_Tower_Corp_A + American_Tower_Corporation,
-AMP,Ameriprise Financial,Financials,yahoo,AMP,2015-07-01,2026-11-10,,213.0,,Ameriprise_Financial,
-ABC,AmerisourceBergen Corp,Health Care,yahoo,COR,2015-07-01,2026-11-10,,248.0,,Cencora + AmerisourceBergen_Corp + AmerisourceBergen,
-AME,Ametek,Industrials,yahoo,AME,2015-07-01,2026-11-10,,105.0,,Ametek,
-AMGN,Amgen Inc,Health Care,yahoo,AMGN,2015-07-01,2026-11-10,,440.0,,Amgen + Amgen_Inc,
-APH,Amphenol Corp A,Industrials,yahoo,APH,2015-07-01,2026-11-10,,124.0,,Amphenol + Amphenol_Corp_A,
-APC,Anadarko Petroleum Corp,Energy,,,,,APC starts 2026-02-12,189.0,,Anadarko_Petroleum + Anadarko_Petroleum_Corporation,
-ADI,"Analog Devices, Inc.",Information Technology,yahoo,ADI,2015-07-01,2026-11-10,,288.0,,Analog_Devices,
-AON,Aon plc,Financials,yahoo,AON,2015-07-01,2026-11-10,,585.0,,Aon_plc + Aon_Corporation + Aon_(company),
-APA,Apache Corporation,Energy,yahoo,APA,2015-07-01,2026-11-10,,94.0,,APA_Corporation + Apache_Corporation,
-AIV,Apartment Investment & Mgmt,Financials,yahoo,AIV,2015-07-01,2026-11-10,,26.0,,Aimco + Apartment_Investment_&_Mgmt,
-AAPL,Apple Inc.,Information Technology,yahoo,AAPL,2015-07-01,2026-11-10,,11867.0,,"Apple_Inc. + Apple_computer + Apple_Inc + Apple_Computer + Apple,_Inc. + Apple_Incorporated + Apple,_Inc + Apple_inc + Apple_inc. + Katherine_L._Adams + Appleinc. + Apple_tax",
-AMAT,Applied Materials Inc,Information Technology,yahoo,AMAT,2015-07-01,2026-11-10,,349.0,,Applied_Materials + Applied_Materials_Inc,
-ADM,Archer-Daniels-Midland Co,Consumer Staples,yahoo,ADM,2015-07-01,2026-11-10,,463.0,,Archer_Daniels_Midland + Archer-Daniels-Midland_Co + ADM_(company),
-AIZ,Assurant Inc,Financials,yahoo,AIZ,2015-07-01,2026-11-10,,102.0,,Assurant + Assurant_Inc,
-T,AT&T Inc,Telecommunications Services,yahoo,T,2015-07-01,2026-11-10,,2610.0,,AT&T + AT&T_Inc + At&t + Att.com + AT&T_Inc. + SBC_Communications + 2024_AT&T_outage,
-ADSK,Autodesk Inc,Information Technology,yahoo,ADSK,2015-07-01,2026-11-10,,841.0,,"Autodesk + Autodesk_Inc + Autodesk,_Inc.",
-ADP,Automatic Data Processing,Information Technology,yahoo,ADP,2015-07-01,2026-11-10,,586.0,,"ADP_(company) + Automatic_Data_Processing + ADP,_Inc.",
-AN,AutoNation Inc,Consumer Discretionary,yahoo,AN,2015-07-01,2026-11-10,,160.0,,AutoNation + AutoNation_Inc,
-AZO,AutoZone Inc,Consumer Discretionary,yahoo,AZO,2015-07-01,2026-11-10,,285.0,,AutoZone + AutoZone_Inc,
-AVGO,Avago Technologies,Information Technology,yahoo,AVGO,2015-07-01,2026-11-10,,956.0,,Broadcom + Avago_Technologies + Avago + Broadcom_Limited + Broadcom_Inc.,
-AVB,"AvalonBay Communities, Inc.",Financials,,,,,AVB starts 2026-08-14,56.0,,"AvalonBay_Communities + AvalonBay_Communities,_Inc.",
-AVY,Avery Dennison Corp,Materials,yahoo,AVY,2015-07-01,2026-11-10,,170.0,,Avery_Dennison + Avery_Dennison_Corp,
-BHI,Baker Hughes Inc,Energy,,,,,no price data (most likely bought out or delisted),485.0,,Baker_Hughes + Baker_Hughes_Inc,
-BLL,Ball Corp,Materials,yahoo,BALL,2015-07-01,2026-11-10,,308.0,,Ball_Corporation + Ball_Corp,
-BAC,Bank of America Corp,Financials,yahoo,BAC,2015-07-01,2026-11-10,,2497.0,,Bank_of_America + Bank_of_America_Corp + BankAmerica + Bank_of_america + BofA_Securities + Bank_of_America_Merrill_Lynch,
-BK,The Bank of New York Mellon Corp.,Financials,,,,,no price data (most likely bought out or delisted),923.0,,BNY + The_Bank_of_New_York_Mellon_Corp. + Bank_of_New_York + The_Bank_of_New_York_Mellon + Pershing_LLC + BNY_Mellon,
-BCR,Bard (C.R.) Inc.,Health Care,,,,,no price data (most likely bought out or delisted),49.0,,Bard_(company) + Bard_(C.R.)_Inc. + C._R._Bard,
-BXLT,Baxalta,Health Care,,,,,no price data (most likely bought out or delisted),44.0,,Baxalta,
-BAX,Baxter International Inc.,Health Care,yahoo,BAX,2015-07-01,2026-11-10,,302.0,,Baxter_International + Baxter_International_Inc.,
-BBT,BB&T Corporation,Financials,yahoo,TFC,2015-07-01,2026-11-10,,217.0,,BB&T + BB&T_Corporation,
-BDX,Becton Dickinson,Health Care,yahoo,BDX,2015-07-01,2026-11-10,,371.0,,BD_(company) + Becton_Dickinson,
-BBBY,Bed Bath & Beyond,Consumer Discretionary,,,,,BBBY starts 2026-07-17,533.0,,Bed_Bath_&_Beyond,
-BRK-B,Berkshire Hathaway,Financials,yahoo,BRK-B,2015-07-01,2026-11-10,,4837.0,,Berkshire_Hathaway + FlightSafety_International + Berkshire_Hathaway_GUARD_Insurance_Companies,
-BBY,Best Buy Co. Inc.,Consumer Discretionary,yahoo,BBY,2015-07-01,2026-11-10,,1112.0,,Best_Buy + Best_Buy_Co._Inc. + Best_buy,
-BIIB,BIOGEN IDEC Inc.,Health Care,yahoo,BIIB,2015-07-01,2026-11-10,,249.0,,Biogen + BIOGEN_IDEC_Inc. + Biogen_Idec,
-BLK,BlackRock,Financials,yahoo,BLK,2015-07-01,2026-11-10,,3150.0,,BlackRock,
-HRB,Block H&R,Financials,yahoo,HRB,2015-07-01,2026-11-10,,263.0,,H&R_Block + Block_H&R,
-BA,Boeing Company,Industrials,yahoo,BA,2015-07-01,2026-11-10,,2814.0,,Boeing + Boeing_Company + The_Boeing_Company,
-BWA,BorgWarner,Consumer Discretionary,yahoo,BWA,2015-07-01,2026-11-10,,333.0,,BorgWarner,
-BXP,Boston Properties,Financials,yahoo,BXP,2015-07-01,2026-11-10,,81.0,,"BXP,_Inc. + Boston_Properties",
-BSX,Boston Scientific,Health Care,yahoo,BSX,2015-07-01,2026-11-10,,309.0,,Boston_Scientific,
-BMY,Bristol-Myers Squibb,Health Care,yahoo,BMY,2015-07-01,2026-11-10,,473.0,,Bristol_Myers_Squibb + Bristol-Myers_Squibb,
-BRCM,Broadcom Corporation,Information Technology,,,,,no price data (most likely bought out or delisted),165.0,,Broadcom_Corporation,
-BF-B,Brown-Forman Corporation,Consumer Staples,yahoo,BF-B,2015-07-01,2026-11-10,,326.0,,Brown-Forman + Brown-Forman_Corporation + Brown–Forman,
-CHRW,C. H. Robinson Worldwide,Industrials,yahoo,CHRW,2015-07-01,2026-11-10,,136.0,,C._H._Robinson + C._H._Robinson_Worldwide + C.H._Robinson,
-CA,"CA, Inc.",Information Technology,,,,,no price data (most likely bought out or delisted),266.0,,"Computer_Associates + CA,_Inc. + CA_Technologies",
-CVC,Cablevision Systems Corp.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),178.0,,Cablevision,
-COG,Cabot Oil & Gas,Energy,,,,,no price data (most likely bought out or delisted),34.0,,Coterra + Cabot_Oil_&_Gas,
-CAM,Cameron International Corp.,Energy,,,,,CAM starts 2025-10-06,77.0,,Cameron_International + Cameron_International_Corp.,
-CPB,Campbell Soup,Consumer Staples,yahoo,CPB,2015-07-01,2026-11-10,,540.0,,Campbell's + Campbell_Soup + Campbell_Soup_Company,
-COF,Capital One Financial,Financials,yahoo,COF,2015-07-01,2026-11-10,,1041.0,,Capital_One + Capital_One_Financial + Capital_One_Financial_Corporation + Capital_one,
-CAH,Cardinal Health Inc.,Health Care,yahoo,CAH,2015-07-01,2026-11-10,,286.0,,Cardinal_Health + Cardinal_Health_Inc.,
-HSIC,Henry Schein,Health Care,yahoo,HSIC,2015-07-01,2026-11-10,,100.0,,Henry_Schein,
-KMX,Carmax Inc,Consumer Discretionary,yahoo,KMX,2015-07-01,2026-11-10,,268.0,,CarMax + Carmax_Inc + Carmax,
-CCL,Carnival Corp.,Consumer Discretionary,yahoo,CCL,2015-07-01,2026-11-10,,690.0,,Carnival_Corporation + Carnival_Corp. + Carnival_plc + Carnival_Corporation_&_PLC + Carnival_Corporation_&_plc,
-CAT,Caterpillar Inc.,Industrials,yahoo,CAT,2015-07-01,2026-11-10,,1307.0,,Caterpillar_Inc. + Caterpillar_Inc,
-CBG,CBRE Group,Financials,yahoo,CBRE,2015-07-01,2026-11-10,,614.0,,CBRE_Group,
-CBS,CBS Corp.,Consumer Discretionary,,,,,PSKY starts 2026-07-29; PARA starts 2021-02-12,395.0,,CBS_Corporation + CBS_Corp. + CBS_Corporation_(1997–2000),
-CELG,Celgene Corp.,Health Care,,,,,no price data (most likely bought out or delisted),140.0,,Celgene + Celgene_Corp.,
-CNP,CenterPoint Energy,Utilities,yahoo,CNP,2015-07-01,2026-11-10,,82.0,,CenterPoint_Energy,
-CTL,CenturyLink Inc,Telecommunications Services,,,,,no price data (most likely bought out or delisted),704.0,,Lumen_Technologies + CenturyLink_Inc + CenturyLink,
-CERN,Cerner,Health Care,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Oracle_Cerner/daily/20150701/20261110'),Oracle_Health + Cerner + Oracle_Cerner,
-CF,CF Industries Holdings Inc,Materials,yahoo,CF,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/CF_Industries/daily/20261102/20261110'),CF_Industries + CF_Industries_Holdings_Inc,
-SCHW,Charles Schwab Corporation,Financials,yahoo,SCHW,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Charles_Schwab_Corporation/daily/20261102/20261110',Charles_Schwab_Corporation,
-CHK,Chesapeake Energy,Energy,,,,,EXE starts 2021-02-10,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Expand_Energy/daily/20261102/20261110'),Expand_Energy + Chesapeake_Energy,
-CVX,Chevron Corp.,Energy,yahoo,CVX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Chevron_Corporation/daily/20261102/20261110'),Chevron_Corporation + Chevron_Corp. + Standard_Oil_of_California,
-CMG,Chipotle Mexican Grill,Consumer Discretionary,yahoo,CMG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Chipotle_Mexican_Grill/daily/20261102/20261110'),Chipotle_Mexican_Grill,
-CB,Chubb Corp.,Financials,yahoo,CB,2015-07-01,2026-11-10,,354.0,,Chubb_Limited + Chubb_Corp. + ACE_Limited + Chubb_(company),
-CHD,Church & Dwight,Consumer Staples,yahoo,CHD,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Church_%26_Dwight/daily/20261102/20261110'),Church_&_Dwight,
-CI,CIGNA Corp.,Health Care,yahoo,CI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/The_Cigna_Group/daily/20261102/20261110'),The_Cigna_Group + CIGNA_Corp. + Cigna,
-XEC,Cimarex Energy,Energy,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Cimarex_Energy/daily/20261102/20261110'),Cimarex_Energy,
-CINF,Cincinnati Financial,Financials,yahoo,CINF,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Cincinnati_Financial/daily/20261102/20261110'),Cincinnati_Financial,
-CTAS,Cintas Corporation,Industrials,yahoo,CTAS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Cintas/daily/20261102/20261110'),Cintas + Cintas_Corporation + Scott_Farmer_(businessman),
-CSCO,Cisco Systems,Information Technology,yahoo,CSCO,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Cisco/daily/20261102/20261110'),"Cisco + Cisco_Systems + Cisco_Systems,_Inc.",
-C,Citigroup Inc.,Financials,yahoo,C,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Citigroup/daily/20261102/20261110'),Citigroup + Citigroup_Inc. + Citi,
-CTXS,Citrix Systems,Information Technology,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Citrix_Systems/daily/20261102/20261110'),Citrix_Systems + Citrix,
-CLX,The Clorox Company,Consumer Staples,yahoo,CLX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Clorox/daily/20261102/20261110'),Clorox + The_Clorox_Company,
-CME,CME Group Inc.,Financials,yahoo,CME,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/CME_Group/daily/20261102/20261110'),CME_Group + CME_Group_Inc.,
-CMS,CMS Energy,Utilities,yahoo,CMS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/CMS_Energy/daily/20261102/20261110'),CMS_Energy,
-COH,Coach Inc.,Consumer Discretionary,yahoo,TPR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Coach_New_York/daily/20261102/20261110'),"Coach_New_York + Coach_Inc. + Coach,_Inc + Coach_Inc",
-KO,The Coca Cola Company,Consumer Staples,yahoo,KO,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/The_Coca-Cola_Company/daily/20261102/20261110'),The_Coca-Cola_Company + The_Coca_Cola_Company + Coca-Cola_Company + Coca-Cola_headquarters,
-CCE,Coca-Cola Enterprises,Consumer Staples,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Coca-Cola_Enterprises/daily/20261102/20261110'),Coca-Cola_Enterprises,
-CTSH,Cognizant Technology Solutions,Information Technology,yahoo,CTSH,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Cognizant/daily/20261102/20261110'),Cognizant + Cognizant_Technology_Solutions,
-CL,Colgate-Palmolive,Consumer Staples,yahoo,CL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Colgate-Palmolive/daily/20261102/20261110'),Colgate-Palmolive,
-CMCSA,Comcast A Corp,Consumer Discretionary,yahoo,CMCSA,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Comcast/daily/20261102/20261110'),Comcast + Comcast_A_Corp + Comcast_Corporation,
-CMA,Comerica Inc.,Financials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Comerica/daily/20261102/20261110'),Comerica + Comerica_Inc.,
-CAG,ConAgra Foods Inc.,Consumer Staples,yahoo,CAG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Conagra_Brands/daily/20261102/20261110'),Conagra_Brands + ConAgra_Foods_Inc. + ConAgra_Foods + ConAgra_Brands,
-COP,ConocoPhillips,Energy,yahoo,COP,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/ConocoPhillips/daily/20261102/20261110'),ConocoPhillips,
-CNX,CONSOL Energy Inc.,Energy,yahoo,CNX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Consol_Energy/daily/20261102/20261110'),Consol_Energy + CONSOL_Energy_Inc.,
-ED,Consolidated Edison,Utilities,yahoo,ED,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Consolidated_Edison/daily/20261102/20261110'),Consolidated_Edison,
-STZ,Constellation Brands,Consumer Staples,yahoo,STZ,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Constellation_Brands/daily/20261102/20261110'),Constellation_Brands,
-GLW,Corning Inc.,Industrials,yahoo,GLW,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Corning_Inc./daily/20261102/20261110'),Corning_Inc.,
-COST,Costco Co.,Consumer Staples,yahoo,COST,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Costco/daily/20261102/20261110'),Costco + Costco_Co. + Costco_Wholesale + Kirkland_Signature,
-CCI,Crown Castle International Corp.,Financials,yahoo,CCI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Crown_Castle/daily/20261102/20261110'),Crown_Castle + Crown_Castle_International_Corp.,
-CSRA,CSRA Inc.,Information Technology,,,,,CSRA starts 2026-08-12,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/CSRA_Inc./daily/20261102/20261110'),CSRA_Inc. + CSRA_(IT_services_company),
-CSX,CSX Corp.,Industrials,yahoo,CSX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/CSX_Corporation/daily/20261102/20261110'),CSX_Corporation + CSX_Corp.,
-CMI,Cummins Inc.,Industrials,yahoo,CMI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Cummins/daily/20261102/20261110'),Cummins + Cummins_Inc. + Cummins_(corporation),
-CVS,CVS Caremark Corp.,Consumer Staples,yahoo,CVS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/CVS_Health/daily/20261102/20261110'),CVS_Health + CVS_Caremark_Corp.,
-DHI,D. R. Horton,Consumer Discretionary,yahoo,DHI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/D._R._Horton/daily/20261102/20261110'),D._R._Horton,
-DHR,Danaher Corp.,Industrials,yahoo,DHR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Danaher_Corporation/daily/20261102/20261110'),Danaher_Corporation + Danaher_Corp.,
-DRI,Darden Restaurants,Consumer Discretionary,yahoo,DRI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Darden_Restaurants/daily/20261102/20261110'),"Darden_Restaurants + Darden_Restaurants,_Inc.",
-DVA,DaVita Inc.,Health Care,yahoo,DVA,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/DaVita/daily/20261102/20261110'),DaVita + DaVita_Inc. + DaVita_Medical_Group,
-DE,Deere & Co.,Industrials,yahoo,DE,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/John_Deere/daily/20261102/20261110'),John_Deere + Deere_&_Co.,
-DLPH,Delphi Automotive,Consumer Discretionary,yahoo,APTV,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Aptiv/daily/20261102/20261110'),Aptiv + Delphi_Automotive,
-DAL,Delta Air Lines,Industrials,yahoo,DAL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Delta_Air_Lines/daily/20261102/20261110'),Delta_Air_Lines + List_of_Delta_Air_Lines_destinations + Delta_air_lines + Delta_airlines + Delta_Air_Lines_destinations + Delta_Air_Lines_Flight_157,
-XRAY,Dentsply International,Health Care,yahoo,XRAY,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Dentsply_Sirona/daily/20261102/20261110'),Dentsply_Sirona + Dentsply_International,
-DVN,Devon Energy Corp.,Energy,yahoo,DVN,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Devon_Energy/daily/20261102/20261110'),Devon_Energy + Devon_Energy_Corp.,
-DO,Diamond Offshore Drilling,Energy,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Diamond_Offshore_Drilling/daily/20261102/20261110'),Diamond_Offshore_Drilling,
-DFS,Discover Financial Services,Financials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Discover_Financial/daily/20261102/20261110'),Discover_Financial,
-DISCA,Discovery Communications-A,Consumer Discretionary,,,,,WBD starts 2026-10-05,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Discovery%2C_Inc./daily/20261102/20261110'),"Discovery,_Inc. + Discovery_Communications-A + Discovery_Communications + Discovery_Inc. + Animal_Planet_(UK_TV_channel)",
-DISCK,Discovery Communications-C,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Discovery%2C_Inc./daily/20261102/20261110'),"Discovery,_Inc. + Discovery_Communications-C + Discovery_Communications + Discovery_Inc. + Animal_Planet_(UK_TV_channel)",
-DG,Dollar General,Consumer Discretionary,yahoo,DG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Dollar_General/daily/20261102/20261110'),Dollar_General,
-DLTR,Dollar Tree,Consumer Discretionary,yahoo,DLTR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Dollar_Tree/daily/20261102/20261110'),Dollar_Tree,
-D,Dominion Resources,Utilities,yahoo,D,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Dominion_Energy/daily/20261102/20261110'),Dominion_Energy + Dominion_Resources,
-DOV,Dover Corp.,Industrials,yahoo,DOV,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Dover_Corporation/daily/20261102/20261110'),Dover_Corporation + Dover_Corp.,
-DOW,Dow Chemical,Materials,,,,,DOW starts 2019-03-20,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Dow_Chemical_Company/daily/20261102/20261110'),Dow_Chemical_Company + Dow_Chemical + Dow_Chemicals + Dow_Inc.,
-DPS,Dr Pepper Snapple Group,Consumer Staples,yahoo,KDP,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Dr_Pepper_Snapple_Group/daily/20261102/20261110'),Dr_Pepper_Snapple_Group,
-DTE,DTE Energy Co.,Utilities,yahoo,DTE,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/DTE_Energy/daily/20261102/20261110'),DTE_Energy + DTE_Energy_Co.,
-DD,Du Pont (E.I.),Materials,yahoo,DD,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/DuPont/daily/20261102/20261110'),DuPont + Du_Pont_(E.I.) + DuPont_(1802–2017) + DowDuPont + DuPont_(1802-2017),
-DUK,Duke Energy,Utilities,yahoo,DUK,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Duke_Energy/daily/20261102/20261110'),Duke_Energy,
-DNB,Dun & Bradstreet,Industrials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Dun_%26_Bradstreet/daily/20261102/20261110'),Dun_&_Bradstreet,
-ETFC,E*Trade,Financials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/E-Trade/daily/20261102/20261110'),E-Trade + E*Trade,
-EMN,Eastman Chemical,Materials,yahoo,EMN,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Eastman_Chemical_Company/daily/20261102/20261110'),Eastman_Chemical_Company + Eastman_Chemical,
-ETN,Eaton Corporation,Industrials,yahoo,ETN,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Eaton_Corporation/daily/20261102/20261110'),Eaton_Corporation,
-EBAY,eBay Inc.,Information Technology,yahoo,EBAY,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/EBay/daily/20261102/20261110'),EBay + EBay_Inc. + Criticism_of_eBay + Ebay,
-ECL,Ecolab Inc.,Materials,yahoo,ECL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Ecolab/daily/20261102/20261110'),Ecolab + Ecolab_Inc.,
-EIX,Edison Int'l,Utilities,yahoo,EIX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Edison_International/daily/20261102/20261110'),Edison_International + Edison_Int'l,
-EW,Edwards Lifesciences,Health Care,yahoo,EW,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Edwards_Lifesciences/daily/20261102/20261110'),Edwards_Lifesciences,
-EA,Electronic Arts,Information Technology,,,,,EA starts 2026-08-04,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Electronic_Arts/daily/20261102/20261110'),Electronic_Arts + EA + Ripple_Effect_Studios,
-EMC,EMC Corp.,Information Technology,,,,,EMC starts 2023-05-15,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/EMC_Corporation/daily/20261102/20261110'),EMC_Corporation + EMC_Corp. + Dell_EMC,
-EMR,Emerson Electric Company,Industrials,yahoo,EMR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Emerson_Electric/daily/20261102/20261110'),Emerson_Electric + Emerson_Electric_Company,
-ENDP,Endo International,Health Care,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Endo_International/daily/20261102/20261110'),Endo_International + Qualitest + Endo_International_plc,
-ESV,Ensco plc,Energy,,,,,VAL starts 2021-05-03,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Valaris_Limited/daily/20261102/20261110'),Valaris_Limited + Ensco_plc + EnscoRowan + Valaris_plc,
-ETR,Entergy Corp.,Utilities,yahoo,ETR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Entergy/daily/20261102/20261110'),Entergy + Entergy_Corp.,
-EOG,EOG Resources,Energy,yahoo,EOG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/EOG_Resources/daily/20261102/20261110'),EOG_Resources,
-EQT,EQT Corporation,Energy,yahoo,EQT,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/EQT_Corporation/daily/20261102/20261110'),EQT_Corporation,
-EFX,Equifax Inc.,Financials,yahoo,EFX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Equifax/daily/20261102/20261110'),Equifax + Equifax_Inc. + TrustedID,
-EQIX,Equinix,Information Technology,yahoo,EQIX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Equinix/daily/20261102/20261110'),Equinix,
-EQR,Equity Residential,Financials,,,,,EQR starts 2026-08-17,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Vivmark_Residential/daily/20261102/20261110'),Vivmark_Residential + Equity_Residential,
-ESS,Essex Property Trust Inc,Financials,yahoo,ESS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Essex_Property_Trust/daily/20261102/20261110'),Essex_Property_Trust + Essex_Property_Trust_Inc,
-EL,Estee Lauder Cos.,Consumer Staples,yahoo,EL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Est%C3%A9e_Lauder_Companies/daily/20261102/20261110,Estée_Lauder_Companies + Estee_Lauder_Cos. + Estée_Lauder + La_Mer_(cosmetics) + The_Estée_Lauder_Companies,
-ES,Eversource Energy,Utilities,yahoo,ES,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Eversource_Energy/daily/20261102/20261110'),Eversource_Energy,
-EXC,Exelon Corp.,Utilities,yahoo,EXC,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Exelon/daily/20261102/20261110'),Exelon + Exelon_Corp.,
-EXPE,Expedia Inc.,Consumer Discretionary,yahoo,EXPE,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Expedia/daily/20261102/20261110'),Expedia + Expedia_Inc. + Expedia_(website),
-EXPD,Expeditors Int'l,Industrials,yahoo,EXPD,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Expeditors_International/daily/20261102/20261110'),Expeditors_International + Expeditors_Int'l,
-ESRX,Express Scripts,Health Care,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Express_Scripts/daily/20261102/20261110'),Express_Scripts,
-XOM,Exxon Mobil Corp.,Energy,yahoo,XOM,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/ExxonMobil/daily/20261102/20261110'),ExxonMobil + Exxon_Mobil_Corp. + Exxon + Exxon_Mobil,
-FFIV,F5 Networks,Information Technology,yahoo,FFIV,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/F5%2C_Inc./daily/20261102/20261110'),"F5,_Inc. + F5_Networks",
-FB,Facebook,Information Technology,yahoo,META,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Facebook/daily/20261102/20261110'),Facebook + Facebook.com + Www.facebook.com + FACEBOOK + FB.Com + Fb.com + Facbook + 10_year_challenge + Anti-Muslim_propaganda_on_Facebook + Facebook_(identifier),
-FDX,FedEx Corporation,Industrials,yahoo,FDX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/FedEx/daily/20261102/20261110'),FedEx + FedEx_Corporation,
-FIS,Fidelity National Information Services,Information Technology,yahoo,FIS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/FIS_%28company%29/daily/20261102/20261110'),FIS_(company) + Fidelity_National_Information_Services,
-FITB,Fifth Third Bancorp,Financials,yahoo,FITB,2015-07-01,2026-11-10,,366.0,,Fifth_Third_Bank + Fifth_Third_Bancorp,
-FSLR,First Solar Inc,Information Technology,yahoo,FSLR,2015-07-01,2026-11-10,,170.0,,First_Solar + First_Solar_Inc,
-FE,FirstEnergy Corp,Utilities,yahoo,FE,2015-07-01,2026-11-10,,178.0,,FirstEnergy + FirstEnergy_Corp + Metropolitan_Edison_Company + Metropolitan_Edison,
-FISV,Fiserv Inc,Information Technology,yahoo,FISV,2015-07-01,2026-11-10,,418.0,,Fiserv + Fiserv_Inc,
-FLIR,FLIR Systems,Industrials,,,,,no price data (most likely bought out or delisted),180.0,,Teledyne_FLIR + FLIR_Systems,
-FLS,Flowserve Corporation,Industrials,yahoo,FLS,2015-07-01,2026-11-10,,107.0,,Flowserve + Flowserve_Corporation,
-FLR,Fluor Corp.,Industrials,yahoo,FLR,2015-07-01,2026-11-10,,232.0,,Fluor_Corporation + Fluor_Corp.,
-FMC,FMC Corporation,Materials,yahoo,FMC,2015-07-01,2026-11-10,,240.0,,FMC_Corporation,
-FTI,FMC Technologies Inc.,Energy,yahoo,FTI,2015-07-01,2026-11-10,,61.0,,FMC_Technologies + FMC_Technologies_Inc.,
-F,Ford Motor,Consumer Discretionary,yahoo,F,2015-07-01,2026-11-10,,4273.0,,Ford_Motor_Company + Ford_Motor + Ford.com,
-FOSL,"Fossil, Inc.",Consumer Discretionary,yahoo,FOSL,2015-07-01,2026-11-10,,575.0,,"Fossil_Group + Fossil,_Inc.",
-BEN,Franklin Resources,Financials,yahoo,BEN,2015-07-01,2026-11-10,,327.0,,Franklin_Templeton + Franklin_Resources + Franklin_Templeton_Investments,
-FCX,Freeport-McMoran Cp & Gld,Materials,yahoo,FCX,2015-07-01,2026-11-10,,242.0,,Freeport-McMoRan + Freeport-McMoran_Cp_&_Gld,
-FTR,Frontier Communications,Telecommunications Services,,,,,no price data (most likely bought out or delisted),275.0,,Frontier_Communications,
-GME,GameStop Corp.,Consumer Discretionary,yahoo,GME,2015-07-01,2026-11-10,,815.0,,GameStop + GameStop_Corp. + Gamestop,
-GPS,Gap (The),Consumer Discretionary,yahoo,GAP,2015-07-01,2026-11-10,,1010.0,,Gap_Inc. + Gap_(The) + Gap_Inc + Baby_Gap + GapKids + Gap_Kids + Gap_(clothing_retailer),
-GRMN,Garmin Ltd.,Consumer Discretionary,yahoo,GRMN,2015-07-01,2026-11-10,,623.0,,Garmin + Garmin_Ltd.,
-GD,General Dynamics,Industrials,yahoo,GD,2015-07-01,2026-11-10,,1021.0,,General_Dynamics,
-GE,General Electric,Industrials,yahoo,GE,2015-07-01,2026-11-10,,2635.0,,General_Electric + General_electric,
-GGP,General Growth Properties Inc.,Financials,,,,,no price data (most likely bought out or delisted),110.0,,GGP_(company) + General_Growth_Properties_Inc. + General_Growth_Properties + Brookfield_Properties_Retail_Group + GGP_Inc.,
-GIS,General Mills,Consumer Staples,yahoo,GIS,2015-07-01,2026-11-10,,779.0,,General_Mills + Total_(cereal),
-GM,General Motors,Consumer Discretionary,yahoo,GM,2015-07-01,2026-11-10,,3969.0,,General_Motors + General_Motors_Corporation + General_Motors_Company + GMSV,
-GPC,Genuine Parts,Consumer Discretionary,yahoo,GPC,2015-07-01,2026-11-10,,125.0,,Genuine_Parts_Company + Genuine_Parts,
-GILD,Gilead Sciences,Health Care,yahoo,GILD,2015-07-01,2026-11-10,,424.0,,Gilead_Sciences,
-GS,Goldman Sachs Group,Financials,yahoo,GS,2015-07-01,2026-11-10,,2702.0,,Goldman_Sachs + Goldman_Sachs_Group + Goldman_sachs + Goldman_Sachs_controversies,
-GT,Goodyear Tire & Rubber,Consumer Discretionary,yahoo,GT,2015-07-01,2026-11-10,,677.0,,Goodyear_Tire_and_Rubber_Company + Goodyear_Tire_&_Rubber,
-GWW,Grainger (W.W.) Inc.,Industrials,yahoo,GWW,2015-07-01,2026-11-10,,265.0,,W._W._Grainger + Grainger_(W.W.)_Inc.,
-HAL,Halliburton Co.,Energy,yahoo,HAL,2015-07-01,2026-11-10,,966.0,,Halliburton + Halliburton_Co.,
-HBI,Hanesbrands Inc,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),148.0,,Hanesbrands + Hanesbrands_Inc,
-HOG,Harley-Davidson,Consumer Discretionary,yahoo,HOG,2015-07-01,2026-11-10,,1698.0,,"Harley-Davidson + Harley_Davidson + William_A._Davidson + Walter_Davidson,_Sr. + Harley_davidson",
-HAR,Harman Int'l Industries,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),685.0,,Harman_International + Harman_Int'l_Industries + Harman_International_Industries,
-HRS,Harris Corporation,Information Technology,yahoo,LHX,2015-07-01,2026-11-10,,212.0,,Harris_Corporation,
-HIG,Hartford Financial Svc.Gp.,Financials,yahoo,HIG,2015-07-01,2026-11-10,,201.0,,The_Hartford + Hartford_Financial_Svc.Gp.,
-HAS,Hasbro Inc.,Consumer Discretionary,yahoo,HAS,2015-07-01,2026-11-10,,1303.0,,"Hasbro + Hasbro_Inc. + Hasbro,_Inc. + Paper_Toss",
-HCA,HCA Holdings,Health Care,yahoo,HCA,2015-07-01,2026-11-10,,407.0,,HCA_Healthcare + HCA_Holdings + Hospital_Corporation_of_America,
-HCP,HCP Inc.,Financials,yahoo,DOC,2015-07-01,2026-11-10,,12.0,,Healthpeak_Properties + HCP_Inc.,
-HP,Helmerich & Payne,Energy,yahoo,HP,2015-07-01,2026-11-10,,28.0,,Helmerich_&_Payne,
-HES,Hess Corporation,Energy,,,,,no price data (most likely bought out or delisted),237.0,,Hess_Corporation,
-HPE,Hewlett Packard Enterprise,Information Technology,yahoo,HPE,2015-10-19,2026-11-10,,683.0,,Hewlett_Packard_Enterprise + SimpliVity,
-HD,Home Depot,Consumer Discretionary,yahoo,HD,2015-07-01,2026-11-10,,1890.0,,Home_Depot + Home_depot + The_Home_Depot,
-HON,Honeywell Int'l Inc.,Industrials,yahoo,HON,2015-07-01,2026-11-10,,1281.0,,Honeywell + Honeywell_Int'l_Inc.,
-HRL,Hormel Foods Corp.,Consumer Staples,yahoo,HRL,2015-07-01,2026-11-10,,271.0,,Hormel_Foods + Hormel_Foods_Corp. + Hormel,
-HST,Host Hotels & Resorts,Financials,yahoo,HST,2015-07-01,2026-11-10,,56.0,,Host_Hotels_&_Resorts,
-HPQ,HP Inc.,Information Technology,yahoo,HPQ,2015-07-01,2026-11-10,,716.0,,HP_Inc.,
-HUM,Humana Inc.,Health Care,yahoo,HUM,2015-07-01,2026-11-10,,269.0,,Humana + Humana_Inc.,
-HBAN,Huntington Bancshares,Financials,yahoo,HBAN,2015-07-01,2026-11-10,,190.0,,Huntington_Bancshares,
-ITW,Illinois Tool Works,Industrials,yahoo,ITW,2015-07-01,2026-11-10,,153.0,,Illinois_Tool_Works,
-ILMN,Illumina Inc,Health Care,yahoo,ILMN,2015-07-01,2026-11-10,,294.0,,"Illumina,_Inc. + Illumina_(company)",
-IR,Ingersoll-Rand PLC,Industrials,yahoo,TT,2015-07-01,2026-11-10,,109.5,,Trane_Technologies + Ingersoll-Rand_PLC,
-INTC,Intel Corp.,Information Technology,yahoo,INTC,2015-07-01,2026-11-10,,2770.0,,Intel + Intel_Corp. + Intel_Corporation,
-ICE,Intercontinental Exchange,Financials,yahoo,ICE,2015-07-01,2026-11-10,,440.0,,Intercontinental_Exchange,
-IBM,International Bus. Machines,Information Technology,yahoo,IBM,2015-07-01,2026-11-10,,4063.0,,IBM + Ibm + International_Business_Machines,
-IP,International Paper,Materials,yahoo,IP,2015-07-01,2026-11-10,,182.0,,International_Paper,
-IPG,Interpublic Group,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),311.0,,The_Interpublic_Group_of_Companies + Interpublic_Group + Golin_(PR_firm) + Al_Golin + Interpublic_Group_of_Companies,
-IFF,Intl Flavors & Fragrances,Materials,yahoo,IFF,2015-07-01,2026-11-10,,134.0,,International_Flavors_&_Fragrances + Intl_Flavors_&_Fragrances,
-INTU,Intuit Inc.,Information Technology,yahoo,INTU,2015-07-01,2026-11-10,,674.0,,Intuit + Intuit_Inc. + Intuit_India,
-ISRG,Intuitive Surgical Inc.,Health Care,yahoo,ISRG,2015-07-01,2026-11-10,,195.0,,Intuitive_Surgical + Intuitive_Surgical_Inc.,
-IVZ,Invesco Ltd.,Financials,yahoo,IVZ,2015-07-01,2026-11-10,,358.0,,Invesco + Invesco_Ltd. + Invesco_Perpetual + Invesco_PowerShares,
-IRM,Iron Mountain Incorporated,Industrials,yahoo,IRM,2015-07-01,2026-11-10,,271.0,,Iron_Mountain_(company) + Iron_Mountain_Incorporated + Iron_Mountain_Digital,
-JEC,Jacobs Engineering Group,Industrials,yahoo,J,2015-07-01,2026-11-10,,372.0,,Jacobs_Solutions + Jacobs_Engineering_Group,
-JBHT,J. B. Hunt Transport Services,Industrials,yahoo,JBHT,2015-07-01,2026-11-10,,172.0,,J._B._Hunt + J._B._Hunt_Transport_Services,
-JNJ,Johnson & Johnson,Health Care,yahoo,JNJ,2015-07-01,2026-11-10,,1754.0,,Johnson_&_Johnson,
-JCI,Johnson Controls,Consumer Discretionary,yahoo,JCI,2015-07-01,2026-11-10,,616.0,,Johnson_Controls,
-JPM,JPMorgan Chase & Co.,Financials,yahoo,JPM,2015-07-01,2026-11-10,,3104.0,,JPMorgan_Chase + JPMorgan_Chase_&_Co. + JP_Morgan_Chase + J.P._Morgan_Asset_Management,
-JNPR,Juniper Networks,Information Technology,,,,,no price data (most likely bought out or delisted),353.0,,Juniper_Networks,
-KSU,Kansas City Southern,Industrials,,,,,no price data (most likely bought out or delisted),2.0,,Kansas_City_Southern,
-K,Kellogg Co.,Consumer Staples,,,,,no price data (most likely bought out or delisted),1366.0,,Kellogg's + Kellogg_Co. + Kellogg_Company,
-KEY,KeyCorp,Financials,yahoo,KEY,2015-07-01,2026-11-10,,250.0,,KeyBank + KeyCorp,
-GMCR,Keurig Green Mountain,Consumer Staples,,,,,no price data (most likely bought out or delisted),1107.0,,Keurig_Dr_Pepper + Keurig_Green_Mountain,
-KMB,Kimberly-Clark,Consumer Staples,yahoo,KMB,2015-07-01,2026-11-10,,452.0,,Kimberly-Clark + Kimberly_Clark,
-KIM,Kimco Realty,Financials,yahoo,KIM,2015-07-01,2026-11-10,,30.0,,Kimco_Realty,
-KMI,Kinder Morgan,Energy,yahoo,KMI,2015-07-01,2026-11-10,,149.0,,Kinder_Morgan,
-KLAC,KLA-Tencor Corp.,Information Technology,yahoo,KLAC,2015-07-01,2026-11-10,,203.0,,KLA_Corporation + KLA-Tencor_Corp. + KLA-Tencor,
-KSS,Kohl's Corp.,Consumer Discretionary,yahoo,KSS,2015-07-01,2026-11-10,,569.0,,Kohl's + Kohl's_Corp. + Kohls,
-KHC,Kraft Heinz Co,Consumer Staples,yahoo,KHC,2015-07-06,2026-11-10,,956.0,,Kraft_Heinz + Kraft_Heinz_Company + The_Kraft_Heinz_Company,
-KR,Kroger Co.,Consumer Staples,yahoo,KR,2015-07-01,2026-11-10,,1421.0,,Kroger + Kroger_Co.,
-LB,L Brands Inc.,Consumer Discretionary,yahoo,BBWI,2015-07-01,2026-11-10,,454.0,,"Bath_&_Body_Works,_Inc. + L_Brands_Inc. + Limited_Brands + L_Brands",
-LLL,L-3 Communications Holdings,Industrials,,,,,no price data (most likely bought out or delisted),285.0,,L3_Technologies + L-3_Communications_Holdings + L-3_Communications,
-LH,Laboratory Corp. of America Holding,Health Care,yahoo,LH,2015-07-01,2026-11-10,,229.0,,Labcorp + Laboratory_Corp._of_America_Holding + LabCorp,
-LRCX,Lam Research,Information Technology,yahoo,LRCX,2015-07-01,2026-11-10,,265.0,,Lam_Research,
-LM,Legg Mason,Financials,,,,,no price data (most likely bought out or delisted),92.0,,Legg_Mason,
-LEG,Leggett & Platt,Industrials,,,,,LEG starts 2026-08-26,61.0,,Leggett_&_Platt,
-LEN,Lennar Corp.,Consumer Discretionary,yahoo,LEN,2015-07-01,2026-11-10,,142.0,,Lennar + Lennar_Corp. + Lennar_Corporation,
-LVLT,Level 3 Communications,Telecommunications Services,,,,,no price data (most likely bought out or delisted),302.0,,Level_3_Communications,
-LUK,Leucadia National Corp.,Financials,yahoo,JEF,2015-07-01,2026-11-10,,104.0,,Jefferies_Financial_Group + Leucadia_National_Corp. + Leucadia_National,
-LLY,Lilly (Eli) & Co.,Health Care,yahoo,LLY,2015-07-01,2026-11-10,,837.0,,Eli_Lilly_and_Company + Lilly_(Eli)_&_Co.,
-LNC,Lincoln National,Financials,yahoo,LNC,2015-07-01,2026-11-10,,113.0,,Lincoln_National_Corporation + Lincoln_National,
-LLTC,Linear Technology Corp.,Information Technology,,,,,no price data (most likely bought out or delisted),64.0,,Linear_Technology + Linear_Technology_Corp.,
-LMT,Lockheed Martin Corp.,Industrials,yahoo,LMT,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Lockheed_Martin/daily/20261102/20261110'),Lockheed_Martin + Lockheed_Martin_Corp.,
-L,Loews Corp.,Financials,yahoo,L,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Loews_Corporation/daily/20261102/20261110'),Loews_Corporation + Loews_Corp.,
-LOW,Lowe's Cos.,Consumer Discretionary,yahoo,LOW,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Lowe%27s/daily/20261102/20261110'),Lowe's + Lowe's_Cos.,
-LYB,LyondellBasell,Materials,yahoo,LYB,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/LyondellBasell/daily/20261102/20261110'),LyondellBasell,
-MTB,M&T Bank Corp.,Financials,yahoo,MTB,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/M%26T_Bank/daily/20261102/20261110'),M&T_Bank + M&T_Bank_Corp.,
-MAC,Macerich,Financials,yahoo,MAC,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Macerich/daily/20261102/20261110'),Macerich,
-M,Macy's Inc.,Consumer Discretionary,yahoo,M,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Macy%27s%2C_Inc./daily/20261102/20261110'),"Macy's,_Inc. + Macy's_Inc.",
-MNK,Mallinckrodt Plc,Health Care,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Mallinckrodt/daily/20261102/20261110'),Mallinckrodt + Mallinckrodt_Plc,
-MRO,Marathon Oil Corp.,Energy,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Marathon_Oil/daily/20261102/20261110'),Marathon_Oil + Marathon_Oil_Corp.,
-MPC,Marathon Petroleum,Energy,yahoo,MPC,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Marathon_Petroleum/daily/20261102/20261110'),Marathon_Petroleum,
-MAR,Marriott Int'l.,Consumer Discretionary,yahoo,MAR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Marriott_International/daily/20261102/20261110'),Marriott_International + Marriott_Int'l. + TownePlace_Suites,
-MMC,Marsh & McLennan,Financials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Marsh_McLennan/daily/20261102/20261110'),Marsh_McLennan + Marsh_&_McLennan + Marsh_&_McLennan_Companies,
-MLM,Martin Marietta Materials,Materials,yahoo,MLM,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Martin_Marietta_Materials/daily/20261102/20261110'),Martin_Marietta_Materials,
-MAS,Masco Corp.,Industrials,yahoo,MAS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Masco/daily/20261102/20261110'),Masco + Masco_Corp.,
-MA,Mastercard Inc.,Information Technology,yahoo,MA,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Mastercard/daily/20261102/20261110'),Mastercard + Mastercard_Inc. + MasterCard,
-MAT,Mattel Inc.,Consumer Discretionary,yahoo,MAT,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Mattel/daily/20261102/20261110'),Mattel + Mattel_Inc. + Harold_Matson_(businessman) + Mattel_Studios,
-MKC,McCormick & Co.,Consumer Staples,yahoo,MKC,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/McCormick_%26_Company/daily/20261102/20261110'),McCormick_&_Company + McCormick_&_Co. + McCormick_and_Company,
-MCD,McDonald's Corp.,Consumer Discretionary,yahoo,MCD,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/McDonald%27s/daily/20261102/20261110'),McDonald's + McDonald's_Corp. + McDonalds + Mcdonalds + Mcdonald's + McDonald's_Corporation + Speedee + Mcdonalds.com,
-MHFI,McGraw Hill Financial,Financials,yahoo,SPGI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/S%26P_Global/daily/20261102/20261110'),S&P_Global + McGraw_Hill_Financial + S&P_Capital_IQ + SNL_Financial,
-MCK,McKesson Corp.,Health Care,yahoo,MCK,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/McKesson/daily/20261102/20261110'),McKesson + McKesson_Corp. + McKesson_Corporation,
-MJN,Mead Johnson,Consumer Staples,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Mead_Johnson/daily/20261102/20261110'),Mead_Johnson,
-MDT,Medtronic plc,Health Care,yahoo,MDT,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Medtronic/daily/20261102/20261110'),"Medtronic + Medtronic_plc + Medtronic,_Inc",
-MRK,Merck & Co.,Health Care,yahoo,MRK,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Merck_%26_Co./daily/20261102/20261110'),Merck_&_Co.,
-MET,MetLife Inc.,Financials,yahoo,MET,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/MetLife/daily/20261102/20261110'),MetLife + MetLife_Inc.,
-KORS,Michael Kors Holdings,Consumer Discretionary,yahoo,CPRI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Capri_Holdings/daily/20261102/20261110'),Capri_Holdings + Michael_Kors_Holdings + Michael_Kors_(brand),
-MCHP,Microchip Technology,Information Technology,yahoo,MCHP,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Microchip_Technology/daily/20261102/20261110'),Microchip_Technology,
-MU,Micron Technology,Information Technology,yahoo,MU,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Micron_Technology/daily/20261102/20261110'),Micron_Technology + Crucial_(brand),
-MSFT,Microsoft Corp.,Information Technology,yahoo,MSFT,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Microsoft/daily/20261102/20261110'),Microsoft + Microsoft_Corp. + Microsoft_Corporation + Mircosoft + Lift_London + Microsoft_Security_Response_Center,
-MHK,Mohawk Industries,Consumer Discretionary,yahoo,MHK,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Mohawk_Industries/daily/20261102/20261110'),Mohawk_Industries,
-TAP,Molson Coors Brewing Company,Consumer Staples,yahoo,TAP,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Molson_Coors/daily/20261102/20261110'),Molson_Coors + Molson_Coors_Brewing_Company + Molson_Coors_Beverage_Company,
-MDLZ,Mondelez International,Consumer Staples,yahoo,MDLZ,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Mondelez_International/daily/20261102/20261110'),Mondelez_International + Mondelez + Mondelēz_International,
-MON,Monsanto Co.,Materials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Monsanto/daily/20261102/20261110'),Monsanto + Monsanto_Co. + Monsanto_Company,
-MNST,Monster Beverage,Consumer Staples,yahoo,MNST,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Monster_Beverage/daily/20261102/20261110'),Monster_Beverage + Burn_(energy_drink) + Peace_Iced_Tea + Monster_Beverage_Corporation,
-MCO,Moody's Corp,Financials,yahoo,MCO,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Moody%27s_Corporation/daily/20261102/20261110'),Moody's_Corporation + Moody's_Corp,
-MS,Morgan Stanley,Financials,yahoo,MS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Morgan_Stanley/daily/20261102/20261110'),Morgan_Stanley,
-MOS,The Mosaic Company,Materials,yahoo,MOS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/The_Mosaic_Company/daily/20261102/20261110'),The_Mosaic_Company,
-MSI,Motorola Solutions Inc.,Information Technology,yahoo,MSI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Motorola_Solutions/daily/20261102/20261110'),Motorola_Solutions + Motorola_Solutions_Inc.,
-MUR,Murphy Oil,Energy,yahoo,MUR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Murphy_Oil/daily/20261102/20261110'),Murphy_Oil,
-MYL,Mylan N.V.,Health Care,yahoo,VTRS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Mylan/daily/20261102/20261110'),Mylan + Mylan_N.V.,
-NDAQ,NASDAQ OMX Group,Financials,yahoo,NDAQ,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Nasdaq%2C_Inc./daily/20261102/20261110'),"Nasdaq,_Inc. + NASDAQ_OMX_Group",
-NOV,National Oilwell Varco Inc.,Energy,yahoo,NOV,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/NOV_Inc./daily/20261102/20261110'),NOV_Inc. + National_Oilwell_Varco_Inc. + National_Oilwell_Varco,
-NAVI,Navient,Financials,yahoo,NAVI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Navient/daily/20261102/20261110'),Navient + Navient_Corporation,
-NTAP,NetApp,Information Technology,yahoo,NTAP,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/NetApp/daily/20261102/20261110'),NetApp,
-NFLX,Netflix Inc.,Information Technology,yahoo,NFLX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Netflix%2C_Inc./daily/20261102/20261110'),"Netflix,_Inc. + Netflix_Inc.",
-NWL,Newell Rubbermaid Co.,Consumer Discretionary,yahoo,NWL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Newell_Brands/daily/20261102/20261110'),Newell_Brands + Newell_Rubbermaid_Co. + Newell_Rubbermaid,
-NFX,Newfield Exploration Co,Energy,,,,,NFX starts 2026-07-07,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Newfield_Exploration/daily/20261102/20261110'),Newfield_Exploration + Newfield_Exploration_Co,
-NEM,Newmont Mining Corp. (Hldg. Co.),Materials,yahoo,NEM,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Newmont/daily/20261102/20261110'),Newmont + Newmont_Mining_Corp._(Hldg._Co.) + Newmont_Corporation + Newmont_Mining_Corporation + Newmont_Goldcorp,
-NWSA,News Corp. Class A,Consumer Discretionary,yahoo,NWSA,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/News_Corp/daily/20261102/20261110'),News_Corp + News_Corp._Class_A + News_Corp_(2013–present),
-NWS,News Corp. Class B,Consumer Discretionary,yahoo,NWS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/News_Corp/daily/20261102/20261110'),News_Corp + News_Corp._Class_B + News_Corp_(2013–present),
-NEE,NextEra Energy,Utilities,yahoo,NEE,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/NextEra_Energy/daily/20261102/20261110'),NextEra_Energy,
-NLSN,Nielsen Holdings,Industrials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Nielsen_Holdings/daily/20261102/20261110'),Nielsen_Holdings + Nielsen_Company + Nielsen_N.V. + Nielsen_Holdings_PLC,
-NKE,Nike,Consumer Discretionary,yahoo,NKE,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Nike%2C_Inc./daily/20261102/20261110'),"Nike,_Inc. + Nike_(company) + Nike,_Inc + NIKE + Nike_Hypervenom",
-NI,NiSource Inc.,Utilities,yahoo,NI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/NiSource/daily/20261102/20261110'),NiSource + NiSource_Inc.,
-NBL,Noble Energy Inc,Energy,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Noble_Energy/daily/20261102/20261110'),Noble_Energy + Noble_Energy_Inc,
-JWN,Nordstrom,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Nordstrom/daily/20261102/20261110'),"Nordstrom + Nordstrom,_Inc. + Erik_Nordstrom_(businessman)",
-NSC,Norfolk Southern Corp.,Industrials,yahoo,NSC,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Norfolk_Southern_Railway/daily/20261102/20261110'),Norfolk_Southern_Railway + Norfolk_Southern_Corp. + Norfolk_Southern,
-NTRS,Northern Trust Corp.,Financials,yahoo,NTRS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Northern_Trust/daily/20261102/20261110'),Northern_Trust + Northern_Trust_Corp.,
-NOC,Northrop Grumman Corp.,Industrials,yahoo,NOC,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Northrop_Grumman/daily/20261102/20261110'),Northrop_Grumman + Northrop_Grumman_Corp.,
-NRG,NRG Energy,Utilities,yahoo,NRG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/NRG_Energy/daily/20261102/20261110'),NRG_Energy,
-NUE,Nucor Corp.,Materials,yahoo,NUE,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Nucor/daily/20261102/20261110'),Nucor + Nucor_Corp. + Nucor_Corporation,
-NVDA,Nvidia Corporation,Information Technology,yahoo,NVDA,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Nvidia/daily/20261102/20261110'),Nvidia + Nvidia_Corporation + NVIDIA + NViDiA,
-ORLY,O'Reilly Automotive,Consumer Discretionary,yahoo,ORLY,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/O%27Reilly_Auto_Parts/daily/20261102/20261110'),O'Reilly_Auto_Parts + O'Reilly_Automotive,
-OXY,Occidental Petroleum,Energy,yahoo,OXY,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Occidental_Petroleum/daily/20261102/20261110'),Occidental_Petroleum,
-OMC,Omnicom Group,Consumer Discretionary,yahoo,OMC,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Omnicom_Group/daily/20261102/20261110'),Omnicom_Group + Omnicom,
-OKE,ONEOK,Energy,yahoo,OKE,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Oneok/daily/20261102/20261110'),Oneok + ONEOK,
-ORCL,Oracle Corp.,Information Technology,yahoo,ORCL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Oracle_Corporation/daily/20261102/20261110'),Oracle_Corporation + Oracle_Corp. + Oracle_corporation + Oracle.com + @Oracle,
-OI,Owens-Illinois Inc,Materials,yahoo,OI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/O-I_Glass/daily/20261102/20261110'),O-I_Glass + Owens-Illinois_Inc + Owens-Illinois,
-PCAR,PACCAR Inc.,Industrials,yahoo,PCAR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Paccar/daily/20261102/20261110'),Paccar + PACCAR_Inc.,
-PH,Parker-Hannifin,Industrials,yahoo,PH,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Parker_Hannifin/daily/20261102/20261110'),Parker_Hannifin + Parker-Hannifin,
-PDCO,Patterson Companies,Health Care,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Patterson_Companies/daily/20261102/20261110'),Patterson_Companies,
-PAYX,Paychex Inc.,Information Technology,yahoo,PAYX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Paychex/daily/20261102/20261110'),Paychex + Paychex_Inc.,
-PYPL,PayPal,Information Technology,yahoo,PYPL,2015-07-06,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/PayPal/daily/20261102/20261110'),PayPal + Paypal,
-PNR,Pentair Ltd.,Industrials,yahoo,PNR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Pentair/daily/20261102/20261110'),Pentair,
-PBCT,People's United Financial,Financials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/People%27s_United_Financial/daily/20261102/20261110,People's_United_Financial,
-POM,Pepco Holdings Inc.,Utilities,,,,,POM starts 2025-10-08,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Pepco_Holdings/daily/20261102/20261110'),Pepco_Holdings + Pepco_Holdings_Inc.,
-PEP,PepsiCo Inc.,Consumer Staples,yahoo,PEP,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/PepsiCo/daily/20261102/20261110'),PepsiCo + PepsiCo_Inc. + Pepsico,
-PKI,PerkinElmer,Health Care,yahoo,RVTY,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/PerkinElmer/daily/20261102/20261110'),PerkinElmer,
-PRGO,Perrigo,Health Care,yahoo,PRGO,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Perrigo/daily/20261102/20261110'),Perrigo,
-PFE,Pfizer Inc.,Health Care,yahoo,PFE,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Pfizer/daily/20261102/20261110'),Pfizer + Pfizer_Inc. + Pfizer_Inc + Anacor,
-PCG,PG&E Corp.,Utilities,yahoo,PCG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Pacific_Gas_and_Electric_Company/daily/20261102/202,Pacific_Gas_and_Electric_Company + PG&E_Corp. + Pacific_Gas_&_Electric_Company,
-PM,Philip Morris International,Consumer Staples,yahoo,PM,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Philip_Morris_International/daily/20261102/20261110,Philip_Morris_International,
-PSX,Phillips 66,Energy,yahoo,PSX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Phillips_66/daily/20261102/20261110'),Phillips_66,
-PNW,Pinnacle West Capital,Utilities,yahoo,PNW,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Pinnacle_West_Capital/daily/20261102/20261110'),Pinnacle_West_Capital + Arizona_Public_Service,
-PXD,Pioneer Natural Resources,Energy,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Pioneer_Natural_Resources/daily/20261102/20261110'),Pioneer_Natural_Resources,
-PBI,Pitney-Bowes,Industrials,yahoo,PBI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Pitney_Bowes/daily/20261102/20261110'),Pitney_Bowes + Pitney-Bowes,
-PCL,Plum Creek Timber Co.,Financials,,,,,PCL starts 2025-08-05,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Plum_Creek_Timber/daily/20261102/20261110'),Plum_Creek_Timber + Plum_Creek_Timber_Co.,
-PNC,PNC Financial Services,Financials,yahoo,PNC,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/PNC_Financial_Services/daily/20261102/20261110'),PNC_Financial_Services + Pnc_bank,
-RL,Polo Ralph Lauren Corp.,Consumer Discretionary,yahoo,RL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Ralph_Lauren_Corporation/daily/20261102/20261110'),Ralph_Lauren_Corporation + Polo_Ralph_Lauren_Corp. + Polo_Ralph_Lauren + Rugby_Ralph_Lauren + Ralph_Lauren_(brand),
-PPG,PPG Industries,Materials,yahoo,PPG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/PPG_Industries/daily/20261102/20261110'),PPG_Industries,
-PPL,PPL Corp.,Utilities,yahoo,PPL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/PPL_Corporation/daily/20261102/20261110'),PPL_Corporation + PPL_Corp.,
-PX,Praxair Inc.,Materials,yahoo,LIN,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Praxair/daily/20261102/20261110'),Praxair + Praxair_Inc.,
-PCP,Precision Castparts,Industrials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Precision_Castparts_Corp./daily/20261102/20261110'),Precision_Castparts_Corp. + Precision_Castparts,
-PCLN,Priceline.com Inc,Consumer Discretionary,yahoo,BKNG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Priceline.com/daily/20261102/20261110'),Priceline.com + Priceline.com_Inc,
-PFG,Principal Financial Group,Financials,yahoo,PFG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Principal_Financial_Group/daily/20261102/20261110'),Principal_Financial_Group,
-PG,Procter & Gamble,Consumer Staples,yahoo,PG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Procter_%26_Gamble/daily/20261102/20261110'),Procter_&_Gamble + The_Procter_&_Gamble_Company,
-PGR,Progressive Corp.,Financials,yahoo,PGR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Progressive_Corporation/daily/20261102/20261110'),Progressive_Corporation + Progressive_Corp.,
-PLD,Prologis,Financials,yahoo,PLD,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Prologis/daily/20261102/20261110'),Prologis,
-PRU,Prudential Financial,Financials,yahoo,PRU,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Prudential_Financial/daily/20261102/20261110'),Prudential_Financial,
-PEG,Public Serv. Enterprise Inc.,Utilities,yahoo,PEG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Public_Service_Enterprise_Group/daily/20261102/2026,Public_Service_Enterprise_Group + Public_Serv._Enterprise_Inc.,
-PSA,Public Storage,Financials,yahoo,PSA,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Public_Storage/daily/20261102/20261110'),Public_Storage,
-PHM,Pulte Homes Inc.,Consumer Discretionary,yahoo,PHM,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/PulteGroup/daily/20261102/20261110'),PulteGroup + Pulte_Homes_Inc.,
-PVH,PVH Corp.,Consumer Discretionary,yahoo,PVH,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/PVH_Corp./daily/20261102/20261110'),PVH_Corp. + PVH_(company),
-QRVO,Qorvo,Information Technology,,,,,QRVO starts 2026-10-02,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Qorvo/daily/20261102/20261110'),Qorvo,
-PWR,Quanta Services Inc.,Industrials,yahoo,PWR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Quanta_Services/daily/20261102/20261110'),Quanta_Services + Quanta_Services_Inc.,
-QCOM,QUALCOMM Inc.,Information Technology,yahoo,QCOM,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Qualcomm/daily/20261102/20261110'),Qualcomm + QUALCOMM_Inc.,
-DGX,Quest Diagnostics,Health Care,yahoo,DGX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Quest_Diagnostics/daily/20261102/20261110'),Quest_Diagnostics,
-RRC,Range Resources Corp.,Energy,yahoo,RRC,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Range_Resources/daily/20261102/20261110'),Range_Resources,
-RTN,Raytheon Co.,Industrials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Raytheon/daily/20261102/20261110'),Raytheon + Raytheon_Co. + Raytheon_Company,
-O,Realty Income Corporation,Financials,yahoo,O,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Realty_Income/daily/20261102/20261110'),Realty_Income + Realty_Income_Corporation,
-RHT,Red Hat Inc.,Information Technology,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Red_Hat/daily/20261102/20261110'),Red_Hat + Red_Hat_Inc. + Red_hat,
-REGN,Regeneron,Health Care,yahoo,REGN,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Regeneron_Pharmaceuticals/daily/20261102/20261110'),Regeneron_Pharmaceuticals + Regeneron,
-RF,Regions Financial Corp.,Financials,yahoo,RF,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Regions_Financial_Corporation/daily/20261102/202611,Regions_Financial_Corporation + Regions_Financial_Corp.,
-RSG,Republic Services Inc,Industrials,yahoo,RSG,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Republic_Services/daily/20261102/20261110'),Republic_Services + Republic_Services_Inc,
-RAI,Reynolds American Inc.,Consumer Staples,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Reynolds_American/daily/20261102/20261110'),Reynolds_American + Reynolds_American_Inc.,
-RHI,Robert Half International,Industrials,yahoo,RHI,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Robert_Half/daily/20261102/20261110'),Robert_Half + Robert_Half_International,
-ROK,Rockwell Automation Inc.,Industrials,yahoo,ROK,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Rockwell_Automation/daily/20261102/20261110'),Rockwell_Automation + Rockwell_Automation_Inc.,
-COL,Rockwell Collins,Industrials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Rockwell_Collins/daily/20261102/20261110'),Rockwell_Collins,
-ROP,Roper Industries,Industrials,yahoo,ROP,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Roper_Technologies/daily/20261102/20261110'),Roper_Technologies + Roper_Industries,
-ROST,Ross Stores,Consumer Discretionary,yahoo,ROST,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Ross_Stores/daily/20261102/20261110'),Ross_Stores + Ross_Dress_for_Less,
-RCL,Royal Caribbean Cruises Ltd,Consumer Discretionary,yahoo,RCL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Royal_Caribbean_Group/daily/20261102/20261110'),Royal_Caribbean_Group + Royal_Caribbean_Cruises_Ltd + Royal_Caribbean_Cruises_Ltd.,
-R,Ryder System,Industrials,yahoo,R,2015-07-01,2026-11-10,,155.0,,Ryder + Ryder_System,
-CRM,Salesforce.com,Information Technology,yahoo,CRM,2015-07-01,2026-11-10,,2580.0,,Salesforce + Salesforce.com,
-SNDK,SanDisk Corporation,Information Technology,,,,,SNDK starts 2025-02-13,451.0,,Sandisk + SanDisk_Corporation + SanDisk,
-SCG,SCANA Corp,Utilities,,,,,no price data (most likely bought out or delisted),35.0,,SCANA + SCANA_Corp,
-SLB,Schlumberger Ltd.,Energy,yahoo,SLB,2015-07-01,2026-11-10,,749.0,,SLB + Schlumberger_Ltd. + Schlumberger,
-SNI,Scripps Networks Interactive Inc.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),97.0,,Scripps_Networks_Interactive + Scripps_Networks_Interactive_Inc.,
-STX,Seagate Technology,Information Technology,yahoo,STX,2015-07-01,2026-11-10,,396.0,,Seagate_Technology,
-SRE,Sempra Energy,Utilities,yahoo,SRE,2015-07-01,2026-11-10,,110.0,,Sempra + Sempra_Energy,
-SHW,Sherwin-Williams,Materials,yahoo,SHW,2015-07-01,2026-11-10,,353.0,,Sherwin-Williams,
-SIG,Signet Jewelers,Consumer Discretionary,yahoo,SIG,2015-07-01,2026-11-10,,137.0,,Signet_Jewelers,
-SPG,Simon Property Group Inc,Financials,yahoo,SPG,2015-07-01,2026-11-10,,372.0,,Simon_Property_Group + Simon_Property_Group_Inc,
-SWKS,Skyworks Solutions,Information Technology,yahoo,SWKS,2015-07-01,2026-11-10,,129.0,,Skyworks_Solutions,
-SLG,SL Green Realty,Financials,yahoo,SLG,2015-07-01,2026-11-10,,50.0,,SL_Green_Realty,
-SJM,Smucker (J.M.),Consumer Staples,yahoo,SJM,2015-07-01,2026-11-10,,306.0,,The_J.M._Smucker_Company + Smucker_(J.M.),
-SNA,Snap-On Inc.,Consumer Discretionary,yahoo,SNA,2015-07-01,2026-11-10,,267.0,,Snap-on + Snap-On_Inc.,
-SO,Southern Co.,Utilities,yahoo,SO,2015-07-01,2026-11-10,,171.0,,Southern_Company + Southern_Co.,
-LUV,Southwest Airlines,Industrials,yahoo,LUV,2015-07-01,2026-11-10,,2059.0,,Southwest_Airlines + Iflyswa + Southwest_airlines,
-SWN,Southwestern Energy,Energy,,,,,no price data (most likely bought out or delisted),30.0,,Southwestern_Energy,
-SE,Spectra Energy Corp.,Energy,,,,,SE starts 2017-10-20,22.0,,Spectra_Energy + Spectra_Energy_Corp.,
-STJ,St Jude Medical,Health Care,,,,,no price data (most likely bought out or delisted),89.0,,St._Jude_Medical + St_Jude_Medical,
-SWK,Stanley Black & Decker,Consumer Discretionary,yahoo,SWK,2015-07-01,2026-11-10,,513.0,,Stanley_Black_&_Decker,
-SPLS,Staples Inc.,Consumer Discretionary,,,,,SPLS starts 2026-01-16,455.0,,Staples_Inc. + Staples_Inc,
-SBUX,Starbucks Corp.,Consumer Discretionary,yahoo,SBUX,2015-07-01,2026-11-10,,8040.0,,Starbucks + Starbucks_Corp. + Starbucks_DoubleShot + @Starbucks,
-HOT,Starwood Hotels & Resorts,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),115.0,,Starwood_Hotels_and_Resorts + Starwood_Hotels_&_Resorts + Starwood_Hotels_&_Resorts_Worldwide + Starwood_Hotels_and_Resorts_Worldwide + Compagnia_Italiana_Grandi_Alberghi,
-STT,State Street Corp.,Financials,yahoo,STT,2015-07-01,2026-11-10,,802.0,,State_Street_Corporation + State_Street_Corp.,
-SRCL,Stericycle Inc,Industrials,,,,,no price data (most likely bought out or delisted),57.0,,Stericycle + Stericycle_Inc,
-SYK,Stryker Corp.,Health Care,yahoo,SYK,2015-07-01,2026-11-10,,403.0,,Stryker_Corporation + Stryker_Corp. + Stryker_Orthopaedics,
-STI,SunTrust Banks,Financials,,,,,STI starts 2022-05-02,304.0,,SunTrust + SunTrust_Banks,
-SYMC,Symantec Corp.,Information Technology,yahoo,GEN,2015-07-01,2026-11-10,,317.0,,Gen_Digital + Symantec_Corp. + MessageLabs + NortonLifeLock,
-SYF,Synchrony Financial,Financials,yahoo,SYF,2015-07-01,2026-11-10,,321.0,,Synchrony_Financial,
-SYY,Sysco Corp.,Consumer Staples,yahoo,SYY,2015-07-01,2026-11-10,,341.0,,Sysco + Sysco_Corp.,
-TROW,T. Rowe Price Group,Financials,yahoo,TROW,2015-07-01,2026-11-10,,259.0,,T._Rowe_Price + T._Rowe_Price_Group,
-TGT,Target Corp.,Consumer Discretionary,yahoo,TGT,2015-07-01,2026-11-10,,2063.0,,Target_Corporation + Target_Corp.,
-TEL,TE Connectivity Ltd.,Information Technology,yahoo,TEL,2015-07-01,2026-11-10,,368.0,,TE_Connectivity,
-TE,TECO Energy,Utilities,,,,,TE starts 2020-01-10,40.0,,TECO_Energy,
-TGNA,Tegna,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),378.0,,USA_Today_Co. + Gannett_Co. + Gannett_Company + Gannett,
-THC,Tenet Healthcare Corp.,Health Care,yahoo,THC,2015-07-01,2026-11-10,,153.0,,Tenet_Healthcare + Tenet_Healthcare_Corp.,
-TDC,Teradata Corp.,Information Technology,yahoo,TDC,2015-07-01,2026-11-10,,218.0,,Teradata + Teradata_Corp.,
-TSO,Tesoro Petroleum Co.,Energy,,,,,no price data (most likely bought out or delisted),77.0,,Tesoro_Corporation + Tesoro_Petroleum_Co. + Andeavor,
-TXN,Texas Instruments,Information Technology,yahoo,TXN,2015-07-01,2026-11-10,,908.0,,Texas_Instruments,
-TXT,Textron Inc.,Industrials,yahoo,TXT,2015-07-01,2026-11-10,,391.0,,Textron + Textron_Inc.,
-HSY,The Hershey Company,Consumer Staples,yahoo,HSY,2015-07-01,2026-11-10,,1093.0,,The_Hershey_Company,
-TRV,The Travelers Companies Inc.,Financials,yahoo,TRV,2015-07-01,2026-11-10,,316.0,,The_Travelers_Companies + The_Travelers_Companies_Inc. + Travelers_Group,
-TMO,Thermo Fisher Scientific,Health Care,yahoo,TMO,2015-07-01,2026-11-10,,692.0,,Thermo_Fisher_Scientific,
-TIF,Tiffany & Co.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),994.0,,Tiffany_&_Co. + Tiffany_&_Co + Tiffany_and_Co. + Tiffany_&_Company,
-TWX,Time Warner Inc.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),2248.0,,WarnerMedia + Time_Warner_Inc. + Warner_Communications + Time_Warner + WarnerMedia_Entertainment + WarnerMedia_News_&_Sports,
-TWC,Time Warner Cable Inc.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),402.0,,Time_Warner_Cable + Time_Warner_Cable_Inc. + NaviSite,
-TJX,TJX Companies Inc.,Consumer Discretionary,yahoo,TJX,2015-07-01,2026-11-10,,525.0,,TJX + TJX_Companies_Inc. + TJX_Companies,
-TMK,Torchmark Corp.,Financials,,,,,no price data (most likely bought out or delisted),49.0,,Globe_Life + Torchmark_Corp.,
-TSS,Total System Services,Information Technology,,,,,no price data (most likely bought out or delisted),134.0,,TSYS + Total_System_Services,
-TSCO,Tractor Supply Company,Consumer Discretionary,yahoo,TSCO,2015-07-01,2026-11-10,,217.0,,Tractor_Supply_Company,
-RIG,Transocean,Energy,yahoo,RIG,2015-07-01,2026-11-10,,229.0,,Transocean,
-TRIP,TripAdvisor,Consumer Discretionary,yahoo,TRIP,2015-07-01,2026-11-10,,554.0,,Tripadvisor + TripAdvisor,
-FOXA,Twenty-First Century Fox Class A,Consumer Discretionary,,,,,FOXA starts 2019-03-12,1048.0,,21st_Century_Fox + Twenty-First_Century_Fox_Class_A + List_of_assets_owned_by_21st_Century_Fox,
-FOX,Twenty-First Century Fox Class B,Consumer Discretionary,,,,,FOX starts 2019-03-13,1048.0,,21st_Century_Fox + Twenty-First_Century_Fox_Class_B + List_of_assets_owned_by_21st_Century_Fox,
-TSN,Tyson Foods,Consumer Staples,yahoo,TSN,2015-07-01,2026-11-10,,436.0,,Tyson_Foods,
-TYC,Tyco International,Industrials,yahoo,JCI,2015-07-01,2026-11-10,,274.0,,Tyco_International,
-USB,U.S. Bancorp,Financials,yahoo,USB,2015-07-01,2026-11-10,,604.0,,U.S._Bancorp + U.S._Bank + Usbank,
-UA,Under Armour,Consumer Discretionary,yahoo,UAA,2015-07-01,2026-11-10,,1250.0,,Under_Armour,
-UNP,Union Pacific,Industrials,yahoo,UNP,2015-07-01,2026-11-10,,928.0,,Union_Pacific_Railroad + Union_Pacific,
-UAL,United Continental Holdings,Industrials,yahoo,UAL,2015-07-01,2026-11-10,,3229.0,,United_Airlines + United_Continental_Holdings + United_air + United_airlines + United_Airlines_Holdings + List_of_United_Airlines_destinations,
-UNH,United Health Group Inc.,Health Care,yahoo,UNH,2015-07-01,2026-11-10,,978.0,,UnitedHealth_Group + United_Health_Group_Inc. + United_healthcare + UnitedHealthcare + United_Healthcare,
-UPS,United Parcel Service,Industrials,yahoo,UPS,2015-07-01,2026-11-10,,1385.0,,United_Parcel_Service + UPS_Ground,
-URI,"United Rentals, Inc.",Industrials,yahoo,URI,2015-07-01,2026-11-10,,84.0,,United_Rentals,
-UTX,United Technologies,Industrials,yahoo,RTX,2015-07-01,2026-11-10,,611.0,,United_Technologies + United_Technologies_Corporation,
-UHS,"Universal Health Services, Inc.",Health Care,yahoo,UHS,2015-07-01,2026-11-10,,81.0,,Universal_Health_Services,
-UNM,Unum Group,Financials,yahoo,UNM,2015-07-01,2026-11-10,,127.0,,Unum + Unum_Group,
-URBN,Urban Outfitters,Consumer Discretionary,yahoo,URBN,2015-07-01,2026-11-10,,441.0,,Urban_Outfitters,
-VFC,V.F. Corp.,Consumer Discretionary,yahoo,VFC,2015-07-01,2026-11-10,,785.0,,VF_Corporation + V.F._Corp.,
-VLO,Valero Energy,Energy,yahoo,VLO,2015-07-01,2026-11-10,,296.0,,Valero_Energy + Valero_Energy_Corporation,
-VAR,Varian Medical Systems,Health Care,,,,,no price data (most likely bought out or delisted),110.0,,Varian_Medical_Systems,
-VTR,Ventas Inc,Financials,yahoo,VTR,2015-07-01,2026-11-10,,29.0,,Ventas_(company) + Ventas_Inc,
-VRSN,Verisign Inc.,Information Technology,yahoo,VRSN,2015-07-01,2026-11-10,,239.0,,Verisign + Verisign_Inc.,
-VRSK,Verisk Analytics,Industrials,yahoo,VRSK,2015-07-01,2026-11-10,,109.0,,Verisk_Analytics,
-VZ,Verizon Communications,Telecommunications Services,yahoo,VZ,2015-07-01,2026-11-10,,1486.0,,Verizon + Verizon_Communications + Bell_Atlantic,
-VRTX,Vertex Pharmaceuticals Inc,Health Care,yahoo,VRTX,2015-07-01,2026-11-10,,209.0,,Vertex_Pharmaceuticals,
-VIAB,Viacom Inc.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),191.0,,Viacom + Viacom_Inc.,
-V,Visa Inc.,Information Technology,yahoo,V,2015-07-01,2026-11-10,,1281.0,,Visa_Inc. + Visa_Inc + Visa_Europe,
-VNO,Vornado Realty Trust,Financials,yahoo,VNO,2015-07-01,2026-11-10,,130.0,,Vornado_Realty_Trust,
-VMC,Vulcan Materials,Materials,yahoo,VMC,2015-07-01,2026-11-10,,61.0,,Vulcan_Materials_Company + Vulcan_Materials,
-WMT,Wal-Mart Stores,Consumer Staples,yahoo,WMT,2015-07-01,2026-11-10,,5856.0,,"Walmart + Wal-Mart_Stores + Walmart_Neighborhood_Market + Walmart.com + Wal-Mart_Stores,_Inc. + Wal-mart + Wal-Mart",
-WBA,Walgreens Boots Alliance,Consumer Staples,,,,,no price data (most likely bought out or delisted),410.0,,Walgreens_Boots_Alliance,
-DIS,The Walt Disney Company,Consumer Discretionary,yahoo,DIS,2015-07-01,2026-11-10,,6440.0,,The_Walt_Disney_Company + Walt_Disney_Company + Walt_Disney_Productions + Disney,
-WM,Waste Management Inc.,Industrials,yahoo,WM,2015-07-01,2026-11-10,,368.0,,"Waste_Management,_Inc. + Waste_Management_Inc. + WM_(Waste_Management)_(company) + Waste_Management_(corporation) + Waste_Management,_Inc + Waste_Management_(company)",
-WAT,Waters Corporation,Health Care,yahoo,WAT,2015-07-01,2026-11-10,,86.0,,Waters_Corporation,
-ANTM,Anthem Inc.,Health Care,yahoo,ELV,2015-07-01,2026-11-10,,452.0,,Elevance_Health + Anthem_Inc. + WellPoint + Anthem_(company),
-WFC,Wells Fargo,Financials,yahoo,WFC,2015-07-01,2026-11-10,,2507.0,,Wells_Fargo + Wells_Fargo_Bank + Wells_fargo + Wells_Fargo_Securities + Wellsfargo.com + @WellsFargo,
-HCN,Welltower Inc.,Financials,yahoo,WELL,2015-07-01,2026-11-10,,50.0,,Welltower + Welltower_Inc.,
-WDC,Western Digital,Information Technology,yahoo,WDC,2015-07-01,2026-11-10,,538.0,,Western_Digital,
-WU,Western Union Co,Information Technology,yahoo,WU,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Western_Union_Co/daily/20261102/20261110'),Western_Union + Western_Union_Co,
-WY,Weyerhaeuser Corp.,Financials,yahoo,WY,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Weyerhaeuser/daily/20261102/20261110'),Weyerhaeuser + Weyerhaeuser_Corp.,
-WHR,Whirlpool Corp.,Consumer Discretionary,yahoo,WHR,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Whirlpool_Corporation/daily/20261102/20261110'),Whirlpool_Corporation + Whirlpool_Corp.,
-WFM,Whole Foods Market,Consumer Staples,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Whole_Foods_Market/daily/20261102/20261110'),Whole_Foods_Market,
-WMB,Williams Cos.,Energy,yahoo,WMB,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Williams_Companies/daily/20261102/20261110'),Williams_Companies + Williams_Cos.,
-WEC,Wisconsin Energy Corporation,Utilities,yahoo,WEC,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/WEC_Energy_Group/daily/20261102/20261110'),WEC_Energy_Group + Wisconsin_Energy_Corporation,
-WYN,Wyndham Worldwide,Consumer Discretionary,yahoo,TNL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Travel_%2B_Leisure_Co./daily/20261102/20261110'),Travel_+_Leisure_Co. + Wyndham_Worldwide + Wyndham_Destinations,
-WYNN,Wynn Resorts Ltd,Consumer Discretionary,yahoo,WYNN,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Wynn_Resorts/daily/20261102/20261110'),Wynn_Resorts + Wynn_Resorts_Ltd,
-XEL,Xcel Energy Inc,Utilities,yahoo,XEL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Xcel_Energy/daily/20261102/20261110'),Xcel_Energy + Xcel_Energy_Inc,
-XRX,Xerox Corp.,Information Technology,yahoo,XRX,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Xerox/daily/20261102/20261110'),Xerox + Xerox_Corp.,
-XLNX,Xilinx Inc,Information Technology,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Xilinx/daily/20261102/20261110'),Xilinx + Xilinx_Inc,
-XL,XL Capital,Financials,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Axa_XL/daily/20261102/20261110'),Axa_XL + XL_Capital + XL_Catlin + XL_Group,
-XYL,Xylem Inc.,Industrials,yahoo,XYL,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Xylem_Inc./daily/20261102/20261110'),Xylem_Inc.,
-YHOO,Yahoo Inc.,Information Technology,,,,,no price data (most likely bought out or delisted),,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Yahoo_%28disambiguation%29/daily/20261102/20261110',Yahoo_(disambiguation) + Yahoo_Inc.,
-YUM,Yum! Brands Inc,Consumer Discretionary,yahoo,YUM,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Yum%21_Brands/daily/20261102/20261110'),Yum!_Brands + Yum!_Brands_Inc,
-ZBH,Zimmer Biomet Holdings,Health Care,yahoo,ZBH,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Zimmer_Biomet/daily/20261102/20261110'),Zimmer_Biomet + Zimmer_Holdings,
-ZION,Zions Bancorp,Financials,yahoo,ZION,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Zions_Bancorporation/daily/20261102/20261110'),Zions_Bancorporation + Zions_Bancorp,
-ZTS,Zoetis,Health Care,yahoo,ZTS,2015-07-01,2026-11-10,,,HTTPError('429 Client Error: Too Many Requests for url: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Zoetis/daily/20261102/20261110'),Zoetis,
+MMM,3M Company,Industrials,yahoo,MMM,2015-07-01,2026-11-10,,1175.0,,3M,True
+ABT,Abbott Laboratories,Health Care,yahoo,ABT,2015-07-01,2026-11-10,,882.0,,Abbott_Laboratories + PediaSure,True
+ABBV,AbbVie,Health Care,yahoo,ABBV,2015-07-01,2026-11-10,,568.0,,AbbVie + AbbVie_Inc.,True
+ACN,Accenture plc,Information Technology,yahoo,ACN,2015-07-01,2026-11-10,,3430.0,,Accenture + Accenture_plc,True
+ACE,ACE Limited,Financials,,,,,no price data (most likely bought out or delisted),354.0,,Chubb_Limited + ACE_Limited + Chubb_Corp. + Chubb_(company),True
+ATVI,Activision Blizzard,Information Technology,,,,,no price data (most likely bought out or delisted),1192.0,,Activision_Blizzard,False
+ADBE,Adobe Systems Inc,Information Technology,yahoo,ADBE,2015-07-01,2026-11-10,,1738.0,,Adobe_Inc. + Adobe_Systems_Inc + Adobe_Systems,True
+ADT,ADT Corp,Industrials,,,,,ADT starts 2018-01-19,280.0,,ADT_Inc. + ADT_Corp + ADT_Security_Services + The_ADT_Corporation,False
+AAP,Advance Auto Parts,Consumer Discretionary,yahoo,AAP,2015-07-01,2026-11-10,,235.0,,Advance_Auto_Parts,False
+AES,AES Corp,Utilities,yahoo,AES,2015-07-01,2026-11-10,,170.0,,AES_Corporation + AES_Corp,True
+AET,Aetna Inc,Health Care,,,,,no price data (most likely bought out or delisted),358.0,,Aetna + Aetna_Inc,False
+AFL,AFLAC Inc,Financials,yahoo,AFL,2015-07-01,2026-11-10,,240.0,,Aflac + AFLAC_Inc,True
+AMG,Affiliated Managers Group Inc,Financials,yahoo,AMG,2015-07-01,2026-11-10,,36.0,,Affiliated_Managers_Group + Affiliated_Managers_Group_Inc,False
+A,Agilent Technologies Inc,Health Care,yahoo,A,2015-07-01,2026-11-10,,309.0,,Agilent_Technologies + Agilent_Technologies_Inc,True
+GAS,AGL Resources Inc.,Utilities,,,,,no price data (most likely bought out or delisted),26.0,,Southern_Company_Gas + AGL_Resources_Inc. + AGL_Resources,False
+APD,Air Products & Chemicals Inc,Materials,yahoo,APD,2015-07-01,2026-11-10,,143.0,,Air_Products + Air_Products_&_Chemicals_Inc + Air_Products_and_Chemicals + Air_Products_&_Chemicals,True
+ARG,Airgas Inc,Materials,,,,,no price data (most likely bought out or delisted),61.0,,Airgas + Airgas_Inc,False
+AKAM,Akamai Technologies Inc,Information Technology,yahoo,AKAM,2015-07-01,2026-11-10,,727.0,,Akamai_Technologies + Akamai_Technologies_Inc + Akamai,True
+AA,Alcoa Inc,Materials,yahoo,AA,2015-07-01,2026-11-10,,370.0,,Alcoa + Alcoa_Inc,False
+AGN,Allergan plc,Health Care,,,,,no price data (most likely bought out or delisted),241.0,,"Allergan + Allergan,_plc + Allergan,_Plc",False
+ALXN,Alexion Pharmaceuticals,Health Care,,,,,no price data (most likely bought out or delisted),123.0,,Alexion_Pharmaceuticals,False
+ALLE,Allegion,Industrials,yahoo,ALLE,2015-07-01,2026-11-10,,67.0,,Allegion,True
+ADS,Alliance Data Systems,Information Technology,yahoo,BFH,2015-07-01,2026-11-10,,144.0,,Bread_Financial + Alliance_Data_Systems + Alliance_Data,False
+ALL,Allstate Corp,Financials,yahoo,ALL,2015-07-01,2026-11-10,,479.0,,Allstate + Allstate_Corp + Mayhem_(advertising_character),True
+GOOGL,Alphabet Inc Class A,Information Technology,yahoo,GOOGL,2015-07-01,2026-11-10,,4709.0,,"Alphabet_Inc. + Alphabet_Inc_Class_A + Googl + Goog + Alphabet_Inc + Alphabet,_Inc. + List_of_assets_owned_by_Alphabet_Inc.",True
+GOOG,Alphabet Inc Class C,Information Technology,yahoo,GOOGL,2015-07-01,2026-11-10,,4709.0,,"Alphabet_Inc. + Alphabet_Inc_Class_C + Googl + Goog + Alphabet_Inc + Alphabet,_Inc. + List_of_assets_owned_by_Alphabet_Inc.",True
+MO,Altria Group Inc,Consumer Staples,yahoo,MO,2015-07-01,2026-11-10,,701.0,,Altria + Altria_Group_Inc + Altria_Group,True
+AMZN,Amazon.com Inc,Consumer Discretionary,yahoo,AMZN,2015-07-01,2026-11-10,,13617.0,,Amazon_(company) + Amazon.com_Inc + Amazon.ca + Amazon_UK + Amazon_Inc. + List_of_Amazon_locations + Amazon.com + List_of_Amazon.com_locations,True
+AEE,Ameren Corp,Utilities,yahoo,AEE,2015-07-01,2026-11-10,,96.0,,Ameren + Ameren_Corp,True
+AAL,American Airlines Group,Industrials,yahoo,AAL,2015-07-01,2026-11-10,,379.0,,American_Airlines_Group,False
+AEP,American Electric Power,Utilities,yahoo,AEP,2015-07-01,2026-11-10,,189.0,,American_Electric_Power,True
+AXP,American Express Co,Financials,yahoo,AXP,2015-07-01,2026-11-10,,1942.0,,American_Express + American_Express_Co + Americanexpress + American_express,True
+AIG,"American International Group, Inc.",Financials,yahoo,AIG,2015-07-01,2026-11-10,,769.0,,American_International_Group + AIG,True
+AMT,American Tower Corp A,Financials,yahoo,AMT,2015-07-01,2026-11-10,,136.0,,American_Tower + American_Tower_Corp_A + American_Tower_Corporation,True
+AMP,Ameriprise Financial,Financials,yahoo,AMP,2015-07-01,2026-11-10,,213.0,,Ameriprise_Financial,True
+ABC,AmerisourceBergen Corp,Health Care,yahoo,COR,2015-07-01,2026-11-10,,248.0,,Cencora + AmerisourceBergen_Corp + AmerisourceBergen,True
+AME,Ametek,Industrials,yahoo,AME,2015-07-01,2026-11-10,,105.0,,Ametek,True
+AMGN,Amgen Inc,Health Care,yahoo,AMGN,2015-07-01,2026-11-10,,440.0,,Amgen + Amgen_Inc,True
+APH,Amphenol Corp A,Industrials,yahoo,APH,2015-07-01,2026-11-10,,124.0,,Amphenol + Amphenol_Corp_A,True
+APC,Anadarko Petroleum Corp,Energy,,,,,APC starts 2026-02-12,189.0,,Anadarko_Petroleum + Anadarko_Petroleum_Corporation,False
+ADI,"Analog Devices, Inc.",Information Technology,yahoo,ADI,2015-07-01,2026-11-10,,288.0,,Analog_Devices,True
+AON,Aon plc,Financials,yahoo,AON,2015-07-01,2026-11-10,,585.0,,Aon_plc + Aon_Corporation + Aon_(company),True
+APA,Apache Corporation,Energy,yahoo,APA,2015-07-01,2026-11-10,,94.0,,APA_Corporation + Apache_Corporation,True
+AIV,Apartment Investment & Mgmt,Financials,yahoo,AIV,2015-07-01,2026-11-10,,26.0,,Aimco + Apartment_Investment_&_Mgmt,False
+AAPL,Apple Inc.,Information Technology,yahoo,AAPL,2015-07-01,2026-11-10,,11867.0,,"Apple_Inc. + Apple_computer + Apple_Inc + Apple_Computer + Apple,_Inc. + Apple_Incorporated + Apple,_Inc + Apple_inc + Apple_inc. + Katherine_L._Adams + Appleinc. + Apple_tax",True
+AMAT,Applied Materials Inc,Information Technology,yahoo,AMAT,2015-07-01,2026-11-10,,349.0,,Applied_Materials + Applied_Materials_Inc,True
+ADM,Archer-Daniels-Midland Co,Consumer Staples,yahoo,ADM,2015-07-01,2026-11-10,,463.0,,Archer_Daniels_Midland + Archer-Daniels-Midland_Co + ADM_(company),True
+AIZ,Assurant Inc,Financials,yahoo,AIZ,2015-07-01,2026-11-10,,102.0,,Assurant + Assurant_Inc,True
+T,AT&T Inc,Telecommunications Services,yahoo,T,2015-07-01,2026-11-10,,2610.0,,AT&T + AT&T_Inc + At&t + Att.com + AT&T_Inc. + SBC_Communications + 2024_AT&T_outage,True
+ADSK,Autodesk Inc,Information Technology,yahoo,ADSK,2015-07-01,2026-11-10,,841.0,,"Autodesk + Autodesk_Inc + Autodesk,_Inc.",True
+ADP,Automatic Data Processing,Information Technology,yahoo,ADP,2015-07-01,2026-11-10,,586.0,,"ADP_(company) + Automatic_Data_Processing + ADP,_Inc.",True
+AN,AutoNation Inc,Consumer Discretionary,yahoo,AN,2015-07-01,2026-11-10,,160.0,,AutoNation + AutoNation_Inc,False
+AZO,AutoZone Inc,Consumer Discretionary,yahoo,AZO,2015-07-01,2026-11-10,,285.0,,AutoZone + AutoZone_Inc,True
+AVGO,Avago Technologies,Information Technology,yahoo,AVGO,2015-07-01,2026-11-10,,956.0,,Broadcom + Avago_Technologies + Avago + Broadcom_Limited + Broadcom_Inc.,True
+AVB,"AvalonBay Communities, Inc.",Financials,,,,,AVB starts 2026-08-14,56.0,,"AvalonBay_Communities + AvalonBay_Communities,_Inc.",False
+AVY,Avery Dennison Corp,Materials,yahoo,AVY,2015-07-01,2026-11-10,,170.0,,Avery_Dennison + Avery_Dennison_Corp,True
+BHI,Baker Hughes Inc,Energy,,,,,no price data (most likely bought out or delisted),485.0,,Baker_Hughes + Baker_Hughes_Inc,True
+BLL,Ball Corp,Materials,yahoo,BALL,2015-07-01,2026-11-10,,308.0,,Ball_Corporation + Ball_Corp,True
+BAC,Bank of America Corp,Financials,yahoo,BAC,2015-07-01,2026-11-10,,2497.0,,Bank_of_America + Bank_of_America_Corp + BankAmerica + Bank_of_america + BofA_Securities + Bank_of_America_Merrill_Lynch,True
+BK,The Bank of New York Mellon Corp.,Financials,,,,,no price data (most likely bought out or delisted),923.0,,BNY + The_Bank_of_New_York_Mellon_Corp. + Bank_of_New_York + The_Bank_of_New_York_Mellon + Pershing_LLC + BNY_Mellon,True
+BCR,Bard (C.R.) Inc.,Health Care,,,,,no price data (most likely bought out or delisted),49.0,,Bard_(company) + Bard_(C.R.)_Inc. + C._R._Bard,False
+BXLT,Baxalta,Health Care,,,,,no price data (most likely bought out or delisted),44.0,,Baxalta,False
+BAX,Baxter International Inc.,Health Care,yahoo,BAX,2015-07-01,2026-11-10,,302.0,,Baxter_International + Baxter_International_Inc.,True
+BBT,BB&T Corporation,Financials,yahoo,TFC,2015-07-01,2026-11-10,,217.0,,BB&T + BB&T_Corporation,False
+BDX,Becton Dickinson,Health Care,yahoo,BDX,2015-07-01,2026-11-10,,371.0,,BD_(company) + Becton_Dickinson,True
+BBBY,Bed Bath & Beyond,Consumer Discretionary,,,,,BBBY starts 2026-07-17,533.0,,Bed_Bath_&_Beyond,False
+BRK-B,Berkshire Hathaway,Financials,yahoo,BRK-B,2015-07-01,2026-11-10,,4837.0,,Berkshire_Hathaway + FlightSafety_International + Berkshire_Hathaway_GUARD_Insurance_Companies,True
+BBY,Best Buy Co. Inc.,Consumer Discretionary,yahoo,BBY,2015-07-01,2026-11-10,,1112.0,,Best_Buy + Best_Buy_Co._Inc. + Best_buy,True
+BIIB,BIOGEN IDEC Inc.,Health Care,yahoo,BIIB,2015-07-01,2026-11-10,,249.0,,Biogen + BIOGEN_IDEC_Inc. + Biogen_Idec,True
+BLK,BlackRock,Financials,yahoo,BLK,2015-07-01,2026-11-10,,3150.0,,BlackRock,True
+HRB,Block H&R,Financials,yahoo,HRB,2015-07-01,2026-11-10,,263.0,,H&R_Block + Block_H&R,False
+BA,Boeing Company,Industrials,yahoo,BA,2015-07-01,2026-11-10,,2814.0,,Boeing + Boeing_Company + The_Boeing_Company,True
+BWA,BorgWarner,Consumer Discretionary,yahoo,BWA,2015-07-01,2026-11-10,,333.0,,BorgWarner,False
+BXP,Boston Properties,Financials,yahoo,BXP,2015-07-01,2026-11-10,,81.0,,"BXP,_Inc. + Boston_Properties",True
+BSX,Boston Scientific,Health Care,yahoo,BSX,2015-07-01,2026-11-10,,309.0,,Boston_Scientific,True
+BMY,Bristol-Myers Squibb,Health Care,yahoo,BMY,2015-07-01,2026-11-10,,473.0,,Bristol_Myers_Squibb + Bristol-Myers_Squibb,True
+BRCM,Broadcom Corporation,Information Technology,,,,,no price data (most likely bought out or delisted),165.0,,Broadcom_Corporation,False
+BF-B,Brown-Forman Corporation,Consumer Staples,yahoo,BF-B,2015-07-01,2026-11-10,,326.0,,Brown-Forman + Brown-Forman_Corporation + Brown–Forman,True
+CHRW,C. H. Robinson Worldwide,Industrials,yahoo,CHRW,2015-07-01,2026-11-10,,136.0,,C._H._Robinson + C._H._Robinson_Worldwide + C.H._Robinson,True
+CA,"CA, Inc.",Information Technology,,,,,no price data (most likely bought out or delisted),266.0,,"Computer_Associates + CA,_Inc. + CA_Technologies",False
+CVC,Cablevision Systems Corp.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),181.0,,Cablevision + Cablevision_Systems_Corporation,False
+COG,Cabot Oil & Gas,Energy,,,,,no price data (most likely bought out or delisted),34.0,,Coterra + Cabot_Oil_&_Gas,False
+CAM,Cameron International Corp.,Energy,,,,,CAM starts 2025-10-06,77.0,,Cameron_International + Cameron_International_Corp.,False
+CPB,Campbell Soup,Consumer Staples,yahoo,CPB,2015-07-01,2026-11-10,,540.0,,Campbell's + Campbell_Soup + Campbell_Soup_Company,False
+COF,Capital One Financial,Financials,yahoo,COF,2015-07-01,2026-11-10,,1041.0,,Capital_One + Capital_One_Financial + Capital_One_Financial_Corporation + Capital_one,True
+CAH,Cardinal Health Inc.,Health Care,yahoo,CAH,2015-07-01,2026-11-10,,286.0,,Cardinal_Health + Cardinal_Health_Inc.,True
+HSIC,Henry Schein,Health Care,yahoo,HSIC,2015-07-01,2026-11-10,,100.0,,Henry_Schein,True
+KMX,Carmax Inc,Consumer Discretionary,yahoo,KMX,2015-07-01,2026-11-10,,268.0,,CarMax + Carmax_Inc + Carmax,False
+CCL,Carnival Corp.,Consumer Discretionary,yahoo,CCL,2015-07-01,2026-11-10,,690.0,,Carnival_Corporation + Carnival_Corp. + Carnival_plc + Carnival_Corporation_&_PLC + Carnival_Corporation_&_plc,True
+CAT,Caterpillar Inc.,Industrials,yahoo,CAT,2015-07-01,2026-11-10,,1307.0,,Caterpillar_Inc. + Caterpillar_Inc,True
+CBG,CBRE Group,Financials,yahoo,CBRE,2015-07-01,2026-11-10,,614.0,,CBRE_Group,True
+CBS,CBS Corp.,Consumer Discretionary,,,,,PSKY starts 2026-07-29; PARA starts 2021-02-12,395.0,,CBS_Corporation + CBS_Corp. + CBS_Corporation_(1997–2000),False
+CELG,Celgene Corp.,Health Care,,,,,no price data (most likely bought out or delisted),140.0,,Celgene + Celgene_Corp.,False
+CNP,CenterPoint Energy,Utilities,yahoo,CNP,2015-07-01,2026-11-10,,82.0,,CenterPoint_Energy,True
+CTL,CenturyLink Inc,Telecommunications Services,,,,,no price data (most likely bought out or delisted),704.0,,Lumen_Technologies + CenturyLink_Inc + CenturyLink,False
+CERN,Cerner,Health Care,,,,,no price data (most likely bought out or delisted),286.0,,Oracle_Health + Cerner + Oracle_Cerner,False
+CF,CF Industries Holdings Inc,Materials,yahoo,CF,2015-07-01,2026-11-10,,59.0,,CF_Industries + CF_Industries_Holdings_Inc,True
+SCHW,Charles Schwab Corporation,Financials,yahoo,SCHW,2015-07-01,2026-11-10,,626.0,,Charles_Schwab_Corporation,True
+CHK,Chesapeake Energy,Energy,,,,,EXE starts 2021-02-10,120.0,,Expand_Energy + Chesapeake_Energy,True
+CVX,Chevron Corp.,Energy,yahoo,CVX,2015-07-01,2026-11-10,,1178.0,,Chevron_Corporation + Chevron_Corp. + Standard_Oil_of_California,True
+CMG,Chipotle Mexican Grill,Consumer Discretionary,yahoo,CMG,2015-07-01,2026-11-10,,1388.0,,Chipotle_Mexican_Grill,True
+CB,Chubb Corp.,Financials,yahoo,CB,2015-07-01,2026-11-10,,354.0,,Chubb_Limited + Chubb_Corp. + ACE_Limited + Chubb_(company),True
+CHD,Church & Dwight,Consumer Staples,yahoo,CHD,2015-07-01,2026-11-10,,186.0,,Church_&_Dwight,True
+CI,CIGNA Corp.,Health Care,yahoo,CI,2015-07-01,2026-11-10,,359.0,,The_Cigna_Group + CIGNA_Corp. + Cigna,True
+XEC,Cimarex Energy,Energy,,,,,no price data (most likely bought out or delisted),15.0,,Cimarex_Energy,False
+CINF,Cincinnati Financial,Financials,yahoo,CINF,2015-07-01,2026-11-10,,42.0,,Cincinnati_Financial,True
+CTAS,Cintas Corporation,Industrials,yahoo,CTAS,2015-07-01,2026-11-10,,191.0,,Cintas + Cintas_Corporation + Scott_Farmer_(businessman),True
+CSCO,Cisco Systems,Information Technology,yahoo,CSCO,2015-07-01,2026-11-10,,1796.0,,"Cisco + Cisco_Systems + Cisco_Systems,_Inc.",True
+C,Citigroup Inc.,Financials,yahoo,C,2015-07-01,2026-11-10,,1400.0,,Citigroup + Citigroup_Inc. + Citi,True
+CTXS,Citrix Systems,Information Technology,,,,,no price data (most likely bought out or delisted),490.0,,Citrix_Systems + Citrix,False
+CLX,The Clorox Company,Consumer Staples,yahoo,CLX,2015-07-01,2026-11-10,,334.0,,Clorox + The_Clorox_Company,True
+CME,CME Group Inc.,Financials,yahoo,CME,2015-07-01,2026-11-10,,290.0,,CME_Group + CME_Group_Inc.,True
+CMS,CMS Energy,Utilities,yahoo,CMS,2015-07-01,2026-11-10,,40.0,,CMS_Energy,True
+COH,Coach Inc.,Consumer Discretionary,yahoo,TPR,2015-07-01,2026-11-10,,335.0,,"Coach_New_York + Coach_Inc. + Coach,_Inc + Coach_Inc",False
+KO,The Coca Cola Company,Consumer Staples,yahoo,KO,2015-07-01,2026-11-10,,2801.0,,The_Coca-Cola_Company + The_Coca_Cola_Company + Coca-Cola_Company + Coca-Cola_headquarters,True
+CCE,Coca-Cola Enterprises,Consumer Staples,,,,,no price data (most likely bought out or delisted),56.0,,Coca-Cola_Enterprises,False
+CTSH,Cognizant Technology Solutions,Information Technology,yahoo,CTSH,2015-07-01,2026-11-10,,1832.0,,Cognizant + Cognizant_Technology_Solutions,True
+CL,Colgate-Palmolive,Consumer Staples,yahoo,CL,2015-07-01,2026-11-10,,637.0,,Colgate-Palmolive,True
+CMCSA,Comcast A Corp,Consumer Discretionary,yahoo,CMCSA,2015-07-01,2026-11-10,,2479.0,,Comcast + Comcast_A_Corp + Comcast_Corporation,True
+CMA,Comerica Inc.,Financials,,,,,no price data (most likely bought out or delisted),147.0,,Comerica + Comerica_Inc.,False
+CAG,ConAgra Foods Inc.,Consumer Staples,yahoo,CAG,2015-07-01,2026-11-10,,396.0,,Conagra_Brands + ConAgra_Foods_Inc. + ConAgra_Foods + ConAgra_Brands,False
+COP,ConocoPhillips,Energy,yahoo,COP,2015-07-01,2026-11-10,,345.0,,ConocoPhillips,True
+CNX,CONSOL Energy Inc.,Energy,yahoo,CNX,2015-07-01,2026-11-10,,38.0,,Consol_Energy + CONSOL_Energy_Inc.,False
+ED,Consolidated Edison,Utilities,yahoo,ED,2015-07-01,2026-11-10,,253.0,,Consolidated_Edison,True
+STZ,Constellation Brands,Consumer Staples,yahoo,STZ,2015-07-01,2026-11-10,,335.0,,Constellation_Brands,True
+GLW,Corning Inc.,Industrials,yahoo,GLW,2015-07-01,2026-11-10,,385.0,,Corning_Inc.,True
+COST,Costco Co.,Consumer Staples,yahoo,COST,2015-07-01,2026-11-10,,2812.0,,Costco + Costco_Co. + Costco_Wholesale + Kirkland_Signature,True
+CCI,Crown Castle International Corp.,Financials,yahoo,CCI,2015-07-01,2026-11-10,,91.0,,Crown_Castle + Crown_Castle_International_Corp.,True
+CSRA,CSRA Inc.,Information Technology,,,,,CSRA starts 2026-08-12,54.0,,CSRA_Inc. + CSRA_(IT_services_company),False
+CSX,CSX Corp.,Industrials,yahoo,CSX,2015-07-01,2026-11-10,,148.0,,CSX_Corporation + CSX_Corp.,True
+CMI,Cummins Inc.,Industrials,yahoo,CMI,2015-07-01,2026-11-10,,854.0,,Cummins + Cummins_Inc. + Cummins_(corporation),True
+CVS,CVS Caremark Corp.,Consumer Staples,yahoo,CVS,2015-07-01,2026-11-10,,529.0,,CVS_Health + CVS_Caremark_Corp.,True
+DHI,D. R. Horton,Consumer Discretionary,yahoo,DHI,2015-07-01,2026-11-10,,119.0,,D._R._Horton,True
+DHR,Danaher Corp.,Industrials,yahoo,DHR,2015-07-01,2026-11-10,,562.0,,Danaher_Corporation + Danaher_Corp.,True
+DRI,Darden Restaurants,Consumer Discretionary,yahoo,DRI,2015-07-01,2026-11-10,,566.0,,"Darden_Restaurants + Darden_Restaurants,_Inc.",True
+DVA,DaVita Inc.,Health Care,yahoo,DVA,2015-07-01,2026-11-10,,147.0,,DaVita + DaVita_Inc. + DaVita_Medical_Group,True
+DE,Deere & Co.,Industrials,yahoo,DE,2015-07-01,2026-11-10,,1186.0,,John_Deere + Deere_&_Co.,True
+DLPH,Delphi Automotive,Consumer Discretionary,yahoo,APTV,2015-07-01,2026-11-10,,326.0,,Aptiv + Delphi_Automotive,True
+DAL,Delta Air Lines,Industrials,yahoo,DAL,2015-07-01,2026-11-10,,3360.0,,Delta_Air_Lines + List_of_Delta_Air_Lines_destinations + Delta_air_lines + Delta_airlines + Delta_Air_Lines_destinations + Delta_Air_Lines_Flight_157,True
+XRAY,Dentsply International,Health Care,yahoo,XRAY,2015-07-01,2026-11-10,,85.0,,Dentsply_Sirona + Dentsply_International,False
+DVN,Devon Energy Corp.,Energy,yahoo,DVN,2015-07-01,2026-11-10,,101.0,,Devon_Energy + Devon_Energy_Corp.,True
+DO,Diamond Offshore Drilling,Energy,,,,,no price data (most likely bought out or delisted),38.0,,Diamond_Offshore_Drilling,False
+DFS,Discover Financial Services,Financials,,,,,no price data (most likely bought out or delisted),246.0,,Discover_Financial,False
+DISCA,Discovery Communications-A,Consumer Discretionary,,,,,WBD starts 2026-10-05,639.0,,"Discovery,_Inc. + Discovery_Communications-A + Discovery_Communications + Discovery_Inc. + Animal_Planet_(UK_TV_channel)",False
+DISCK,Discovery Communications-C,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),639.0,,"Discovery,_Inc. + Discovery_Communications-C + Discovery_Communications + Discovery_Inc. + Animal_Planet_(UK_TV_channel)",False
+DG,Dollar General,Consumer Discretionary,yahoo,DG,2015-07-01,2026-11-10,,588.0,,Dollar_General,True
+DLTR,Dollar Tree,Consumer Discretionary,yahoo,DLTR,2015-07-01,2026-11-10,,488.0,,Dollar_Tree,True
+D,Dominion Resources,Utilities,yahoo,D,2015-07-01,2026-11-10,,267.0,,Dominion_Energy + Dominion_Resources,True
+DOV,Dover Corp.,Industrials,yahoo,DOV,2015-07-01,2026-11-10,,131.0,,Dover_Corporation + Dover_Corp.,True
+DOW,Dow Chemical,Materials,,,,,DOW starts 2019-03-20,855.0,,Dow_Chemical_Company + Dow_Chemical + Dow_Chemicals + Dow_Inc.,True
+DPS,Dr Pepper Snapple Group,Consumer Staples,yahoo,KDP,2015-07-01,2026-11-10,,430.0,,Dr_Pepper_Snapple_Group,False
+DTE,DTE Energy Co.,Utilities,yahoo,DTE,2015-07-01,2026-11-10,,126.0,,DTE_Energy + DTE_Energy_Co.,True
+DD,Du Pont (E.I.),Materials,yahoo,DD,2015-07-01,2026-11-10,,1890.0,,DuPont + Du_Pont_(E.I.) + DuPont_(1802–2017) + DowDuPont + DuPont_(1802-2017),True
+DUK,Duke Energy,Utilities,yahoo,DUK,2015-07-01,2026-11-10,,344.0,,Duke_Energy,True
+DNB,Dun & Bradstreet,Industrials,,,,,no price data (most likely bought out or delisted),469.0,,Dun_&_Bradstreet,False
+ETFC,E*Trade,Financials,,,,,no price data (most likely bought out or delisted),298.0,,E-Trade + E*Trade,False
+EMN,Eastman Chemical,Materials,yahoo,EMN,2015-07-01,2026-11-10,,164.0,,Eastman_Chemical_Company + Eastman_Chemical,False
+ETN,Eaton Corporation,Industrials,yahoo,ETN,2015-07-01,2026-11-10,,552.0,,Eaton_Corporation,True
+EBAY,eBay Inc.,Information Technology,yahoo,EBAY,2015-07-01,2026-11-10,,4014.0,,EBay + EBay_Inc. + Criticism_of_eBay + Ebay,True
+ECL,Ecolab Inc.,Materials,yahoo,ECL,2015-07-01,2026-11-10,,278.0,,Ecolab + Ecolab_Inc.,True
+EIX,Edison Int'l,Utilities,yahoo,EIX,2015-07-01,2026-11-10,,68.0,,Edison_International + Edison_Int'l,True
+EW,Edwards Lifesciences,Health Care,yahoo,EW,2015-07-01,2026-11-10,,104.0,,Edwards_Lifesciences,True
+EA,Electronic Arts,Information Technology,,,,,EA starts 2026-08-04,2098.0,,Electronic_Arts + EA + Ripple_Effect_Studios,False
+EMC,EMC Corp.,Information Technology,,,,,EMC starts 2023-05-15,473.0,,EMC_Corporation + EMC_Corp. + Dell_EMC,False
+EMR,Emerson Electric Company,Industrials,yahoo,EMR,2015-07-01,2026-11-10,,455.0,,Emerson_Electric + Emerson_Electric_Company,True
+ENDP,Endo International,Health Care,,,,,no price data (most likely bought out or delisted),86.0,,Endo_International + Qualitest + Endo_International_plc,False
+ESV,Ensco plc,Energy,,,,,VAL starts 2021-05-03,61.0,,Valaris_Limited + Ensco_plc + EnscoRowan + Valaris_plc,False
+ETR,Entergy Corp.,Utilities,yahoo,ETR,2015-07-01,2026-11-10,,98.0,,Entergy + Entergy_Corp.,True
+EOG,EOG Resources,Energy,yahoo,EOG,2015-07-01,2026-11-10,,89.0,,EOG_Resources,True
+EQT,EQT Corporation,Energy,yahoo,EQT,2015-07-01,2026-11-10,,4.0,,EQT_Corporation,True
+EFX,Equifax Inc.,Financials,yahoo,EFX,2015-07-01,2026-11-10,,374.0,,Equifax + Equifax_Inc. + TrustedID,True
+EQIX,Equinix,Information Technology,yahoo,EQIX,2015-07-01,2026-11-10,,277.0,,Equinix,True
+EQR,Equity Residential,Financials,,,,,EQR starts 2026-08-17,64.0,,Vivmark_Residential + Equity_Residential,True
+ESS,Essex Property Trust Inc,Financials,yahoo,ESS,2015-07-01,2026-11-10,,26.0,,Essex_Property_Trust + Essex_Property_Trust_Inc,True
+EL,Estee Lauder Cos.,Consumer Staples,yahoo,EL,2015-07-01,2026-11-10,,955.0,,Estée_Lauder_Companies + Estee_Lauder_Cos. + Estée_Lauder + La_Mer_(cosmetics) + The_Estée_Lauder_Companies,True
+ES,Eversource Energy,Utilities,yahoo,ES,2015-07-01,2026-11-10,,124.0,,Eversource_Energy,True
+EXC,Exelon Corp.,Utilities,yahoo,EXC,2015-07-01,2026-11-10,,235.0,,Exelon + Exelon_Corp.,True
+EXPE,Expedia Inc.,Consumer Discretionary,yahoo,EXPE,2015-07-01,2026-11-10,,336.0,,Expedia + Expedia_Inc. + Expedia_(website),False
+EXPD,Expeditors Int'l,Industrials,yahoo,EXPD,2015-07-01,2026-11-10,,81.0,,Expeditors_International + Expeditors_Int'l,True
+ESRX,Express Scripts,Health Care,,,,,no price data (most likely bought out or delisted),244.0,,Express_Scripts,False
+XOM,Exxon Mobil Corp.,Energy,yahoo,XOM,2015-07-01,2026-11-10,,1902.0,,ExxonMobil + Exxon_Mobil_Corp. + Exxon + Exxon_Mobil,True
+FFIV,F5 Networks,Information Technology,yahoo,FFIV,2015-07-01,2026-11-10,,587.0,,"F5,_Inc. + F5_Networks",True
+FB,Facebook,Information Technology,yahoo,META,2015-07-01,2026-11-10,,29064.0,,Facebook + Facebook.com + Www.facebook.com + FACEBOOK + FB.Com + Fb.com + Facbook + 10_year_challenge + Anti-Muslim_propaganda_on_Facebook + Facebook_(identifier),False
+FDX,FedEx Corporation,Industrials,yahoo,FDX,2015-07-01,2026-11-10,,1571.0,,FedEx + FedEx_Corporation,True
+FIS,Fidelity National Information Services,Information Technology,yahoo,FIS,2015-07-01,2026-11-10,,596.0,,FIS_(company) + Fidelity_National_Information_Services,True
+FITB,Fifth Third Bancorp,Financials,yahoo,FITB,2015-07-01,2026-11-10,,366.0,,Fifth_Third_Bank + Fifth_Third_Bancorp,True
+FSLR,First Solar Inc,Information Technology,yahoo,FSLR,2015-07-01,2026-11-10,,170.0,,First_Solar + First_Solar_Inc,True
+FE,FirstEnergy Corp,Utilities,yahoo,FE,2015-07-01,2026-11-10,,178.0,,FirstEnergy + FirstEnergy_Corp + Metropolitan_Edison_Company + Metropolitan_Edison,True
+FISV,Fiserv Inc,Information Technology,yahoo,FISV,2015-07-01,2026-11-10,,418.0,,Fiserv + Fiserv_Inc,True
+FLIR,FLIR Systems,Industrials,,,,,no price data (most likely bought out or delisted),180.0,,Teledyne_FLIR + FLIR_Systems,False
+FLS,Flowserve Corporation,Industrials,yahoo,FLS,2015-07-01,2026-11-10,,107.0,,Flowserve + Flowserve_Corporation,False
+FLR,Fluor Corp.,Industrials,yahoo,FLR,2015-07-01,2026-11-10,,232.0,,Fluor_Corporation + Fluor_Corp.,False
+FMC,FMC Corporation,Materials,yahoo,FMC,2015-07-01,2026-11-10,,240.0,,FMC_Corporation,False
+FTI,FMC Technologies Inc.,Energy,yahoo,FTI,2015-07-01,2026-11-10,,61.0,,FMC_Technologies + FMC_Technologies_Inc.,False
+F,Ford Motor,Consumer Discretionary,yahoo,F,2015-07-01,2026-11-10,,4273.0,,Ford_Motor_Company + Ford_Motor + Ford.com,True
+FOSL,"Fossil, Inc.",Consumer Discretionary,yahoo,FOSL,2015-07-01,2026-11-10,,575.0,,"Fossil_Group + Fossil,_Inc.",False
+BEN,Franklin Resources,Financials,yahoo,BEN,2015-07-01,2026-11-10,,327.0,,Franklin_Templeton + Franklin_Resources + Franklin_Templeton_Investments,True
+FCX,Freeport-McMoran Cp & Gld,Materials,yahoo,FCX,2015-07-01,2026-11-10,,242.0,,Freeport-McMoRan + Freeport-McMoran_Cp_&_Gld,True
+FTR,Frontier Communications,Telecommunications Services,,,,,no price data (most likely bought out or delisted),275.0,,Frontier_Communications,False
+GME,GameStop Corp.,Consumer Discretionary,yahoo,GME,2015-07-01,2026-11-10,,815.0,,GameStop + GameStop_Corp. + Gamestop,False
+GPS,Gap (The),Consumer Discretionary,yahoo,GAP,2015-07-01,2026-11-10,,1010.0,,Gap_Inc. + Gap_(The) + Gap_Inc + Baby_Gap + GapKids + Gap_Kids + Gap_(clothing_retailer),False
+GRMN,Garmin Ltd.,Consumer Discretionary,yahoo,GRMN,2015-07-01,2026-11-10,,623.0,,Garmin + Garmin_Ltd.,True
+GD,General Dynamics,Industrials,yahoo,GD,2015-07-01,2026-11-10,,1021.0,,General_Dynamics,True
+GE,General Electric,Industrials,yahoo,GE,2015-07-01,2026-11-10,,2635.0,,General_Electric + General_electric,False
+GGP,General Growth Properties Inc.,Financials,,,,,no price data (most likely bought out or delisted),110.0,,GGP_(company) + General_Growth_Properties_Inc. + General_Growth_Properties + Brookfield_Properties_Retail_Group + GGP_Inc.,False
+GIS,General Mills,Consumer Staples,yahoo,GIS,2015-07-01,2026-11-10,,779.0,,General_Mills + Total_(cereal),True
+GM,General Motors,Consumer Discretionary,yahoo,GM,2015-07-01,2026-11-10,,3969.0,,General_Motors + General_Motors_Corporation + General_Motors_Company + GMSV,True
+GPC,Genuine Parts,Consumer Discretionary,yahoo,GPC,2015-07-01,2026-11-10,,125.0,,Genuine_Parts_Company + Genuine_Parts,True
+GILD,Gilead Sciences,Health Care,yahoo,GILD,2015-07-01,2026-11-10,,424.0,,Gilead_Sciences,True
+GS,Goldman Sachs Group,Financials,yahoo,GS,2015-07-01,2026-11-10,,2702.0,,Goldman_Sachs + Goldman_Sachs_Group + Goldman_sachs + Goldman_Sachs_controversies,True
+GT,Goodyear Tire & Rubber,Consumer Discretionary,yahoo,GT,2015-07-01,2026-11-10,,677.0,,Goodyear_Tire_and_Rubber_Company + Goodyear_Tire_&_Rubber,False
+GWW,Grainger (W.W.) Inc.,Industrials,yahoo,GWW,2015-07-01,2026-11-10,,265.0,,W._W._Grainger + Grainger_(W.W.)_Inc.,True
+HAL,Halliburton Co.,Energy,yahoo,HAL,2015-07-01,2026-11-10,,966.0,,Halliburton + Halliburton_Co.,True
+HBI,Hanesbrands Inc,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),148.0,,Hanesbrands + Hanesbrands_Inc,False
+HOG,Harley-Davidson,Consumer Discretionary,yahoo,HOG,2015-07-01,2026-11-10,,1698.0,,"Harley-Davidson + Harley_Davidson + William_A._Davidson + Walter_Davidson,_Sr. + Harley_davidson",False
+HAR,Harman Int'l Industries,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),685.0,,Harman_International + Harman_Int'l_Industries + Harman_International_Industries,False
+HRS,Harris Corporation,Information Technology,yahoo,LHX,2015-07-01,2026-11-10,,212.0,,Harris_Corporation,False
+HIG,Hartford Financial Svc.Gp.,Financials,yahoo,HIG,2015-07-01,2026-11-10,,201.0,,The_Hartford + Hartford_Financial_Svc.Gp.,True
+HAS,Hasbro Inc.,Consumer Discretionary,yahoo,HAS,2015-07-01,2026-11-10,,1303.0,,"Hasbro + Hasbro_Inc. + Hasbro,_Inc. + Paper_Toss",True
+HCA,HCA Holdings,Health Care,yahoo,HCA,2015-07-01,2026-11-10,,407.0,,HCA_Healthcare + HCA_Holdings + Hospital_Corporation_of_America,True
+HCP,HCP Inc.,Financials,yahoo,DOC,2015-07-01,2026-11-10,,12.0,,Healthpeak_Properties + HCP_Inc.,True
+HP,Helmerich & Payne,Energy,yahoo,HP,2015-07-01,2026-11-10,,28.0,,Helmerich_&_Payne,False
+HES,Hess Corporation,Energy,,,,,no price data (most likely bought out or delisted),237.0,,Hess_Corporation,False
+HPE,Hewlett Packard Enterprise,Information Technology,yahoo,HPE,2015-10-19,2026-11-10,,683.0,,Hewlett_Packard_Enterprise + SimpliVity,True
+HD,Home Depot,Consumer Discretionary,yahoo,HD,2015-07-01,2026-11-10,,1890.0,,Home_Depot + Home_depot + The_Home_Depot,True
+HON,Honeywell Int'l Inc.,Industrials,yahoo,HON,2015-07-01,2026-11-10,,1281.0,,Honeywell + Honeywell_Int'l_Inc.,True
+HRL,Hormel Foods Corp.,Consumer Staples,yahoo,HRL,2015-07-01,2026-11-10,,271.0,,Hormel_Foods + Hormel_Foods_Corp. + Hormel,True
+HST,Host Hotels & Resorts,Financials,yahoo,HST,2015-07-01,2026-11-10,,56.0,,Host_Hotels_&_Resorts,True
+HPQ,HP Inc.,Information Technology,yahoo,HPQ,2015-07-01,2026-11-10,,716.0,,HP_Inc.,True
+HUM,Humana Inc.,Health Care,yahoo,HUM,2015-07-01,2026-11-10,,269.0,,Humana + Humana_Inc.,True
+HBAN,Huntington Bancshares,Financials,yahoo,HBAN,2015-07-01,2026-11-10,,190.0,,Huntington_Bancshares,True
+ITW,Illinois Tool Works,Industrials,yahoo,ITW,2015-07-01,2026-11-10,,153.0,,Illinois_Tool_Works,True
+ILMN,Illumina Inc,Health Care,yahoo,ILMN,2015-07-01,2026-11-10,,294.0,,"Illumina,_Inc. + Illumina_(company)",True
+IR,Ingersoll-Rand PLC,Industrials,yahoo,TT,2015-07-01,2026-11-10,,109.5,,Trane_Technologies + Ingersoll-Rand_PLC,True
+INTC,Intel Corp.,Information Technology,yahoo,INTC,2015-07-01,2026-11-10,,2770.0,,Intel + Intel_Corp. + Intel_Corporation,True
+ICE,Intercontinental Exchange,Financials,yahoo,ICE,2015-07-01,2026-11-10,,440.0,,Intercontinental_Exchange,True
+IBM,International Bus. Machines,Information Technology,yahoo,IBM,2015-07-01,2026-11-10,,4063.0,,IBM + Ibm + International_Business_Machines,True
+IP,International Paper,Materials,yahoo,IP,2015-07-01,2026-11-10,,182.0,,International_Paper,True
+IPG,Interpublic Group,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),311.0,,The_Interpublic_Group_of_Companies + Interpublic_Group + Golin_(PR_firm) + Al_Golin + Interpublic_Group_of_Companies,False
+IFF,Intl Flavors & Fragrances,Materials,yahoo,IFF,2015-07-01,2026-11-10,,134.0,,International_Flavors_&_Fragrances + Intl_Flavors_&_Fragrances,True
+INTU,Intuit Inc.,Information Technology,yahoo,INTU,2015-07-01,2026-11-10,,674.0,,Intuit + Intuit_Inc. + Intuit_India,True
+ISRG,Intuitive Surgical Inc.,Health Care,yahoo,ISRG,2015-07-01,2026-11-10,,195.0,,Intuitive_Surgical + Intuitive_Surgical_Inc.,True
+IVZ,Invesco Ltd.,Financials,yahoo,IVZ,2015-07-01,2026-11-10,,358.0,,Invesco + Invesco_Ltd. + Invesco_Perpetual + Invesco_PowerShares,True
+IRM,Iron Mountain Incorporated,Industrials,yahoo,IRM,2015-07-01,2026-11-10,,271.0,,Iron_Mountain_(company) + Iron_Mountain_Incorporated + Iron_Mountain_Digital,True
+JEC,Jacobs Engineering Group,Industrials,yahoo,J,2015-07-01,2026-11-10,,372.0,,Jacobs_Solutions + Jacobs_Engineering_Group,True
+JBHT,J. B. Hunt Transport Services,Industrials,yahoo,JBHT,2015-07-01,2026-11-10,,172.0,,J._B._Hunt + J._B._Hunt_Transport_Services,True
+JNJ,Johnson & Johnson,Health Care,yahoo,JNJ,2015-07-01,2026-11-10,,1754.0,,Johnson_&_Johnson,True
+JCI,Johnson Controls,Consumer Discretionary,yahoo,JCI,2015-07-01,2026-11-10,,616.0,,Johnson_Controls,True
+JPM,JPMorgan Chase & Co.,Financials,yahoo,JPM,2015-07-01,2026-11-10,,3104.0,,JPMorgan_Chase + JPMorgan_Chase_&_Co. + JP_Morgan_Chase + J.P._Morgan_Asset_Management,True
+JNPR,Juniper Networks,Information Technology,,,,,no price data (most likely bought out or delisted),353.0,,Juniper_Networks,False
+KSU,Kansas City Southern,Industrials,,,,,no price data (most likely bought out or delisted),2.0,,Kansas_City_Southern,False
+K,Kellogg Co.,Consumer Staples,,,,,no price data (most likely bought out or delisted),1366.0,,Kellogg's + Kellogg_Co. + Kellogg_Company,False
+KEY,KeyCorp,Financials,yahoo,KEY,2015-07-01,2026-11-10,,250.0,,KeyBank + KeyCorp,True
+GMCR,Keurig Green Mountain,Consumer Staples,,,,,no price data (most likely bought out or delisted),1107.0,,Keurig_Dr_Pepper + Keurig_Green_Mountain,True
+KMB,Kimberly-Clark,Consumer Staples,yahoo,KMB,2015-07-01,2026-11-10,,452.0,,Kimberly-Clark + Kimberly_Clark,True
+KIM,Kimco Realty,Financials,yahoo,KIM,2015-07-01,2026-11-10,,30.0,,Kimco_Realty,True
+KMI,Kinder Morgan,Energy,yahoo,KMI,2015-07-01,2026-11-10,,149.0,,Kinder_Morgan,True
+KLAC,KLA-Tencor Corp.,Information Technology,yahoo,KLAC,2015-07-01,2026-11-10,,203.0,,KLA_Corporation + KLA-Tencor_Corp. + KLA-Tencor,True
+KSS,Kohl's Corp.,Consumer Discretionary,yahoo,KSS,2015-07-01,2026-11-10,,569.0,,Kohl's + Kohl's_Corp. + Kohls,False
+KHC,Kraft Heinz Co,Consumer Staples,yahoo,KHC,2015-07-06,2026-11-10,,956.0,,Kraft_Heinz + Kraft_Heinz_Company + The_Kraft_Heinz_Company,True
+KR,Kroger Co.,Consumer Staples,yahoo,KR,2015-07-01,2026-11-10,,1421.0,,Kroger + Kroger_Co.,True
+LB,L Brands Inc.,Consumer Discretionary,yahoo,BBWI,2015-07-01,2026-11-10,,454.0,,"Bath_&_Body_Works,_Inc. + L_Brands_Inc. + Limited_Brands + L_Brands",False
+LLL,L-3 Communications Holdings,Industrials,,,,,no price data (most likely bought out or delisted),285.0,,L3_Technologies + L-3_Communications_Holdings + L-3_Communications,False
+LH,Laboratory Corp. of America Holding,Health Care,yahoo,LH,2015-07-01,2026-11-10,,229.0,,Labcorp + Laboratory_Corp._of_America_Holding + LabCorp,True
+LRCX,Lam Research,Information Technology,yahoo,LRCX,2015-07-01,2026-11-10,,265.0,,Lam_Research,True
+LM,Legg Mason,Financials,,,,,no price data (most likely bought out or delisted),92.0,,Legg_Mason,False
+LEG,Leggett & Platt,Industrials,,,,,LEG starts 2026-08-26,61.0,,Leggett_&_Platt,False
+LEN,Lennar Corp.,Consumer Discretionary,yahoo,LEN,2015-07-01,2026-11-10,,142.0,,Lennar + Lennar_Corp. + Lennar_Corporation,True
+LVLT,Level 3 Communications,Telecommunications Services,,,,,no price data (most likely bought out or delisted),302.0,,Level_3_Communications,False
+LUK,Leucadia National Corp.,Financials,yahoo,JEF,2015-07-01,2026-11-10,,104.0,,Jefferies_Financial_Group + Leucadia_National_Corp. + Leucadia_National,False
+LLY,Lilly (Eli) & Co.,Health Care,yahoo,LLY,2015-07-01,2026-11-10,,837.0,,Eli_Lilly_and_Company + Lilly_(Eli)_&_Co.,True
+LNC,Lincoln National,Financials,yahoo,LNC,2015-07-01,2026-11-10,,113.0,,Lincoln_National_Corporation + Lincoln_National,False
+LLTC,Linear Technology Corp.,Information Technology,,,,,no price data (most likely bought out or delisted),64.0,,Linear_Technology + Linear_Technology_Corp.,False
+LMT,Lockheed Martin Corp.,Industrials,yahoo,LMT,2015-07-01,2026-11-10,,2390.0,,Lockheed_Martin + Lockheed_Martin_Corp.,True
+L,Loews Corp.,Financials,yahoo,L,2015-07-01,2026-11-10,,160.0,,Loews_Corporation + Loews_Corp.,True
+LOW,Lowe's Cos.,Consumer Discretionary,yahoo,LOW,2015-07-01,2026-11-10,,913.0,,Lowe's + Lowe's_Cos.,True
+LYB,LyondellBasell,Materials,yahoo,LYB,2015-07-01,2026-11-10,,201.0,,LyondellBasell,True
+MTB,M&T Bank Corp.,Financials,yahoo,MTB,2015-07-01,2026-11-10,,319.0,,M&T_Bank + M&T_Bank_Corp.,True
+MAC,Macerich,Financials,yahoo,MAC,2015-07-01,2026-11-10,,54.0,,Macerich,False
+M,Macy's Inc.,Consumer Discretionary,yahoo,M,2015-07-01,2026-11-10,,261.0,,"Macy's,_Inc. + Macy's_Inc.",False
+MNK,Mallinckrodt Plc,Health Care,,,,,no price data (most likely bought out or delisted),147.0,,Mallinckrodt + Mallinckrodt_Plc,False
+MRO,Marathon Oil Corp.,Energy,,,,,no price data (most likely bought out or delisted),170.0,,Marathon_Oil + Marathon_Oil_Corp.,False
+MPC,Marathon Petroleum,Energy,yahoo,MPC,2015-07-01,2026-11-10,,294.0,,Marathon_Petroleum,True
+MAR,Marriott Int'l.,Consumer Discretionary,yahoo,MAR,2015-07-01,2026-11-10,,1528.0,,Marriott_International + Marriott_Int'l. + TownePlace_Suites,True
+MMC,Marsh & McLennan,Financials,,,,,no price data (most likely bought out or delisted),515.0,,Marsh_McLennan + Marsh_&_McLennan + Marsh_&_McLennan_Companies,True
+MLM,Martin Marietta Materials,Materials,yahoo,MLM,2015-07-01,2026-11-10,,51.0,,Martin_Marietta_Materials,True
+MAS,Masco Corp.,Industrials,yahoo,MAS,2015-07-01,2026-11-10,,107.0,,Masco + Masco_Corp.,True
+MA,Mastercard Inc.,Information Technology,yahoo,MA,2015-07-01,2026-11-10,,1206.0,,Mastercard + Mastercard_Inc. + MasterCard,True
+MAT,Mattel Inc.,Consumer Discretionary,yahoo,MAT,2015-07-01,2026-11-10,,1149.0,,Mattel + Mattel_Inc. + Harold_Matson_(businessman) + Mattel_Studios,False
+MKC,McCormick & Co.,Consumer Staples,yahoo,MKC,2015-07-01,2026-11-10,,316.0,,McCormick_&_Company + McCormick_&_Co. + McCormick_and_Company,True
+MCD,McDonald's Corp.,Consumer Discretionary,yahoo,MCD,2015-07-01,2026-11-10,,6981.0,,McDonald's + McDonald's_Corp. + McDonalds + Mcdonalds + Mcdonald's + McDonald's_Corporation + Speedee + Mcdonalds.com,True
+MHFI,McGraw Hill Financial,Financials,yahoo,SPGI,2015-07-01,2026-11-10,,587.0,,S&P_Global + McGraw_Hill_Financial + S&P_Capital_IQ + SNL_Financial,True
+MCK,McKesson Corp.,Health Care,yahoo,MCK,2015-07-01,2026-11-10,,510.0,,McKesson + McKesson_Corp. + McKesson_Corporation,True
+MJN,Mead Johnson,Consumer Staples,,,,,no price data (most likely bought out or delisted),101.0,,Mead_Johnson,False
+MDT,Medtronic plc,Health Care,yahoo,MDT,2015-07-01,2026-11-10,,574.0,,"Medtronic + Medtronic_plc + Medtronic,_Inc",True
+MRK,Merck & Co.,Health Care,yahoo,MRK,2015-07-01,2026-11-10,,852.0,,Merck_&_Co.,True
+MET,MetLife Inc.,Financials,yahoo,MET,2015-07-01,2026-11-10,,462.0,,MetLife + MetLife_Inc.,True
+KORS,Michael Kors Holdings,Consumer Discretionary,yahoo,CPRI,2015-07-01,2026-11-10,,310.0,,Capri_Holdings + Michael_Kors_Holdings + Michael_Kors_(brand),False
+MCHP,Microchip Technology,Information Technology,yahoo,MCHP,2015-07-01,2026-11-10,,319.0,,Microchip_Technology,True
+MU,Micron Technology,Information Technology,yahoo,MU,2015-07-01,2026-11-10,,674.0,,Micron_Technology + Crucial_(brand),True
+MSFT,Microsoft Corp.,Information Technology,yahoo,MSFT,2015-07-01,2026-11-10,,7593.0,,Microsoft + Microsoft_Corp. + Microsoft_Corporation + Mircosoft + Lift_London + Microsoft_Security_Response_Center,True
+MHK,Mohawk Industries,Consumer Discretionary,yahoo,MHK,2015-07-01,2026-11-10,,78.0,,Mohawk_Industries,False
+TAP,Molson Coors Brewing Company,Consumer Staples,yahoo,TAP,2015-07-01,2026-11-10,,580.0,,Molson_Coors + Molson_Coors_Brewing_Company + Molson_Coors_Beverage_Company,False
+MDLZ,Mondelez International,Consumer Staples,yahoo,MDLZ,2015-07-01,2026-11-10,,2011.0,,Mondelez_International + Mondelez + Mondelēz_International,True
+MON,Monsanto Co.,Materials,,,,,no price data (most likely bought out or delisted),1363.0,,Monsanto + Monsanto_Co. + Monsanto_Company,False
+MNST,Monster Beverage,Consumer Staples,yahoo,MNST,2015-07-01,2026-11-10,,632.0,,Monster_Beverage + Burn_(energy_drink) + Peace_Iced_Tea + Monster_Beverage_Corporation,True
+MCO,Moody's Corp,Financials,yahoo,MCO,2015-07-01,2026-11-10,,193.0,,Moody's_Corporation + Moody's_Corp,True
+MS,Morgan Stanley,Financials,yahoo,MS,2015-07-01,2026-11-10,,1709.0,,Morgan_Stanley,True
+MOS,The Mosaic Company,Materials,yahoo,MOS,2015-07-01,2026-11-10,,139.0,,The_Mosaic_Company,True
+MSI,Motorola Solutions Inc.,Information Technology,yahoo,MSI,2015-07-01,2026-11-10,,319.0,,Motorola_Solutions + Motorola_Solutions_Inc.,True
+MUR,Murphy Oil,Energy,yahoo,MUR,2015-07-01,2026-11-10,,61.0,,Murphy_Oil,False
+MYL,Mylan N.V.,Health Care,yahoo,VTRS,2015-07-01,2026-11-10,,319.0,,Mylan + Mylan_N.V.,False
+NDAQ,NASDAQ OMX Group,Financials,yahoo,NDAQ,2015-07-01,2026-11-10,,267.0,,"Nasdaq,_Inc. + NASDAQ_OMX_Group",True
+NOV,National Oilwell Varco Inc.,Energy,yahoo,NOV,2015-07-01,2026-11-10,,148.0,,NOV_Inc. + National_Oilwell_Varco_Inc. + National_Oilwell_Varco,False
+NAVI,Navient,Financials,yahoo,NAVI,2015-07-01,2026-11-10,,98.0,,Navient + Navient_Corporation,False
+NTAP,NetApp,Information Technology,yahoo,NTAP,2015-07-01,2026-11-10,,322.0,,NetApp,True
+NFLX,Netflix Inc.,Information Technology,yahoo,NFLX,2015-07-01,2026-11-10,,8.0,,"Netflix,_Inc. + Netflix_Inc.",True
+NWL,Newell Rubbermaid Co.,Consumer Discretionary,yahoo,NWL,2015-07-01,2026-11-10,,437.0,,Newell_Brands + Newell_Rubbermaid_Co. + Newell_Rubbermaid,False
+NFX,Newfield Exploration Co,Energy,,,,,NFX starts 2026-07-07,14.0,,Newfield_Exploration + Newfield_Exploration_Co,False
+NEM,Newmont Mining Corp. (Hldg. Co.),Materials,yahoo,NEM,2015-07-01,2026-11-10,,153.0,,Newmont + Newmont_Mining_Corp._(Hldg._Co.) + Newmont_Corporation + Newmont_Mining_Corporation + Newmont_Goldcorp,True
+NWSA,News Corp. Class A,Consumer Discretionary,yahoo,NWSA,2015-07-01,2026-11-10,,783.0,,News_Corp + News_Corp._Class_A + News_Corp_(2013–present),True
+NWS,News Corp. Class B,Consumer Discretionary,yahoo,NWS,2015-07-01,2026-11-10,,783.0,,News_Corp + News_Corp._Class_B + News_Corp_(2013–present),True
+NEE,NextEra Energy,Utilities,yahoo,NEE,2015-07-01,2026-11-10,,241.0,,NextEra_Energy,True
+NLSN,Nielsen Holdings,Industrials,,,,,no price data (most likely bought out or delisted),379.0,,Nielsen_Holdings + Nielsen_Company + Nielsen_N.V. + Nielsen_Holdings_PLC,False
+NKE,Nike,Consumer Discretionary,yahoo,NKE,2015-07-01,2026-11-10,,5042.0,,"Nike,_Inc. + Nike_(company) + Nike,_Inc + NIKE + Nike_Hypervenom",True
+NI,NiSource Inc.,Utilities,yahoo,NI,2015-07-01,2026-11-10,,53.0,,NiSource + NiSource_Inc.,True
+NBL,Noble Energy Inc,Energy,,,,,no price data (most likely bought out or delisted),60.0,,Noble_Energy + Noble_Energy_Inc,False
+JWN,Nordstrom,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),613.0,,"Nordstrom + Nordstrom,_Inc. + Erik_Nordstrom_(businessman)",False
+NSC,Norfolk Southern Corp.,Industrials,yahoo,NSC,2015-07-01,2026-11-10,,450.0,,Norfolk_Southern_Railway + Norfolk_Southern_Corp. + Norfolk_Southern,True
+NTRS,Northern Trust Corp.,Financials,yahoo,NTRS,2015-07-01,2026-11-10,,324.0,,Northern_Trust + Northern_Trust_Corp.,True
+NOC,Northrop Grumman Corp.,Industrials,yahoo,NOC,2015-07-01,2026-11-10,,1358.0,,Northrop_Grumman + Northrop_Grumman_Corp.,True
+NRG,NRG Energy,Utilities,yahoo,NRG,2015-07-01,2026-11-10,,225.0,,NRG_Energy,True
+NUE,Nucor Corp.,Materials,yahoo,NUE,2015-07-01,2026-11-10,,254.0,,Nucor + Nucor_Corp. + Nucor_Corporation,True
+NVDA,Nvidia Corporation,Information Technology,yahoo,NVDA,2015-07-01,2026-11-10,,2517.0,,Nvidia + Nvidia_Corporation + NVIDIA + NViDiA,True
+ORLY,O'Reilly Automotive,Consumer Discretionary,yahoo,ORLY,2015-07-01,2026-11-10,,253.0,,O'Reilly_Auto_Parts + O'Reilly_Automotive,True
+OXY,Occidental Petroleum,Energy,yahoo,OXY,2015-07-01,2026-11-10,,388.0,,Occidental_Petroleum,True
+OMC,Omnicom Group,Consumer Discretionary,yahoo,OMC,2015-07-01,2026-11-10,,384.0,,Omnicom_Group + Omnicom,True
+OKE,ONEOK,Energy,yahoo,OKE,2015-07-01,2026-11-10,,56.0,,Oneok + ONEOK,True
+ORCL,Oracle Corp.,Information Technology,yahoo,ORCL,2015-07-01,2026-11-10,,3336.0,,Oracle_Corporation + Oracle_Corp. + Oracle_corporation + Oracle.com + @Oracle,True
+OI,Owens-Illinois Inc,Materials,yahoo,OI,2015-07-01,2026-11-10,,105.0,,O-I_Glass + Owens-Illinois_Inc + Owens-Illinois,False
+PCAR,PACCAR Inc.,Industrials,yahoo,PCAR,2015-07-01,2026-11-10,,388.0,,Paccar + PACCAR_Inc.,True
+PH,Parker-Hannifin,Industrials,yahoo,PH,2015-07-01,2026-11-10,,265.0,,Parker_Hannifin + Parker-Hannifin,True
+PDCO,Patterson Companies,Health Care,,,,,no price data (most likely bought out or delisted),34.0,,Patterson_Companies,False
+PAYX,Paychex Inc.,Information Technology,yahoo,PAYX,2015-07-01,2026-11-10,,134.0,,Paychex + Paychex_Inc.,True
+PYPL,PayPal,Information Technology,yahoo,PYPL,2015-07-06,2026-11-10,,4611.0,,PayPal + Paypal,True
+PNR,Pentair Ltd.,Industrials,yahoo,PNR,2015-07-01,2026-11-10,,97.0,,Pentair,True
+PBCT,People's United Financial,Financials,,,,,no price data (most likely bought out or delisted),46.0,,People's_United_Financial,False
+POM,Pepco Holdings Inc.,Utilities,,,,,POM starts 2025-10-08,20.0,,Pepco_Holdings + Pepco_Holdings_Inc.,False
+PEP,PepsiCo Inc.,Consumer Staples,yahoo,PEP,2015-07-01,2026-11-10,,2874.0,,PepsiCo + PepsiCo_Inc. + Pepsico,True
+PKI,PerkinElmer,Health Care,yahoo,RVTY,2015-07-01,2026-11-10,,179.0,,PerkinElmer,False
+PRGO,Perrigo,Health Care,yahoo,PRGO,2015-07-01,2026-11-10,,118.0,,Perrigo,False
+PFE,Pfizer Inc.,Health Care,yahoo,PFE,2015-07-01,2026-11-10,,1520.0,,Pfizer + Pfizer_Inc. + Pfizer_Inc + Anacor,True
+PCG,PG&E Corp.,Utilities,yahoo,PCG,2015-07-01,2026-11-10,,520.0,,Pacific_Gas_and_Electric_Company + PG&E_Corp. + Pacific_Gas_&_Electric_Company,True
+PM,Philip Morris International,Consumer Staples,yahoo,PM,2015-07-01,2026-11-10,,1035.0,,Philip_Morris_International,True
+PSX,Phillips 66,Energy,yahoo,PSX,2015-07-01,2026-11-10,,385.0,,Phillips_66,True
+PNW,Pinnacle West Capital,Utilities,yahoo,PNW,2015-07-01,2026-11-10,,65.0,,Pinnacle_West_Capital + Arizona_Public_Service,True
+PXD,Pioneer Natural Resources,Energy,,,,,no price data (most likely bought out or delisted),52.0,,Pioneer_Natural_Resources,False
+PBI,Pitney-Bowes,Industrials,yahoo,PBI,2015-07-01,2026-11-10,,221.0,,Pitney_Bowes + Pitney-Bowes,False
+PCL,Plum Creek Timber Co.,Financials,,,,,PCL starts 2025-08-05,25.0,,Plum_Creek_Timber + Plum_Creek_Timber_Co.,False
+PNC,PNC Financial Services,Financials,yahoo,PNC,2015-07-01,2026-11-10,,719.0,,PNC_Financial_Services + Pnc_bank,True
+RL,Polo Ralph Lauren Corp.,Consumer Discretionary,yahoo,RL,2015-07-01,2026-11-10,,920.0,,Ralph_Lauren_Corporation + Polo_Ralph_Lauren_Corp. + Polo_Ralph_Lauren + Rugby_Ralph_Lauren + Ralph_Lauren_(brand),True
+PPG,PPG Industries,Materials,yahoo,PPG,2015-07-01,2026-11-10,,471.0,,PPG_Industries,True
+PPL,PPL Corp.,Utilities,yahoo,PPL,2015-07-01,2026-11-10,,135.0,,PPL_Corporation + PPL_Corp.,True
+PX,Praxair Inc.,Materials,yahoo,LIN,2015-07-01,2026-11-10,,97.0,,Praxair + Praxair_Inc.,False
+PCP,Precision Castparts,Industrials,,,,,no price data (most likely bought out or delisted),100.0,,Precision_Castparts_Corp. + Precision_Castparts,False
+PCLN,Priceline.com Inc,Consumer Discretionary,yahoo,BKNG,2015-07-01,2026-11-10,,260.0,,Priceline.com + Priceline.com_Inc,False
+PFG,Principal Financial Group,Financials,yahoo,PFG,2015-07-01,2026-11-10,,191.0,,Principal_Financial_Group,True
+PG,Procter & Gamble,Consumer Staples,yahoo,PG,2015-07-01,2026-11-10,,2220.0,,Procter_&_Gamble + The_Procter_&_Gamble_Company,True
+PGR,Progressive Corp.,Financials,yahoo,PGR,2015-07-01,2026-11-10,,303.0,,Progressive_Corporation + Progressive_Corp.,True
+PLD,Prologis,Financials,yahoo,PLD,2015-07-01,2026-11-10,,126.0,,Prologis,True
+PRU,Prudential Financial,Financials,yahoo,PRU,2015-07-01,2026-11-10,,358.0,,Prudential_Financial,True
+PEG,Public Serv. Enterprise Inc.,Utilities,yahoo,PEG,2015-07-01,2026-11-10,,112.0,,Public_Service_Enterprise_Group + Public_Serv._Enterprise_Inc.,True
+PSA,Public Storage,Financials,yahoo,PSA,2015-07-01,2026-11-10,,90.0,,Public_Storage,True
+PHM,Pulte Homes Inc.,Consumer Discretionary,yahoo,PHM,2015-07-01,2026-11-10,,85.0,,PulteGroup + Pulte_Homes_Inc.,True
+PVH,PVH Corp.,Consumer Discretionary,yahoo,PVH,2015-07-01,2026-11-10,,522.0,,PVH_Corp. + PVH_(company),False
+QRVO,Qorvo,Information Technology,,,,,QRVO starts 2026-10-02,105.0,,Qorvo,False
+PWR,Quanta Services Inc.,Industrials,yahoo,PWR,2015-07-01,2026-11-10,,85.0,,Quanta_Services + Quanta_Services_Inc.,True
+QCOM,QUALCOMM Inc.,Information Technology,yahoo,QCOM,2015-07-01,2026-11-10,,1390.0,,Qualcomm + QUALCOMM_Inc.,True
+DGX,Quest Diagnostics,Health Care,yahoo,DGX,2015-07-01,2026-11-10,,209.0,,Quest_Diagnostics,True
+RRC,Range Resources Corp.,Energy,yahoo,RRC,2015-07-01,2026-11-10,,24.0,,Range_Resources,False
+RTN,Raytheon Co.,Industrials,,,,,no price data (most likely bought out or delisted),1084.0,,Raytheon + Raytheon_Co. + Raytheon_Company,False
+O,Realty Income Corporation,Financials,yahoo,O,2015-07-01,2026-11-10,,82.0,,Realty_Income + Realty_Income_Corporation,True
+RHT,Red Hat Inc.,Information Technology,,,,,no price data (most likely bought out or delisted),841.0,,Red_Hat + Red_Hat_Inc. + Red_hat,False
+REGN,Regeneron,Health Care,yahoo,REGN,2015-07-01,2026-11-10,,257.0,,Regeneron_Pharmaceuticals + Regeneron,True
+RF,Regions Financial Corp.,Financials,yahoo,RF,2015-07-01,2026-11-10,,183.0,,Regions_Financial_Corporation + Regions_Financial_Corp.,True
+RSG,Republic Services Inc,Industrials,yahoo,RSG,2015-07-01,2026-11-10,,149.0,,Republic_Services + Republic_Services_Inc,True
+RAI,Reynolds American Inc.,Consumer Staples,,,,,no price data (most likely bought out or delisted),188.0,,Reynolds_American + Reynolds_American_Inc.,False
+RHI,Robert Half International,Industrials,yahoo,RHI,2015-07-01,2026-11-10,,162.0,,Robert_Half + Robert_Half_International,False
+ROK,Rockwell Automation Inc.,Industrials,yahoo,ROK,2015-07-01,2026-11-10,,330.0,,Rockwell_Automation + Rockwell_Automation_Inc.,True
+COL,Rockwell Collins,Industrials,,,,,no price data (most likely bought out or delisted),269.0,,Rockwell_Collins,False
+ROP,Roper Industries,Industrials,yahoo,ROP,2015-07-01,2026-11-10,,98.0,,Roper_Technologies + Roper_Industries,True
+ROST,Ross Stores,Consumer Discretionary,yahoo,ROST,2015-07-01,2026-11-10,,445.0,,Ross_Stores + Ross_Dress_for_Less,True
+RCL,Royal Caribbean Cruises Ltd,Consumer Discretionary,yahoo,RCL,2015-07-01,2026-11-10,,514.0,,Royal_Caribbean_Group + Royal_Caribbean_Cruises_Ltd + Royal_Caribbean_Cruises_Ltd.,True
+R,Ryder System,Industrials,yahoo,R,2015-07-01,2026-11-10,,155.0,,Ryder + Ryder_System,False
+CRM,Salesforce.com,Information Technology,yahoo,CRM,2015-07-01,2026-11-10,,2580.0,,Salesforce + Salesforce.com,True
+SNDK,SanDisk Corporation,Information Technology,,,,,SNDK starts 2025-02-13,451.0,,Sandisk + SanDisk_Corporation + SanDisk,True
+SCG,SCANA Corp,Utilities,,,,,no price data (most likely bought out or delisted),35.0,,SCANA + SCANA_Corp,False
+SLB,Schlumberger Ltd.,Energy,yahoo,SLB,2015-07-01,2026-11-10,,749.0,,SLB + Schlumberger_Ltd. + Schlumberger,True
+SNI,Scripps Networks Interactive Inc.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),97.0,,Scripps_Networks_Interactive + Scripps_Networks_Interactive_Inc.,False
+STX,Seagate Technology,Information Technology,yahoo,STX,2015-07-01,2026-11-10,,396.0,,Seagate_Technology,True
+SRE,Sempra Energy,Utilities,yahoo,SRE,2015-07-01,2026-11-10,,110.0,,Sempra + Sempra_Energy,True
+SHW,Sherwin-Williams,Materials,yahoo,SHW,2015-07-01,2026-11-10,,353.0,,Sherwin-Williams,True
+SIG,Signet Jewelers,Consumer Discretionary,yahoo,SIG,2015-07-01,2026-11-10,,137.0,,Signet_Jewelers,False
+SPG,Simon Property Group Inc,Financials,yahoo,SPG,2015-07-01,2026-11-10,,372.0,,Simon_Property_Group + Simon_Property_Group_Inc,True
+SWKS,Skyworks Solutions,Information Technology,yahoo,SWKS,2015-07-01,2026-11-10,,129.0,,Skyworks_Solutions,True
+SLG,SL Green Realty,Financials,yahoo,SLG,2015-07-01,2026-11-10,,50.0,,SL_Green_Realty,False
+SJM,Smucker (J.M.),Consumer Staples,yahoo,SJM,2015-07-01,2026-11-10,,306.0,,The_J.M._Smucker_Company + Smucker_(J.M.),True
+SNA,Snap-On Inc.,Consumer Discretionary,yahoo,SNA,2015-07-01,2026-11-10,,267.0,,Snap-on + Snap-On_Inc.,True
+SO,Southern Co.,Utilities,yahoo,SO,2015-07-01,2026-11-10,,171.0,,Southern_Company + Southern_Co.,True
+LUV,Southwest Airlines,Industrials,yahoo,LUV,2015-07-01,2026-11-10,,2059.0,,Southwest_Airlines + Iflyswa + Southwest_airlines,True
+SWN,Southwestern Energy,Energy,,,,,no price data (most likely bought out or delisted),30.0,,Southwestern_Energy,False
+SE,Spectra Energy Corp.,Energy,,,,,SE starts 2017-10-20,22.0,,Spectra_Energy + Spectra_Energy_Corp.,False
+STJ,St Jude Medical,Health Care,,,,,no price data (most likely bought out or delisted),89.0,,St._Jude_Medical + St_Jude_Medical,False
+SWK,Stanley Black & Decker,Consumer Discretionary,yahoo,SWK,2015-07-01,2026-11-10,,513.0,,Stanley_Black_&_Decker,True
+SPLS,Staples Inc.,Consumer Discretionary,,,,,SPLS starts 2026-01-16,455.0,,Staples_Inc. + Staples_Inc,False
+SBUX,Starbucks Corp.,Consumer Discretionary,yahoo,SBUX,2015-07-01,2026-11-10,,8040.0,,Starbucks + Starbucks_Corp. + Starbucks_DoubleShot + @Starbucks,True
+HOT,Starwood Hotels & Resorts,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),115.0,,Starwood_Hotels_and_Resorts + Starwood_Hotels_&_Resorts + Starwood_Hotels_&_Resorts_Worldwide + Starwood_Hotels_and_Resorts_Worldwide + Compagnia_Italiana_Grandi_Alberghi,False
+STT,State Street Corp.,Financials,yahoo,STT,2015-07-01,2026-11-10,,802.0,,State_Street_Corporation + State_Street_Corp.,True
+SRCL,Stericycle Inc,Industrials,,,,,no price data (most likely bought out or delisted),57.0,,Stericycle + Stericycle_Inc,False
+SYK,Stryker Corp.,Health Care,yahoo,SYK,2015-07-01,2026-11-10,,403.0,,Stryker_Corporation + Stryker_Corp. + Stryker_Orthopaedics,True
+STI,SunTrust Banks,Financials,,,,,STI starts 2022-05-02,304.0,,SunTrust + SunTrust_Banks,False
+SYMC,Symantec Corp.,Information Technology,yahoo,GEN,2015-07-01,2026-11-10,,317.0,,Gen_Digital + Symantec_Corp. + MessageLabs + NortonLifeLock,True
+SYF,Synchrony Financial,Financials,yahoo,SYF,2015-07-01,2026-11-10,,321.0,,Synchrony_Financial,True
+SYY,Sysco Corp.,Consumer Staples,yahoo,SYY,2015-07-01,2026-11-10,,341.0,,Sysco + Sysco_Corp.,True
+TROW,T. Rowe Price Group,Financials,yahoo,TROW,2015-07-01,2026-11-10,,259.0,,T._Rowe_Price + T._Rowe_Price_Group,True
+TGT,Target Corp.,Consumer Discretionary,yahoo,TGT,2015-07-01,2026-11-10,,2063.0,,Target_Corporation + Target_Corp.,True
+TEL,TE Connectivity Ltd.,Information Technology,yahoo,TEL,2015-07-01,2026-11-10,,368.0,,TE_Connectivity,True
+TE,TECO Energy,Utilities,,,,,TE starts 2020-01-10,40.0,,TECO_Energy,False
+TGNA,Tegna,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),378.0,,USA_Today_Co. + Gannett_Co. + Gannett_Company + Gannett,False
+THC,Tenet Healthcare Corp.,Health Care,yahoo,THC,2015-07-01,2026-11-10,,153.0,,Tenet_Healthcare + Tenet_Healthcare_Corp.,False
+TDC,Teradata Corp.,Information Technology,yahoo,TDC,2015-07-01,2026-11-10,,218.0,,Teradata + Teradata_Corp.,False
+TSO,Tesoro Petroleum Co.,Energy,,,,,no price data (most likely bought out or delisted),77.0,,Tesoro_Corporation + Tesoro_Petroleum_Co. + Andeavor,False
+TXN,Texas Instruments,Information Technology,yahoo,TXN,2015-07-01,2026-11-10,,908.0,,Texas_Instruments,True
+TXT,Textron Inc.,Industrials,yahoo,TXT,2015-07-01,2026-11-10,,391.0,,Textron + Textron_Inc.,True
+HSY,The Hershey Company,Consumer Staples,yahoo,HSY,2015-07-01,2026-11-10,,1093.0,,The_Hershey_Company,True
+TRV,The Travelers Companies Inc.,Financials,yahoo,TRV,2015-07-01,2026-11-10,,316.0,,The_Travelers_Companies + The_Travelers_Companies_Inc. + Travelers_Group,True
+TMO,Thermo Fisher Scientific,Health Care,yahoo,TMO,2015-07-01,2026-11-10,,692.0,,Thermo_Fisher_Scientific,True
+TIF,Tiffany & Co.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),994.0,,Tiffany_&_Co. + Tiffany_&_Co + Tiffany_and_Co. + Tiffany_&_Company,False
+TWX,Time Warner Inc.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),2248.0,,WarnerMedia + Time_Warner_Inc. + Warner_Communications + Time_Warner + WarnerMedia_Entertainment + WarnerMedia_News_&_Sports,False
+TWC,Time Warner Cable Inc.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),402.0,,Time_Warner_Cable + Time_Warner_Cable_Inc. + NaviSite,False
+TJX,TJX Companies Inc.,Consumer Discretionary,yahoo,TJX,2015-07-01,2026-11-10,,525.0,,TJX + TJX_Companies_Inc. + TJX_Companies,True
+TMK,Torchmark Corp.,Financials,,,,,no price data (most likely bought out or delisted),49.0,,Globe_Life + Torchmark_Corp.,True
+TSS,Total System Services,Information Technology,,,,,no price data (most likely bought out or delisted),134.0,,TSYS + Total_System_Services,False
+TSCO,Tractor Supply Company,Consumer Discretionary,yahoo,TSCO,2015-07-01,2026-11-10,,217.0,,Tractor_Supply_Company,True
+RIG,Transocean,Energy,yahoo,RIG,2015-07-01,2026-11-10,,229.0,,Transocean,False
+TRIP,TripAdvisor,Consumer Discretionary,yahoo,TRIP,2015-07-01,2026-11-10,,554.0,,Tripadvisor + TripAdvisor,False
+FOXA,Twenty-First Century Fox Class A,Consumer Discretionary,,,,,FOXA starts 2019-03-12,1048.0,,21st_Century_Fox + Twenty-First_Century_Fox_Class_A + List_of_assets_owned_by_21st_Century_Fox,False
+FOX,Twenty-First Century Fox Class B,Consumer Discretionary,,,,,FOX starts 2019-03-13,1048.0,,21st_Century_Fox + Twenty-First_Century_Fox_Class_B + List_of_assets_owned_by_21st_Century_Fox,False
+TSN,Tyson Foods,Consumer Staples,yahoo,TSN,2015-07-01,2026-11-10,,436.0,,Tyson_Foods,True
+TYC,Tyco International,Industrials,yahoo,JCI,2015-07-01,2026-11-10,,274.0,,Tyco_International,False
+USB,U.S. Bancorp,Financials,yahoo,USB,2015-07-01,2026-11-10,,604.0,,U.S._Bancorp + U.S._Bank + Usbank,True
+UA,Under Armour,Consumer Discretionary,yahoo,UAA,2015-07-01,2026-11-10,,1250.0,,Under_Armour,False
+UNP,Union Pacific,Industrials,yahoo,UNP,2015-07-01,2026-11-10,,928.0,,Union_Pacific_Railroad + Union_Pacific,False
+UAL,United Continental Holdings,Industrials,yahoo,UAL,2015-07-01,2026-11-10,,3229.0,,United_Airlines + United_Continental_Holdings + United_air + United_airlines + United_Airlines_Holdings + List_of_United_Airlines_destinations,True
+UNH,United Health Group Inc.,Health Care,yahoo,UNH,2015-07-01,2026-11-10,,978.0,,UnitedHealth_Group + United_Health_Group_Inc. + United_healthcare + UnitedHealthcare + United_Healthcare,True
+UPS,United Parcel Service,Industrials,yahoo,UPS,2015-07-01,2026-11-10,,1385.0,,United_Parcel_Service + UPS_Ground,True
+URI,"United Rentals, Inc.",Industrials,yahoo,URI,2015-07-01,2026-11-10,,84.0,,United_Rentals,True
+UTX,United Technologies,Industrials,yahoo,RTX,2015-07-01,2026-11-10,,611.0,,United_Technologies + United_Technologies_Corporation,False
+UHS,"Universal Health Services, Inc.",Health Care,yahoo,UHS,2015-07-01,2026-11-10,,81.0,,Universal_Health_Services,True
+UNM,Unum Group,Financials,yahoo,UNM,2015-07-01,2026-11-10,,127.0,,Unum + Unum_Group,False
+URBN,Urban Outfitters,Consumer Discretionary,yahoo,URBN,2015-07-01,2026-11-10,,441.0,,Urban_Outfitters,False
+VFC,V.F. Corp.,Consumer Discretionary,yahoo,VFC,2015-07-01,2026-11-10,,785.0,,VF_Corporation + V.F._Corp.,False
+VLO,Valero Energy,Energy,yahoo,VLO,2015-07-01,2026-11-10,,296.0,,Valero_Energy + Valero_Energy_Corporation,True
+VAR,Varian Medical Systems,Health Care,,,,,no price data (most likely bought out or delisted),110.0,,Varian_Medical_Systems,False
+VTR,Ventas Inc,Financials,yahoo,VTR,2015-07-01,2026-11-10,,29.0,,Ventas_(company) + Ventas_Inc,True
+VRSN,Verisign Inc.,Information Technology,yahoo,VRSN,2015-07-01,2026-11-10,,239.0,,Verisign + Verisign_Inc.,True
+VRSK,Verisk Analytics,Industrials,yahoo,VRSK,2015-07-01,2026-11-10,,109.0,,Verisk_Analytics,True
+VZ,Verizon Communications,Telecommunications Services,yahoo,VZ,2015-07-01,2026-11-10,,1486.0,,Verizon + Verizon_Communications + Bell_Atlantic,True
+VRTX,Vertex Pharmaceuticals Inc,Health Care,yahoo,VRTX,2015-07-01,2026-11-10,,209.0,,Vertex_Pharmaceuticals,True
+VIAB,Viacom Inc.,Consumer Discretionary,,,,,no price data (most likely bought out or delisted),191.0,,Viacom + Viacom_Inc.,False
+V,Visa Inc.,Information Technology,yahoo,V,2015-07-01,2026-11-10,,1281.0,,Visa_Inc. + Visa_Inc + Visa_Europe,True
+VNO,Vornado Realty Trust,Financials,yahoo,VNO,2015-07-01,2026-11-10,,130.0,,Vornado_Realty_Trust,False
+VMC,Vulcan Materials,Materials,yahoo,VMC,2015-07-01,2026-11-10,,61.0,,Vulcan_Materials_Company + Vulcan_Materials,True
+WMT,Wal-Mart Stores,Consumer Staples,yahoo,WMT,2015-07-01,2026-11-10,,5856.0,,"Walmart + Wal-Mart_Stores + Walmart_Neighborhood_Market + Walmart.com + Wal-Mart_Stores,_Inc. + Wal-mart + Wal-Mart",True
+WBA,Walgreens Boots Alliance,Consumer Staples,,,,,no price data (most likely bought out or delisted),410.0,,Walgreens_Boots_Alliance,False
+DIS,The Walt Disney Company,Consumer Discretionary,yahoo,DIS,2015-07-01,2026-11-10,,6440.0,,The_Walt_Disney_Company + Walt_Disney_Company + Walt_Disney_Productions + Disney,True
+WM,Waste Management Inc.,Industrials,yahoo,WM,2015-07-01,2026-11-10,,368.0,,"Waste_Management,_Inc. + Waste_Management_Inc. + WM_(Waste_Management)_(company) + Waste_Management_(corporation) + Waste_Management,_Inc + Waste_Management_(company)",True
+WAT,Waters Corporation,Health Care,yahoo,WAT,2015-07-01,2026-11-10,,86.0,,Waters_Corporation,True
+ANTM,Anthem Inc.,Health Care,yahoo,ELV,2015-07-01,2026-11-10,,452.0,,Elevance_Health + Anthem_Inc. + WellPoint + Anthem_(company),True
+WFC,Wells Fargo,Financials,yahoo,WFC,2015-07-01,2026-11-10,,2507.0,,Wells_Fargo + Wells_Fargo_Bank + Wells_fargo + Wells_Fargo_Securities + Wellsfargo.com + @WellsFargo,True
+HCN,Welltower Inc.,Financials,yahoo,WELL,2015-07-01,2026-11-10,,50.0,,Welltower + Welltower_Inc.,True
+WDC,Western Digital,Information Technology,yahoo,WDC,2015-07-01,2026-11-10,,538.0,,Western_Digital,True
+WU,Western Union Co,Information Technology,yahoo,WU,2015-07-01,2026-11-10,,773.0,,Western_Union + Western_Union_Co,False
+WY,Weyerhaeuser Corp.,Financials,yahoo,WY,2015-07-01,2026-11-10,,195.0,,Weyerhaeuser + Weyerhaeuser_Corp.,True
+WHR,Whirlpool Corp.,Consumer Discretionary,yahoo,WHR,2015-07-01,2026-11-10,,879.0,,Whirlpool_Corporation + Whirlpool_Corp.,False
+WFM,Whole Foods Market,Consumer Staples,,,,,no price data (most likely bought out or delisted),876.0,,Whole_Foods_Market,False
+WMB,Williams Cos.,Energy,yahoo,WMB,2015-07-01,2026-11-10,,96.0,,Williams_Companies + Williams_Cos.,True
+WEC,Wisconsin Energy Corporation,Utilities,yahoo,WEC,2015-07-01,2026-11-10,,57.0,,WEC_Energy_Group + Wisconsin_Energy_Corporation,True
+WYN,Wyndham Worldwide,Consumer Discretionary,yahoo,TNL,2015-07-01,2026-11-10,,111.0,,Travel_+_Leisure_Co. + Wyndham_Worldwide + Wyndham_Destinations,False
+WYNN,Wynn Resorts Ltd,Consumer Discretionary,yahoo,WYNN,2015-07-01,2026-11-10,,207.0,,Wynn_Resorts + Wynn_Resorts_Ltd,True
+XEL,Xcel Energy Inc,Utilities,yahoo,XEL,2015-07-01,2026-11-10,,186.0,,Xcel_Energy + Xcel_Energy_Inc,True
+XRX,Xerox Corp.,Information Technology,yahoo,XRX,2015-07-01,2026-11-10,,838.0,,Xerox + Xerox_Corp.,False
+XLNX,Xilinx Inc,Information Technology,,,,,no price data (most likely bought out or delisted),346.0,,Xilinx + Xilinx_Inc,False
+XL,XL Capital,Financials,,,,,no price data (most likely bought out or delisted),102.0,,Axa_XL + XL_Capital + XL_Catlin + XL_Group,False
+XYL,Xylem Inc.,Industrials,yahoo,XYL,2015-07-01,2026-11-10,,138.0,,Xylem_Inc.,True
+YHOO,Yahoo Inc.,Information Technology,,,,,no price data (most likely bought out or delisted),21.0,,Yahoo_(disambiguation) + Yahoo_Inc.,False
+YUM,Yum! Brands Inc,Consumer Discretionary,yahoo,YUM,2015-07-01,2026-11-10,,1393.0,,Yum!_Brands + Yum!_Brands_Inc,True
+ZBH,Zimmer Biomet Holdings,Health Care,yahoo,ZBH,2015-07-01,2026-11-10,,152.0,,Zimmer_Biomet + Zimmer_Holdings,True
+ZION,Zions Bancorp,Financials,yahoo,ZION,2015-07-01,2026-11-10,,128.0,,Zions_Bancorporation + Zions_Bancorp,False
+ZTS,Zoetis,Health Care,yahoo,ZTS,2015-07-01,2026-11-10,,150.0,,Zoetis,True
