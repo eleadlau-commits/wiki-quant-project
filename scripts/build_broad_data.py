@@ -179,7 +179,7 @@ def load_all_views(members, end: str) -> tuple[dict[str, pd.Series], dict[str, s
             errors[m.ticker] = repr(err)[:200]
         if i % 50 == 0:
             print(f"  views {i}/{len(members)}")
-        time.sleep(0.05)   # be polite to the Wikimedia API
+        time.sleep(0.2)    # be polite to the Wikimedia API
     return views, errors
 
 
@@ -209,7 +209,7 @@ def main() -> None:
         print(f"Universe: {len(members)} companies (cached in data/broad/universe.csv)")
 
     end = (date.today() - timedelta(days=1)).isoformat()
-    if args.refresh_former or not any(m.former for m in members):
+    if args.refresh_former or not (OUT / "former_checked").exists():
         # Moved articles keep their pre-move views under the old title.
         print("Looking for former article titles (busy redirects)...")
         former = U.former_titles([m.current for m in members], VIEWS_START, end)
@@ -217,6 +217,7 @@ def main() -> None:
             m.former = "|".join(t for t in former.get(m.current, []) if t != m.article)
         print(f"  {sum(bool(m.former) for m in members)} articles had earlier titles with real traffic")
         U.save_universe(members, OUT / "universe.csv")
+        (OUT / "former_checked").write_text(end + "\n")
 
     start_date = pd.Timestamp(args.as_of)
 
@@ -256,6 +257,9 @@ def main() -> None:
           f"(yahoo {(cov['source'] == 'yahoo').sum()}, stooq {(cov['source'] == 'stooq').sum()}); "
           f"views for {len(views)}/{len(members)}; errors {len(errors)}")
     print(f"Wrote {OUT}/prices.csv.gz, views.csv.gz, coverage.csv")
+    if len(errors) > 0.02 * len(members):
+        # Usually rate limiting. Fail so the workflow does not commit a half-empty dataset.
+        sys.exit(f"Page views failed for {len(errors)} companies, e.g. {next(iter(errors.values()))}")
 
 
 if __name__ == "__main__":

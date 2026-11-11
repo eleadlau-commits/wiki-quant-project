@@ -308,19 +308,18 @@ def peak_monthly_views(title: str, start: str, end: str) -> float:
     """Busiest month of human views for one title (0 if none). One cheap request."""
     import requests
 
+    from .pageviews import _polite_get
+
     url = MONTHLY_API.format(title=requests.utils.quote(title, safe=""),
                              start=pd.Timestamp(start).strftime("%Y%m01"),
                              end=pd.Timestamp(end).strftime("%Y%m01"))
-    for attempt in range(4):
-        resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=30)
-        if resp.status_code == 404:
-            return 0.0
-        if resp.status_code == 429 or resp.status_code >= 500:
-            time.sleep(2 ** attempt)
-            continue
-        resp.raise_for_status()
-        return float(max((x["views"] for x in resp.json()["items"]), default=0))
-    return 0.0
+    try:
+        resp = _polite_get(url)
+    except requests.HTTPError as err:
+        if err.response is not None and err.response.status_code == 404:
+            return 0.0   # never viewed
+        raise            # rate limits must not silently drop an old title
+    return float(max((x["views"] for x in resp.json()["items"]), default=0))
 
 
 def former_titles(current: list[str], start: str, end: str,

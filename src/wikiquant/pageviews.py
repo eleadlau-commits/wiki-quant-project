@@ -26,6 +26,23 @@ USER_AGENT = "wikiquant-research/0.1 (https://github.com/eleadlau-commits/wiki-q
 Fetcher = Callable[[str, str, str], pd.Series]
 
 
+def _polite_get(url: str, tries: int = 7):
+    """GET with back-off on 429 / 5xx. Wikimedia rate-limits busy IPs (GitHub
+    runners share them), so a burst of requests needs to slow down, not fail."""
+    import time
+
+    import requests
+
+    for attempt in range(tries):
+        resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=30)
+        if resp.status_code != 429 and resp.status_code < 500:
+            break
+        wait = resp.headers.get("Retry-After")
+        time.sleep(float(wait) if wait and wait.isdigit() else min(60, 2 ** attempt))
+    resp.raise_for_status()
+    return resp
+
+
 def _api_fetcher(title: str, start: str, end: str) -> pd.Series:
     import requests
 
@@ -34,8 +51,7 @@ def _api_fetcher(title: str, start: str, end: str) -> pd.Series:
         start=pd.Timestamp(start).strftime("%Y%m%d"),
         end=pd.Timestamp(end).strftime("%Y%m%d"),
     )
-    resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=30)
-    resp.raise_for_status()
+    resp = _polite_get(url)
     items = resp.json()["items"]
     dates = pd.to_datetime([i["timestamp"][:8] for i in items], format="%Y%m%d")
     return pd.Series([i["views"] for i in items], index=dates, name=title, dtype=float)
