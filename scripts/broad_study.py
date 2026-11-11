@@ -211,8 +211,8 @@ def main() -> None:
          "",
          f"Buzz replaces its whole portfolio about {num(buzz.annual_turnover, 0)} times a year "
          f"(equal weight: {num(ew.annual_turnover, 1)}), and every replacement pays the cost twice (sell, then buy). "
-         (f"The edge before costs would be wiped out at **{num(be_cost, 0)} bps per trade**." if be_cost and be_cost > 0
-          else "There is no edge before costs to protect, so costs only make it worse."), "",
+         + (f"The edge before costs would be wiped out at **{num(be_cost, 0)} bps per trade**." if be_cost and be_cost > 0
+             else "There is no edge before costs to protect, so costs only make it worse."), "",
          "### Before and after 2021 (the out-of-sample check)", "",
          "| Period | Buzz − equal weight, after costs | t-stat | Buzz − Quiet | t-stat |", "| --- | ---: | ---: | ---: | ---: |"]
     for key, label in [("in_sample", f"{START[:4]}-2020"), ("out_of_sample", f"2021-{last.year}"), ("all", "All")]:

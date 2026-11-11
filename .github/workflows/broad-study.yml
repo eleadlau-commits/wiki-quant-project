@@ -34,16 +34,29 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pandas numpy yfinance requests
-      - uses: actions/cache@v4
+      - name: Check the scripts compile before the long download
+        run: python -W error::SyntaxWarning -m py_compile scripts/build_broad_data.py scripts/broad_study.py
+      - uses: actions/cache/restore@v4
         with:
           path: data/cache/attention
           key: broad-attention-${{ github.run_id }}
           restore-keys: broad-attention-
       - name: Build the broad dataset
+        id: build
         run: python scripts/build_broad_data.py
+      - name: Save downloaded page views even if a later step fails
+        if: ${{ !cancelled() }}
+        uses: actions/cache/save@v4
+        with:
+          path: data/cache/attention
+          key: broad-attention-${{ github.run_id }}
       - name: Run the broad study
+        id: study
+        continue-on-error: true
         run: python scripts/broad_study.py
       - name: Commit results
+        # Keep the (slow) downloaded data even if the study script breaks.
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -51,3 +64,6 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "Refresh broad study"
           for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+      - name: Fail the run if the study broke
+        if: ${{ steps.study.outcome == 'failure' }}
+        run: exit 1
