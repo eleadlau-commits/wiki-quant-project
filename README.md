@@ -23,6 +23,21 @@ The latest comparison is in [`reports/attention_comparison.md`](reports/attentio
 (refreshed every weekday). An honest evaluation of the idea, the pitfalls, and
 how to add your own source: [`docs/attention-framework.md`](docs/attention-framework.md).
 
+## A first classic strategy: moving-average crossover
+
+A baseline for everything else: hold SPY while its 50-day average is above its
+200-day average, otherwise cash, with lagged signals and 10 bps trading costs.
+Over Dec 2019 to Nov 2026 it **lost to buy-and-hold** (CAGR 9.6% vs 14.8%,
+Sharpe 0.63 vs 0.79): the 2020 and 2025 crashes were too fast for a 200-day
+filter. It did cut drawdowns on 15 of 16 single stocks, at a big cost in return.
+
+```bash
+python scripts/ma_crossover.py   # needs your metrics.py; writes reports/ma_crossover.md
+```
+
+Explanation and exercises: [`docs/ma-crossover.md`](docs/ma-crossover.md).
+Results: [`reports/ma_crossover.md`](reports/ma_crossover.md).
+
 ## Attention Tape dashboard
 
 One self-contained web page (`dashboard/index.html`) that answers the core
@@ -70,6 +85,8 @@ pytest                           # loader tests pass; metric tests fail until yo
 | `src/wikiquant/pageviews.py` | Wikipedia page-view downloader and abnormal-attention measure |
 | `src/wikiquant/sources/` | Attention plugins (Wikipedia, Hacker News) behind one interface |
 | `src/wikiquant/universe.py` | The companies and their search keys per source |
+| `src/wikiquant/backtest.py` | Backtester: lagged positions, trading costs, equity curve |
+| `src/wikiquant/strategies.py` | Classic rules (moving-average crossover, buy and hold) |
 | `src/wikiquant/analysis.py` | Source-agnostic tests: spikes, event study, Buzz 4, overlap |
 | `src/wikiquant/dataset.py` | Load `dashboard/data.json` into pandas, offline |
 | `reports/` | Generated comparison of sources |
