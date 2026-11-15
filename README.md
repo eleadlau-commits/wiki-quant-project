@@ -38,6 +38,12 @@ python scripts/ma_crossover.py   # needs your metrics.py; writes reports/ma_cros
 Explanation and exercises: [`docs/ma-crossover.md`](docs/ma-crossover.md).
 Results: [`reports/ma_crossover.md`](reports/ma_crossover.md).
 
+**Can a rule dodge crashes?** A fairer follow-up on SPY since 1993: settings
+chosen on 1994-2009, judged on 2010-2026, with T-bill interest on cash.
+Volatility targeting reliably shrank every crash (worst fall -17% vs -34%) but
+earned less; no rule beat buy-and-hold on return. See
+[`docs/crash-defence.md`](docs/crash-defence.md).
+
 **Trading bot.** The same rule can trade a Trading 212 account (practice or
 real) once each weekday, from your computer or GitHub Actions. It's safe by
 default: a dry run on a pretend account, with a separate switch for each step

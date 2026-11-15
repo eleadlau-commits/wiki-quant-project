@@ -26,8 +26,9 @@ out (day 3's signal) so the fall does not hurt us, but we pay to get out.
 
 Assumptions to keep in mind (all deliberately simple):
 - You trade at the closing price. Real fills differ a little.
-- Uninvested cash earns 0%. In 2023-25 cash paid ~5%, so this is unfair
-  to strategies that spend time in cash.
+- Uninvested cash earns 0% unless you pass `cash_ret` (e.g. daily T-bill
+  returns). In 2023-25 cash paid ~5%, so leaving it at 0 is unfair to
+  strategies that spend time in cash.
 - No leverage, no shorting unless positions go negative, no taxes.
 """
 
@@ -41,6 +42,7 @@ def run_backtest(
     positions: pd.DataFrame | pd.Series,
     cost_bps: float = 10.0,
     lag: int = 1,
+    cash_ret: pd.Series | None = None,
 ) -> pd.DataFrame:
     """Daily results of holding `positions` (fraction of capital, decided at each close).
 
@@ -52,6 +54,8 @@ def run_backtest(
         cost_bps: cost per unit of turnover, in basis points (10 bps = 0.10%).
         lag: days between deciding and earning. 1 = trade at the same close
             you observed; 2 = trade one day later (a stricter test).
+        cash_ret: optional daily return on uninvested cash (same dates). The
+            uninvested share (1 - position, if positive) earns it.
 
     Returns:
         DataFrame with columns
@@ -71,6 +75,10 @@ def run_backtest(
     cost = turnover * cost_bps / 10_000
 
     gross = held * asset_ret.fillna(0.0)
+    if cash_ret is not None:
+        idle = (1 - held).clip(lower=0)
+        cr = cash_ret.reindex(prices.index).fillna(0.0)
+        gross = gross + (idle.mul(cr, axis=0) if isinstance(idle, pd.DataFrame) else idle * cr)
     net = gross - cost
 
     if isinstance(prices, pd.DataFrame):
