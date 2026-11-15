@@ -8,3 +8,6 @@ __pycache__/
 
 # Downloaded data is cached locally, not committed
 data/cache/
+
+# Trading bot: pretend account and logs stay on your machine
+trades/

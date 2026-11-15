@@ -38,6 +38,15 @@ python scripts/ma_crossover.py   # needs your metrics.py; writes reports/ma_cros
 Explanation and exercises: [`docs/ma-crossover.md`](docs/ma-crossover.md).
 Results: [`reports/ma_crossover.md`](reports/ma_crossover.md).
 
+**Trading bot.** The same rule can trade a Trading 212 account (practice or
+real) once each weekday, from your computer or GitHub Actions. It's safe by
+default: a dry run on a pretend account, with a separate switch for each step
+towards real money. Setup: [`docs/trading-bot.md`](docs/trading-bot.md).
+
+```bash
+python scripts/run_bot.py            # what would it do today? (pretend account, dry run)
+```
+
 ## Attention Tape dashboard
 
 One self-contained web page (`dashboard/index.html`) that answers the core
@@ -86,6 +95,7 @@ pytest                           # loader tests pass; metric tests fail until yo
 | `src/wikiquant/sources/` | Attention plugins (Wikipedia, Hacker News) behind one interface |
 | `src/wikiquant/universe.py` | The companies and their search keys per source |
 | `src/wikiquant/backtest.py` | Backtester: lagged positions, trading costs, equity curve |
+| `src/wikiquant/trader.py`, `brokers/` | Trading bot: daily plan, paper and Trading 212 brokers |
 | `src/wikiquant/strategies.py` | Classic rules (moving-average crossover, buy and hold) |
 | `src/wikiquant/analysis.py` | Source-agnostic tests: spikes, event study, Buzz 4, overlap |
 | `src/wikiquant/dataset.py` | Load `dashboard/data.json` into pandas, offline |
