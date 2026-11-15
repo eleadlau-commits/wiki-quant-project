@@ -75,6 +75,8 @@ def main() -> None:
     ap.add_argument("--min-trade", type=float, default=20.0, help="skip orders smaller than this value")
     ap.add_argument("--max-order", type=float, default=float(os.getenv("BOT_MAX_ORDER", "2000")),
                     help="refuse any single order bigger than this value (a safety cap)")
+    ap.add_argument("--budget", type=float, default=float(os.getenv("BOT_BUDGET") or 0) or None,
+                    help="only manage this much of the account (e.g. 50); the rest is left alone")
     ap.add_argument("--execute", action="store_true", help="actually place the order (default: dry run)")
     ap.add_argument("--live", action="store_true", help="use the real-money Trading 212 account")
     ap.add_argument("--hide-amounts", action="store_true", help="don't print money amounts (for public CI logs)")
@@ -102,7 +104,8 @@ def main() -> None:
     dry = not args.execute
     try:
         plan = run_once(broker, signal, args.trade_ticker, args.strategy, args.allocation,
-                        args.min_trade, dry_run=dry, log_path=args.log, max_order_value=args.max_order)
+                        args.min_trade, dry_run=dry, log_path=args.log, max_order_value=args.max_order,
+                        budget=args.budget)
     except OrderTooLarge as e:
         raise SystemExit(f"{e} Raise --max-order (or BOT_MAX_ORDER) if this is intended.")
 
@@ -112,7 +115,7 @@ def main() -> None:
     if args.hide_amounts:
         print(f"  {plan.trade_ticker}: action = {plan.action}")
     else:
-        print(f"  account {plan.account_value:,.2f} | {plan.trade_ticker} at {plan.price:,.2f} | "
+        print(f"  managing {plan.account_value:,.2f} | {plan.trade_ticker} at {plan.price:,.2f} | "
               f"hold {plan.held_qty:g} -> target {plan.target_qty:.4f}")
         print(f"  action = {plan.action} {abs(plan.order_qty):g} ({abs(plan.order_value):,.2f})")
     if plan.broker_reply:

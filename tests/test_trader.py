@@ -124,3 +124,10 @@ def test_trading212_refuses_bad_setup():
         Trading212Broker("", "", session=FakeSession())
     with pytest.raises(ValueError):
         Trading212Broker("K", "S", env="real", session=FakeSession())
+
+
+def test_budget_limits_how_much_the_bot_manages(tmp_path):
+    broker = PaperBroker(tmp_path / "acct.json", price_of=lambda t: 10.0, starting_cash=1000)
+    plan = run_once(broker, trend(up=True), "FUND", dry_run=False, budget=50)
+    assert plan.order_value == pytest.approx(47.5)   # 95% of 50, not of 1,000
+    assert broker.state["cash"] > 950
