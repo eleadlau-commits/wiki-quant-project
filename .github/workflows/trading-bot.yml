@@ -1,0 +1,50 @@
+name: Trading bot
+
+# Runs the strategy once each weekday morning, after the London Stock Exchange
+# opens, using yesterday's US close for the signal. Off until you turn it on:
+# set the repository variable BOT_ENABLED to "true" (Settings > Secrets and
+# variables > Actions > Variables). Full guide: docs/trading-bot.md
+on:
+  schedule:
+    - cron: "15 8 * * 1-5"   # 08:15 UTC = 08:15 UK in winter, 09:15 in summer
+  workflow_dispatch:
+    inputs:
+      execute:
+        description: "Place the order (unticked = dry run, just print the plan)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trading-bot      # never two runs at once (orders are not idempotent)
+  cancel-in-progress: false
+
+jobs:
+  trade:
+    if: vars.BOT_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    env:
+      T212_API_KEY: ${{ secrets.T212_API_KEY }}
+      T212_API_SECRET: ${{ secrets.T212_API_SECRET }}
+      BOT_CONFIRM_LIVE: ${{ vars.BOT_CONFIRM_LIVE }}
+      BOT_TRADE_TICKER: ${{ vars.BOT_TRADE_TICKER || 'VUAGl_EQ' }}
+      BOT_YAHOO_TICKER: ${{ vars.BOT_YAHOO_TICKER || 'VUAG.L' }}
+      BOT_MAX_ORDER: ${{ vars.BOT_MAX_ORDER || '2000' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy yfinance requests
+      - name: Run the bot
+        # Scheduled runs place orders; manual runs only if you tick "execute".
+        # Amounts are hidden because logs of a public repository are public.
+        run: |
+          FLAGS="--broker trading212 --hide-amounts --log ''"
+          if [ "${{ vars.T212_ENV }}" = "live" ]; then FLAGS="$FLAGS --live"; fi
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.execute }}" = "true" ]; then
+            FLAGS="$FLAGS --execute"
+          fi
+          eval python scripts/run_bot.py $FLAGS
