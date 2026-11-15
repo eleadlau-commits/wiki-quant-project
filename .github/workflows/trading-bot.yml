@@ -32,6 +32,7 @@ jobs:
       BOT_TRADE_TICKER: ${{ vars.BOT_TRADE_TICKER || 'VUAGl_EQ' }}
       BOT_YAHOO_TICKER: ${{ vars.BOT_YAHOO_TICKER || 'VUAG.L' }}
       BOT_MAX_ORDER: ${{ vars.BOT_MAX_ORDER || '2000' }}
+      BOT_BUDGET: ${{ vars.BOT_BUDGET }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

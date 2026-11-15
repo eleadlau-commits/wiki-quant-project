@@ -119,17 +119,24 @@ def run_once(broker: Broker, signal_prices: pd.Series, trade_ticker: str,
              strategy: str = "sma_50_200", allocation: float = 0.95,
              min_trade_value: float = 20.0, dry_run: bool = True,
              log_path: Path | str | None = None,
-             max_order_value: float = float("inf")) -> Plan:
+             max_order_value: float = float("inf"),
+             budget: float | None = None) -> Plan:
     """One full cycle: signal -> holdings -> order -> (place) -> log.
 
     Raises OrderTooLarge, before anything is sent, if the order is worth more
     than `max_order_value`: a guard against a bug or a bad price buying far
     more than intended.
+
+    `budget` limits how much of the account the bot manages: with a budget of
+    50 in a 1,000 account, it sizes trades as if the account were worth 50
+    and leaves the rest alone.
     """
     weight, sig_date = target_weight(signal_prices, strategy)
     pending = getattr(broker, "pending_orders", None)
     waiting = bool(pending and pending(trade_ticker))
     value = broker.account_value()
+    if budget is not None:
+        value = min(value, budget)
     held, price = broker.holding(trade_ticker)
     target_qty, order_qty, action = plan_order(value, price, held, weight, allocation, min_trade_value)
     if target_qty == 0:

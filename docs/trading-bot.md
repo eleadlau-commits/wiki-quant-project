@@ -101,12 +101,20 @@ places orders. Set `BOT_ENABLED` to anything else to stop it.
 Privacy: this repository is public, so its Actions logs are too. The bot
 hides money amounts in those logs. Your trades are visible in the app.
 
-### 5. Going live (after a few weeks of practice)
+### 5. Going live
+
+**Start small with a budget.** The bot normally sizes trades from the whole
+account value. Set the variable `BOT_BUDGET` (e.g. `50`) and it acts as if the
+account were worth only that, leaving the rest alone. Also keep the fund the
+bot trades (VUAG) *only* for the bot: when the signal turns off it sells
+**all** of it, including any you bought yourself.
+
 
 1. Switch the app to your real Invest or Stocks ISA account, generate a
    **live** key, and replace the two secrets with it.
 2. Set the variables `T212_ENV` = `live` and `BOT_CONFIRM_LIVE` = `yes`.
-3. Set `BOT_MAX_ORDER` a bit above the amount you put in, so a bug can't buy more.
+3. Set `BOT_BUDGET` to the amount the bot may use, and `BOT_MAX_ORDER` a bit
+   above it, so a bug can't buy more.
 
 To stop live trading, delete `T212_ENV` or set `BOT_ENABLED` to `false`. Any
 position stays open until you sell it in the app.
