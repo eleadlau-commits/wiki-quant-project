@@ -104,8 +104,10 @@ hides money amounts in those logs. Your trades are visible in the app.
 ### 5. Going live
 
 **Start small with a budget.** The bot normally sizes trades from the whole
-account value. Set the variable `BOT_BUDGET` (e.g. `50`) and it acts as if the
-account were worth only that, leaving the rest alone. Also keep the fund the
+account value. Set the variable `BOT_BUDGET` (e.g. `50`) and when it buys in it
+spends 95% of that amount, leaving the rest of the account alone. While
+invested it just holds, so gains are left to grow; when the signal turns off
+it sells everything it holds, and the next buy-in uses the budget again. Also keep the fund the
 bot trades (VUAG) *only* for the bot: when the signal turns off it sells
 **all** of it, including any you bought yourself.
 

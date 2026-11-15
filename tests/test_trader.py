@@ -131,3 +131,15 @@ def test_budget_limits_how_much_the_bot_manages(tmp_path):
     plan = run_once(broker, trend(up=True), "FUND", dry_run=False, budget=50)
     assert plan.order_value == pytest.approx(47.5)   # 95% of 50, not of 1,000
     assert broker.state["cash"] > 950
+
+
+def test_budget_only_sizes_the_first_buy_then_lets_gains_ride(tmp_path):
+    prices = {"FUND": 10.0}
+    broker = PaperBroker(tmp_path / "acct.json", price_of=lambda t: prices["FUND"], starting_cash=1000)
+    run_once(broker, trend(up=True), "FUND", dry_run=False, budget=50)
+    held = broker.holding("FUND")[0]
+    prices["FUND"] = 20.0                      # doubled: now worth ~95, above the budget
+    plan = run_once(broker, trend(up=True), "FUND", dry_run=False, budget=50)
+    assert plan.action == "hold" and broker.holding("FUND")[0] == held
+    out = run_once(broker, trend(up=False), "FUND", dry_run=False, budget=50)
+    assert out.action == "sell" and broker.holding("FUND")[0] == 0.0

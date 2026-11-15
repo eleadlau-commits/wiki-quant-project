@@ -127,9 +127,10 @@ def run_once(broker: Broker, signal_prices: pd.Series, trade_ticker: str,
     than `max_order_value`: a guard against a bug or a bad price buying far
     more than intended.
 
-    `budget` limits how much of the account the bot manages: with a budget of
-    50 in a 1,000 account, it sizes trades as if the account were worth 50
-    and leaves the rest alone.
+    `budget` limits how much the bot spends when it buys in: with a budget of
+    50 in a 1,000 account, it buys 95% of 50 and leaves the rest alone. Once
+    invested it just holds (no topping up or trimming), so gains are left to
+    grow. When the signal turns off it sells everything it holds.
     """
     weight, sig_date = target_weight(signal_prices, strategy)
     pending = getattr(broker, "pending_orders", None)
@@ -146,6 +147,9 @@ def run_once(broker: Broker, signal_prices: pd.Series, trade_ticker: str,
         # Rounding towards zero never buys more than the account can afford.
         order_qty = math.trunc(order_qty * 1e4) / 1e4
 
+    if budget is not None and weight > 0 and held > 0:
+        # Budget mode: the budget only sizes the buy-in. Already invested, so hold.
+        order_qty, action = 0.0, "hold"
     if waiting:
         # Yesterday's order hasn't filled yet (e.g. sent while the exchange was
         # closed). Holdings are out of date, so don't trade on them.
