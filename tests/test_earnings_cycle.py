@@ -178,3 +178,17 @@ def test_execute_skips_buys_without_cash_and_keeps_going_after_an_error():
     assert by["AMZN"].reply["status"] == "ERROR"      # failed, so its cash is still free
     assert by["AVGO"].reply["status"] == "FILLED"
     assert by["MSFT"].action == "skip (not enough cash)"
+
+
+# --- Price checks -------------------------------------------------------------------
+
+def test_price_checks_pass_on_clean_data_and_catch_problems():
+    idx = ec.nyse_sessions("2026-10-01", "2026-11-13")
+    prices = pd.DataFrame(100.0, index=idx, columns=["A", "B"])
+    assert ec.price_problems(prices, pd.Timestamp("2026-11-13")) == []
+    bad = prices.copy()
+    bad.loc["2026-11-10":, "A"] = 10.0             # a 10:1 split left unadjusted
+    bad = bad.drop(pd.Timestamp("2026-11-05"))     # a missing session
+    problems = ec.price_problems(bad, pd.Timestamp("2026-11-13"))
+    assert any("A fell" in p for p in problems) and any("missing" in p for p in problems)
+    assert ec.price_problems(prices, pd.Timestamp("2026-11-16"))   # data not in yet
