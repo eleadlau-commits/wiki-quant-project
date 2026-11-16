@@ -228,7 +228,7 @@ def cmd_trade(args) -> int:
     if broker.account_currency() not in ("GBP", ""):
         print(f"Note: account currency is {broker.account_currency()}, sizes assume GBP.")
     tickers = sorted(rec["weights"])
-    pending = {o.get("ticker") for o in broker.all_pending_orders()}
+    pending = {o.get("ticker") or o.get("instrument", {}).get("ticker") for o in broker.all_pending_orders()}
     if pending & {t212_ticker(t) for t in tickers}:
         print("An earlier order for one of these stocks is still pending; not trading today.")
         return 0
@@ -244,7 +244,12 @@ def cmd_trade(args) -> int:
 
     if args.execute:
         execute([o for o in orders if o.action == "sell"], broker)
-        execute([o for o in orders if o.action == "buy"], broker, free_cash=broker.free_cash())
+        try:
+            cash = broker.free_cash()
+        except Exception as e:  # unknown reply shape: let the broker reject what it can't afford
+            print(f"Couldn't read free cash ({str(e)[:80]}); sending buys anyway.")
+            cash = None
+        execute([o for o in orders if o.action == "buy"], broker, free_cash=cash)
     for o in orders:
         if o.action in ("hold",) or o.action.startswith("skip (yours"):
             continue

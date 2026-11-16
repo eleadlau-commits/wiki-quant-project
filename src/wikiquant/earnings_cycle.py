@@ -209,7 +209,7 @@ def price_problems(prices: pd.DataFrame, signal_date: pd.Timestamp) -> list[str]
         return problems
     window = prices.loc[:signal_date].tail(260)
     rets = window.pct_change(fill_method=None)
-    crashes = rets[rets < -0.5].stack()
+    crashes = rets[rets < -0.5].stack().dropna()   # pandas 3 keeps NaN in stack()
     for (day, tk), r in crashes.items():
         problems.append(f"{tk} fell {r:.0%} on {day.date()}: an unadjusted split?")
     expected = nyse_sessions(window.index.min(), signal_date)

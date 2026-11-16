@@ -23,6 +23,7 @@ on:
       - src/wikiquant/earnings_cycle.py
       - src/wikiquant/edgar.py
       - scripts/earnings_bot.py
+      - tests/test_earnings_*.py
       - .github/workflows/earnings-bot.yml
   workflow_dispatch:
     inputs:
@@ -53,7 +54,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pandas numpy yfinance requests exchange_calendars pytest && pip install -e .
-      - run: python -m pytest -q tests/test_earnings_cycle.py
+      - run: python -m pytest -q tests/test_earnings_cycle.py tests/test_earnings_bot.py
       - name: Rebuild history and check the plan's test vectors
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT || 'wikiquant-ci research-bot@example.com' }}
