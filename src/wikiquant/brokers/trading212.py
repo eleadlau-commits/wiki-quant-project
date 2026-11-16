@@ -82,6 +82,26 @@ class Trading212Broker:
             raise Trading212Error(f"No position in {ticker} and no fallback price source")
         return 0.0, float(self.price_fallback(ticker))
 
+    def positions(self) -> dict[str, float]:
+        """Quantity of every instrument held, keyed by Trading 212 ticker (one API call)."""
+        return {p.get("instrument", {}).get("ticker") or p.get("ticker", ""): float(p["quantity"])
+                for p in self._get("/equity/positions")}
+
+    def free_cash(self) -> float:
+        """Cash available to trade, in the account currency."""
+        summary = self._get("/equity/account/summary")
+        cash = summary.get("cash")
+        if isinstance(cash, dict):
+            for key in ("availableToTrade", "free"):
+                if key in cash:
+                    return float(cash[key])
+        if "free" in summary:
+            return float(summary["free"])
+        return float(self._get("/equity/account/cash")["free"])
+
+    def all_pending_orders(self) -> list[dict]:
+        return list(self._get("/equity/orders"))
+
     def pending_orders(self, ticker: str) -> list[dict]:
         return [o for o in self._get("/equity/orders") if o.get("ticker") == ticker]
 

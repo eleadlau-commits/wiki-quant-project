@@ -53,6 +53,21 @@ towards real money. Setup: [`docs/trading-bot.md`](docs/trading-bot.md).
 python scripts/run_bot.py            # what would it do today? (pretend account, dry run)
 ```
 
+## Earnings-cycle overlay (second bot)
+
+Holds each of 23 US chip and big-tech stocks only in the 3 sessions after its
+earnings filing (from SEC EDGAR) and from 46 sessions on, otherwise cash.
+Out of sample (2022-2023) the research behind it found Sharpe 0.58 with a -10.5% worst fall,
+against -39% for holding the same stocks. A separate bot trades it on Trading
+212 with a small budget, logs every signal to a tamper-evident hash chain, and
+is off and dry-run by default.
+
+```bash
+python scripts/earnings_bot.py verify    # rebuild history and check the reference test dates
+```
+
+Guide: [`docs/earnings-cycle.md`](docs/earnings-cycle.md).
+
 ## Attention Tape dashboard
 
 One self-contained web page (`dashboard/index.html`) that answers the core

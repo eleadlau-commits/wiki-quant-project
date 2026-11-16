@@ -1,0 +1,25 @@
+{
+  "strategy": "pooled earnings-cycle overlay",
+  "registered": "2026-11-16",
+  "universe": ["AAPL", "ADI", "AMAT", "AMZN", "AVGO", "CSCO", "GOOGL", "IBM", "INTC", "KLAC", "LRCX", "MCHP",
+               "META", "MRVL", "MSFT", "MU", "NVDA", "ON", "ORCL", "QCOM", "SWKS", "TER", "TXN"],
+  "ticker_note": "META is called FB in the reference files",
+  "earnings_event": "SEC 8-K with Item 2.02, plus mistagged 2.01s: AMAT 2024-05-16, LRCX 2016-04-20, SWKS 2015-11-05",
+  "acceptance_time": "acceptanceDateTime read as true UTC",
+  "reaction_day": "first XNYS session whose close is strictly after acceptance",
+  "bucket_edges": [0, 3, 21, 46],
+  "bucket_long": [1, 0, 0, 1],
+  "weights": "1/n per live long name, no renormalising; live = adjusted close on t and t-1",
+  "timing": "signal after close of t, trade near close of t+1, first return t+2",
+  "cost_assumed_per_side": 0.0005,
+  "prices": "Yahoo Finance adjusted close (auto_adjust)",
+  "first_signal_date": "2026-11-16",
+  "trading": {
+    "broker": "Trading 212 (GBP account)",
+    "budget_gbp": 50,
+    "skip": ["NVDA"],
+    "skip_note": "E trades NVDA personally; its signal is still logged but the bot never trades it",
+    "min_trade_gbp": 1.0,
+    "max_order_gbp": 10.0
+  }
+}
