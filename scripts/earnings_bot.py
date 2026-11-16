@@ -123,8 +123,8 @@ def cmd_verify(args) -> int:
              "|---|---|---|---|---|---|---|---|\n" + "\n".join(rows))
     print("\nNet of 5 bps per side:\n" + table)
     print("Plan says 2022-2023: Sharpe 0.58, +15.1%, max drawdown -10.5%.")
-    turnover = bt.loc["2022":"2023", "turnover"].sum() / 2 / 2
-    print(f"One-way turnover 2022-2023: {turnover:.1f}x a year (plan: about 8.3x)")
+    turnover = bt.loc["2022":"2023", "turnover"].sum() / 2   # sum of |change in weight|, per year
+    print(f"Turnover 2022-2023: {turnover:.1f}x capital a year, sum of |change in weight| (plan: about 8.3x)")
 
     out = ROOT / "reports" / "earnings_cycle.md"
     out.write_text(
