@@ -1,0 +1,33 @@
+name: Fetch long price history
+
+# Downloads SPY since 1993 and T-bill yields into data/long/ for the
+# crash-defence study, then commits the CSV. Run it by hand when you want
+# fresher data (Actions > Fetch long price history > Run workflow).
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-jgzrkt]
+    paths:
+      - scripts/fetch_long_history.py
+      - .github/workflows/fetch-long-history.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas yfinance
+      - run: python scripts/fetch_long_history.py
+      - name: Commit the data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/long/spy_tbill.csv
+          git diff --cached --quiet || git commit -m "Fetch long SPY and T-bill history"
+          git push

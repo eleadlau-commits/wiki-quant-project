@@ -68,3 +68,27 @@ def test_sma_crossover_turns_on_in_an_uptrend_and_off_in_a_downtrend():
 def test_sma_crossover_rejects_bad_windows():
     with pytest.raises(ValueError):
         sma_crossover(pd.Series([1.0, 2.0]), fast=200, slow=50)
+
+
+def test_cash_earns_interest_when_out_of_the_market():
+    prices = pd.Series([100.0, 100.0, 100.0])
+    cash = pd.Series([0.0, 0.01, 0.01])
+    bt = run_backtest(prices, pd.Series([0.0, 0.0, 0.0]), cost_bps=0, cash_ret=cash)
+    assert bt["equity"].iloc[-1] == pytest.approx(1.01 ** 2)
+
+
+def test_vol_target_holds_less_when_jumpy():
+    from wikiquant.strategies import vol_target
+    calm = [100 * (1.001 ** i) for i in range(30)]
+    wild = [calm[-1] * (1.05 if i % 2 else 0.95) ** 1 for i in range(30)]
+    prices = pd.Series(calm + wild)
+    w = vol_target(prices, target=0.15, window=10)
+    assert w.iloc[25] == 1.0 and w.iloc[-1] < 0.3
+
+
+def test_big_drop_exit_sells_on_a_sharp_fall_and_returns_on_recovery():
+    from wikiquant.strategies import big_drop_exit
+    prices = pd.Series([100.0] * 12 + [97, 94, 95, 96, 101, 102])
+    pos = big_drop_exit(prices, drop=0.04, days=2, reentry=5)
+    assert pos.iloc[12] == 1.0 and pos.iloc[13] == 0.0   # -6% over two days
+    assert pos.iloc[-1] == 1.0                           # back above its 5-day average

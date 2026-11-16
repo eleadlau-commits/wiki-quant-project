@@ -1,21 +1,23 @@
 # Running the strategy for real: the trading bot
 
-The bot runs the 50/200 moving-average crossover (or any strategy in
-`wikiquant.trader.STRATEGIES`) on a Trading 212 account, once each weekday.
+The bot runs **volatility targeting** (or any strategy in
+`wikiquant.trader.STRATEGIES`, e.g. `sma_50_200`) on a Trading 212 account,
+once each weekday. Each morning it holds `10% / SPY's volatility over the last
+60 days` of the budget in the fund, at most 95%, and only trades when that
+share moves by 10 points or more. Calm market: nearly fully invested. Jumpy
+market: much less. Why this rule: [`docs/crash-defence.md`](crash-defence.md).
 
-Before you put money in, remember what the backtest said: over 2020-26 this
-rule earned **less than buying and holding** (9.6% vs 14.8% a year), mainly
-because it sold after fast crashes and bought back higher. Running it live is
-a good way to learn and a strong CV point, but it is not expected to beat an
-index fund. Start on the practice account, then use only money you're happy
-to treat as tuition.
+Before you put money in, remember what the tests said: from 2010 to 2026
+volatility targeting earned **less than buying and holding** (9.1% vs 14.0% a
+year) but roughly halved the worst fall (-17% vs -34%). It's a way to take
+less risk, not to beat an index fund.
 
 ## What one run does
 
 1. Downloads about two years of SPY closing prices from Yahoo Finance and asks
-   the strategy what it wants: **invested** (50-day average above 200-day) or **cash**.
+   the strategy what share it wants invested (0-100%).
 2. Asks Trading 212 for the account value and how much of the fund you hold.
-3. Works out the order needed to hold 95% of the account in the fund (or 0%).
+3. Works out the order needed to hold that share (times 95%) of the money it manages.
    The 5% buffer leaves room for price moves and fees.
 4. Skips orders under 20 (noise), waits if an earlier order is still pending,
    and refuses any order above a safety cap (2,000 by default).
@@ -103,7 +105,9 @@ hides money amounts in those logs. Your trades are visible in the app.
 
 ### 5. Going live
 
-**Start small with a budget.** The bot normally sizes trades from the whole
+**Start small with a budget.** (Updated: the bot manages the budget, or
+more if its holding has grown past it, so gains ride. When the strategy wants
+less, it sells down to that share of what it manages.) The bot normally sizes trades from the whole
 account value. Set the variable `BOT_BUDGET` (e.g. `50`) and when it buys in it
 spends 95% of that amount, leaving the rest of the account alone. While
 invested it just holds, so gains are left to grow; when the signal turns off

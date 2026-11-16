@@ -33,11 +33,13 @@ from typing import Callable, Protocol
 
 import pandas as pd
 
-from wikiquant.strategies import buy_and_hold, sma_crossover
+from wikiquant.strategies import buy_and_hold, sma_crossover, vol_target
 
 # Every strategy the bot can run: prices -> positions (one per day). The bot
 # uses the last value. Add a new one here and choose it with --strategy.
 STRATEGIES: dict[str, Callable[[pd.Series], pd.Series]] = {
+    # Chosen on 1994-2009 data only, see docs/crash-defence.md
+    "vol_target": lambda p: vol_target(p, target=0.10, window=60, band=0.10),
     "sma_50_200": lambda p: sma_crossover(p, 50, 200),
     "buy_and_hold": buy_and_hold,
 }
@@ -127,18 +129,20 @@ def run_once(broker: Broker, signal_prices: pd.Series, trade_ticker: str,
     than `max_order_value`: a guard against a bug or a bad price buying far
     more than intended.
 
-    `budget` limits how much the bot spends when it buys in: with a budget of
-    50 in a 1,000 account, it buys 95% of 50 and leaves the rest alone. Once
-    invested it just holds (no topping up or trimming), so gains are left to
-    grow. When the signal turns off it sells everything it holds.
+    `budget` limits how much of the account the bot manages. It manages the
+    larger of the budget and what its holding is worth (so gains ride), never
+    more than the account. With a budget of 50 it first buys 95% of 50; if
+    that grows to 80 and the strategy then wants half, it sells down to 40.
+    Cash freed above the budget is left alone in your account.
     """
     weight, sig_date = target_weight(signal_prices, strategy)
     pending = getattr(broker, "pending_orders", None)
     waiting = bool(pending and pending(trade_ticker))
     value = broker.account_value()
-    if budget is not None:
-        value = min(value, budget)
     held, price = broker.holding(trade_ticker)
+    if budget is not None:
+        # Manage the budget, or more if the holding has grown past it.
+        value = min(value, max(budget, held * price / allocation))
     target_qty, order_qty, action = plan_order(value, price, held, weight, allocation, min_trade_value)
     if target_qty == 0:
         order_qty = -held  # sell out exactly, leaving no dust
@@ -147,9 +151,6 @@ def run_once(broker: Broker, signal_prices: pd.Series, trade_ticker: str,
         # Rounding towards zero never buys more than the account can afford.
         order_qty = math.trunc(order_qty * 1e4) / 1e4
 
-    if budget is not None and weight > 0 and held > 0:
-        # Budget mode: the budget only sizes the buy-in. Already invested, so hold.
-        order_qty, action = 0.0, "hold"
     if waiting:
         # Yesterday's order hasn't filled yet (e.g. sent while the exchange was
         # closed). Holdings are out of date, so don't trade on them.
