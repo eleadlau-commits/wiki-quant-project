@@ -65,14 +65,15 @@ def yahoo_last_price(ticker: str) -> float:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--broker", choices=["paper", "trading212"], default="paper")
-    ap.add_argument("--strategy", choices=sorted(STRATEGIES), default="sma_50_200")
+    ap.add_argument("--strategy", choices=sorted(STRATEGIES), default=os.getenv("BOT_STRATEGY") or "vol_target")
     ap.add_argument("--signal", default="SPY", help="Yahoo ticker the strategy reads (default SPY)")
     ap.add_argument("--trade-ticker", default=os.getenv("BOT_TRADE_TICKER", "VUAGl_EQ"),
                     help="the broker's code for what to buy (Trading 212 format, e.g. VUAGl_EQ)")
     ap.add_argument("--yahoo-ticker", default=os.getenv("BOT_YAHOO_TICKER", "VUAG.L"),
                     help="the same fund on Yahoo, for its price when you hold none")
     ap.add_argument("--allocation", type=float, default=0.95, help="share of the account to invest when the signal is on")
-    ap.add_argument("--min-trade", type=float, default=20.0, help="skip orders smaller than this value")
+    ap.add_argument("--min-trade", type=float, default=float(os.getenv("BOT_MIN_TRADE") or 0) or None,
+                    help="skip orders smaller than this value (default: 20, or 5%% of the budget if smaller)")
     ap.add_argument("--max-order", type=float, default=float(os.getenv("BOT_MAX_ORDER", "2000")),
                     help="refuse any single order bigger than this value (a safety cap)")
     ap.add_argument("--budget", type=float, default=float(os.getenv("BOT_BUDGET") or 0) or None,
@@ -100,6 +101,8 @@ def main() -> None:
                 print(f"{i['ticker']:<16} {i.get('type', ''):<6} {i.get('currencyCode', ''):<4} {i.get('isin', '')}  {i['name']}")
             return
 
+    if args.min_trade is None:
+        args.min_trade = min(20.0, max(1.0, 0.05 * args.budget)) if args.budget else 20.0
     signal = yahoo_close_history(args.signal)
     dry = not args.execute
     try:
@@ -109,7 +112,7 @@ def main() -> None:
     except OrderTooLarge as e:
         raise SystemExit(f"{e} Raise --max-order (or BOT_MAX_ORDER) if this is intended.")
 
-    on = "INVESTED" if plan.target_weight > 0 else "CASH"
+    on = f"{plan.target_weight:.0%} INVESTED" if plan.target_weight > 0 else "CASH"
     print(f"[{plan.broker}{' DRY RUN' if dry else ''}] {plan.strategy}: {plan.signal_ticker} close "
           f"{plan.signal_date} says {on}")
     if args.hide_amounts:

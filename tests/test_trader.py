@@ -143,3 +143,17 @@ def test_budget_only_sizes_the_first_buy_then_lets_gains_ride(tmp_path):
     assert plan.action == "hold" and broker.holding("FUND")[0] == held
     out = run_once(broker, trend(up=False), "FUND", dry_run=False, budget=50)
     assert out.action == "sell" and broker.holding("FUND")[0] == 0.0
+
+
+def test_budget_with_part_invested_strategy(tmp_path):
+    prices = {"FUND": 10.0}
+    broker = PaperBroker(tmp_path / "acct.json", price_of=lambda t: prices["FUND"], starting_cash=1000, cost_bps=0)
+    full = trend(up=True)
+    run_once(broker, full, "FUND", strategy="buy_and_hold", dry_run=False, budget=50, min_trade_value=1)
+    assert broker.holding("FUND")[0] == pytest.approx(4.75)          # 47.50 of a 50 budget
+    prices["FUND"] = 16.0                                             # grows to 76
+    from wikiquant import trader
+    trader.STRATEGIES["half"] = lambda p: p * 0 + 0.5
+    plan = run_once(broker, full, "FUND", strategy="half", dry_run=False, budget=50, min_trade_value=1)
+    assert plan.action == "sell"
+    assert broker.holding("FUND")[0] * 16 == pytest.approx(38.0, abs=0.01)   # half of the grown 76
