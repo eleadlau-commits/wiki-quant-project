@@ -1,0 +1,128 @@
+name: Earnings-cycle bot
+
+# Separate from the VUAG trading bot. Two jobs, both off until you set the
+# repository variable EARNINGS_BOT_ENABLED to "true":
+#   signal: each weekday evening after the US close, log tomorrow's targets
+#           to ledger/earnings/signals.jsonl (hash-chained) and commit it.
+#   trade:  near the next US close, rebalance a small budget (config/earnings_cycle.json)
+#           on Trading 212. Dry run unless EARNINGS_EXECUTE is "true".
+# A push that changes the strategy code runs `verify` (rebuild history, check
+# the plan's test dates) instead. Full guide: docs/earnings-cycle.md
+on:
+  schedule:
+    - cron: "45 23 * * 1-5"   # signal: 18:45 New York in winter, 19:45 in summer
+    # trade: one of these lands 20 minutes before the close (winter, summer, and
+    # 13:00 half-days); the script ignores the others.
+    - cron: "40 16 * * 1-5"
+    - cron: "40 17 * * 1-5"
+    - cron: "40 19 * * 1-5"
+    - cron: "40 20 * * 1-5"
+  push:
+    branches: [main, claude/project-thread-aix2kc]
+    paths:
+      - src/wikiquant/earnings_cycle.py
+      - src/wikiquant/edgar.py
+      - scripts/earnings_bot.py
+      - .github/workflows/earnings-bot.yml
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "What to run"
+        type: choice
+        options: [verify, signal, trade-dry-run]
+        default: verify
+
+permissions:
+  contents: write
+
+concurrency:
+  group: earnings-bot     # never two runs at once (orders are not idempotent, ledger commits)
+  cancel-in-progress: false
+
+env:
+  # Your name and email for SEC (a secret so it stays out of public logs).
+  SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+
+jobs:
+  verify:
+    if: github.event_name == 'push' || inputs.task == 'verify'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy yfinance requests exchange_calendars pytest && pip install -e .
+      - run: python -m pytest -q tests/test_earnings_cycle.py
+      - name: Rebuild history and check the plan's test vectors
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT || 'wikiquant-ci research-bot@example.com' }}
+        run: python scripts/earnings_bot.py verify
+      - name: Commit report
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/earnings_cycle.md data/earnings/ 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "Earnings-cycle: rebuilt backtest report"
+          git pull --rebase && git push || true
+
+  signal:
+    if: >-
+      vars.EARNINGS_BOT_ENABLED == 'true' &&
+      (github.event.schedule == '45 23 * * 1-5' || inputs.task == 'signal')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy yfinance requests exchange_calendars && pip install -e .
+      - uses: actions/cache@v4
+        with:
+          path: data/cache/edgar
+          key: edgar-${{ github.run_id }}
+          restore-keys: edgar-
+      - run: python scripts/earnings_bot.py signal
+      - name: Commit signal log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ledger/earnings/signals.jsonl data/earnings/earnings_events.csv
+          git diff --cached --quiet || git commit -m "Earnings-cycle signal"
+          git pull --rebase && git push
+
+  trade:
+    if: >-
+      vars.EARNINGS_BOT_ENABLED == 'true' &&
+      ((github.event_name == 'schedule' && github.event.schedule != '45 23 * * 1-5') || inputs.task == 'trade-dry-run')
+    runs-on: ubuntu-latest
+    env:
+      T212_API_KEY: ${{ secrets.T212_API_KEY }}
+      T212_API_SECRET: ${{ secrets.T212_API_SECRET }}
+      EARNINGS_CONFIRM_LIVE: ${{ vars.EARNINGS_CONFIRM_LIVE }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy yfinance requests exchange_calendars && pip install -e .
+      - name: Trade
+        # Amounts are hidden because logs of a public repository are public.
+        run: |
+          FLAGS="--hide-amounts"
+          if [ "${{ inputs.task }}" = "trade-dry-run" ]; then
+            FLAGS="$FLAGS --anytime --no-log"
+          elif [ "${{ vars.EARNINGS_EXECUTE }}" = "true" ]; then
+            FLAGS="$FLAGS --execute"
+          fi
+          if [ "${{ vars.EARNINGS_T212_ENV }}" = "live" ]; then FLAGS="$FLAGS --live"; fi
+          python scripts/earnings_bot.py trade $FLAGS
+      - name: Commit trade log (actions only, no amounts)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ledger/earnings/trades.jsonl 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "Earnings-cycle trades"
+          git pull --rebase && git push
